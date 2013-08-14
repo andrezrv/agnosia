@@ -49,9 +49,6 @@ function agnosia_initialize_supported_dynamic_modules() {
 		$agnosia_supported_dynamic_modules[] = '/inc/support/agnosia-support-post-format-types.php';
 	endif;
 
-	/* Set content width. You can override this file with the values that you want. */
-	$agnosia_supported_dynamic_modules[] = '/inc/support/agnosia-support-content-width.php';
-
 }
 
 

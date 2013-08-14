@@ -12,6 +12,8 @@
  */
 
 
+/* Set content width. */
+require_once get_template_directory() . '/inc/support/agnosia-support-content-width.php';
 
 /* Initialize Agnosia theme */
 
@@ -24,6 +26,7 @@ function agnosia_init() {
 /* Add action filters. */
 
 add_action( 'agnosia_init', 'agnosia_init' );
+add_action( 'agnosia_after_init', 'agnosia_init' );
 
 
 /* Execute actions. */

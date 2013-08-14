@@ -37,6 +37,18 @@ div, section {
 
 header#header {
 	background-color: @white;
+	.navbar-inner {
+		.standard-rounded(0);
+		.sub-menu:not(.dropdown-menu) {
+			li {
+				a {
+					&:hover {
+						background-image: linear-gradient(@lightBlue, @darkBlue);
+					}
+				}
+			}
+		}
+	}
 }
 
 article {
@@ -934,7 +946,6 @@ body.medium, body.small {
 				padding: 0;
 
 				a {
-
 					color: @base;
 					display: block;
 					padding: 3px 3px 3px 35px;

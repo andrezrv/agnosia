@@ -11,6 +11,6 @@
  * @package Agnosia
  */
 
-if ( !isset( $content_width ) ) : $content_width = 900; endif;
+if ( !isset( $content_width ) ) : $content_width = 1180; endif;
 
 ?>
