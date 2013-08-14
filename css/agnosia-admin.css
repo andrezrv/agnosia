@@ -1,0 +1,93 @@
+/**
+ * NOTICE: This file is part of the Agnosia framework core.
+ * Please don't modify this file unless you know exactly what you're doing.
+ * Keep in mind that any modification to this file may be overwritten by future core updates.
+ *
+ * This file manages styles for Agnosia Options in WordPress Dashboard.
+ * You can add or overwrite these styles via child themes.
+ * 
+ * @package Agnosia
+ */
+
+#agnosia_options_navigation small {
+	font-size: 10px;
+}
+
+#agnosia_options_container fieldset {
+	display: none;
+}
+
+#post-body #advanced-sortables {
+	margin-right: 0;
+}
+
+.misc-pub-section {
+	padding-bottom: 10px !important;
+}
+
+.inside .misc-pub-section:last-child {
+	border-bottom: none;
+}
+
+.agnosia-field small {
+    color: #666666;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.agnosia-field {
+    clear: both;
+    margin: 0;
+    overflow: hidden;
+    padding: 4px 15px;
+}
+
+.dependent {
+    margin: 0 15px;
+    padding: 0;
+}
+
+.dependent .agnosia-field {
+	padding: 4px 17px;
+}
+
+.dependent .agnosia-field.agnosia-post-meta {
+	margin: 0;
+}
+
+.agnosia-field.agnosia-post-meta {
+	padding: 2px 0;
+}
+
+#post-custom-settings .dependent {
+	margin: 0 0 0 21px;
+}
+
+.dependent.disabled {
+	display: none;
+}
+
+.agnosia-field .left-column {
+	float: left;
+	width: 33.3%;
+}
+
+.agnosia-field .right-column {
+	float: left;
+	width: 66.6%;
+}
+
+.agnosia-field select ,
+.agnosia-field input[type="text"] {
+	width: 25%;
+}
+
+.agnosia-field input[type="checkbox"] {
+	margin: 2px 0 0;
+} 
+
+.settings-container .tabs-panel {
+	border: 1px solid #DFDFDF;
+	margin-top: 3px;
+	padding: 10px 2px 10px 5px;
+}

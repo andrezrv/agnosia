@@ -1,0 +1,1618 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Agnosia 1.0\n"
+"POT-Creation-Date: 2013-07-23 02:30-0300\n"
+"PO-Revision-Date: 2013-07-23 02:30-0300\n"
+"Last-Translator: Andrés Villarreal <andrezrv@gmail.com>\n"
+"Language-Team: Agnosia Team <andrezrv@gmail.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:7
+msgid "Error 404 - Page Not Found"
+msgstr "Error 404 - Page Not Found"
+
+#: ../404.php:9
+msgid ""
+"The page you were looking for does not exist. You can try to find it by "
+"using the search option. "
+msgstr ""
+"The page you were looking for does not exist. You can try to find it by "
+"using the search option. "
+
+#: ../archive.php:105 ../author.php:105 ../category.php:107 ../date.php:105
+#: ../paged.php:105 ../tag.php:105
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#: ../author.php:13 ../inc/outputs/agnosia-outputs.php:179
+msgid "Author Archive"
+msgstr "Author Archive"
+
+#: ../category.php:13 ../inc/outputs/agnosia-outputs.php:164
+#, php-format
+msgid "Archive for the %s Category"
+msgstr "Archive for the %s Category"
+
+#: ../comments.php:9
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Please do not load this page directly. Thanks!"
+
+#: ../comments.php:15
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "This post is password protected. Enter the password to view comments."
+
+#: ../comments.php:33
+msgid "No Responses"
+msgstr "No Responses"
+
+#: ../comments.php:33
+msgid "One Response"
+msgstr "One Response"
+
+#: ../comments.php:33
+msgid "% Responses"
+msgstr "% Responses"
+
+#: ../comments.php:64
+msgid "Leave a Reply"
+msgstr "Leave a Reply"
+
+#: ../comments.php:65
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Leave a Reply to %s"
+
+#: ../comments.php:66
+#, fuzzy
+msgid "Cancel Reply"
+msgstr "Leave a Reply"
+
+#: ../comments.php:67
+#, fuzzy
+msgid "Post Comment"
+msgstr "No Comments"
+
+#: ../comments.php:69
+msgid "You must be"
+msgstr "You must be"
+
+#: ../comments.php:69
+msgid " logged in"
+msgstr " logged in"
+
+#: ../comments.php:69
+msgid "to post a comment."
+msgstr "to post a comment."
+
+#: ../comments.php:70
+msgid "Logged in as"
+msgstr "Logged in as"
+
+#: ../comments.php:70
+msgid "Log out"
+msgstr "Log out"
+
+#: ../comments.php:71
+#, fuzzy
+msgid "Your email address will not be published."
+msgstr "Mail (will not be published)"
+
+#: ../comments.php:72
+#, fuzzy, php-format
+msgid "You may use these HTML tags and attributes: %s"
+msgstr "You can use these tags:"
+
+#: ../comments.php:74
+msgid "Name"
+msgstr "Name"
+
+#: ../comments.php:75
+msgid "Email"
+msgstr "Email"
+
+#: ../comments.php:76
+msgid "Website"
+msgstr "Website"
+
+#: ../comments.php:89
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: ../index.php:97 ../inc/filters/agnosia-filters.php:82
+msgid "Not Found"
+msgstr "Not Found"
+
+#: ../search.php:9
+msgid "Search Results"
+msgstr "Search Results"
+
+#: ../search.php:11
+#, fuzzy, php-format
+msgid "You searched for &quot;%s&quot;"
+msgstr "Tag Archive for &quot;"
+
+#: ../search.php:105
+msgid "No posts found"
+msgstr "No posts found"
+
+#: ../tag.php:13 ../inc/outputs/agnosia-outputs.php:167
+msgid "Posts Tagged"
+msgstr "Posts Tagged"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:33
+#: ../inc/admin/agnosia-admin-theme-options.php:34
+msgid "Agnosia Options"
+msgstr "Agnosia Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:65
+#, fuzzy
+msgid "General"
+msgstr "General Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:66
+#, fuzzy
+msgid "Header"
+msgstr "Header Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:67
+#, fuzzy
+msgid "Content"
+msgstr "Content Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:68
+#, fuzzy
+msgid "Sidebar"
+msgstr "Sidebar Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:69
+#: ../inc/register/agnosia-register-sidebars.php:40
+#: ../inc/templates/footer/footer-contents.php:21
+#, fuzzy
+msgid "Footer"
+msgstr "Footer Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:71
+#, php-format
+msgid "Agnosia is built with %1$sBootstrap%2$s."
+msgstr "Agnosia is built with %1$sBootstrap%2$s."
+
+#: ../inc/admin/agnosia-admin-theme-options.php:81
+msgid "Options saved"
+msgstr "Options saved"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:89
+msgid "General Options"
+msgstr "General Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:101
+msgid "Header Options"
+msgstr "Header Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:113
+msgid "Content Options"
+msgstr "Content Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:125
+msgid "Sidebar Options"
+msgstr "Sidebar Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:137
+msgid "Footer Options"
+msgstr "Footer Options"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:152
+msgid "Update"
+msgstr "Update"
+
+#: ../inc/admin/agnosia-admin-theme-options.php:153
+msgid "Reset to default settings"
+msgstr "Reset to default settings"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:19
+msgid "Show site header"
+msgstr "Show site header"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:20
+msgid "Hide site header"
+msgstr "Hide site header"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:27
+msgid "Show page hierarchy"
+msgstr "Show page hierarchy"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:28
+msgid "Hide page hierarchy"
+msgstr "Hide page hierarchy"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:37
+msgid "Show Gravatar thumbnail"
+msgstr "Show Gravatar thumbnail"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:38
+msgid "Hide Gravatar thumbnail"
+msgstr "Hide Gravatar thumbnail"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:43
+msgid "Show author name"
+msgstr "Show author name"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:44
+msgid "Hide author name"
+msgstr "Hide author name"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:52
+#: ../inc/register/agnosia-register-quotes-options.php:27
+msgid "Show source"
+msgstr "Show source"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:53
+msgid "Hide source"
+msgstr "Hide source"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:60
+#, php-format
+msgid "Show %s header"
+msgstr "Show %s header"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:61
+#, php-format
+msgid "Hide %s header"
+msgstr "Hide %s header"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:72
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:162
+#: ../inc/register/agnosia-register-aside-options.php:41
+#: ../inc/register/agnosia-register-aside-options.php:181
+#: ../inc/register/agnosia-register-audios-options.php:181
+#: ../inc/register/agnosia-register-chats-options.php:181
+#: ../inc/register/agnosia-register-galleries-options.php:41
+#: ../inc/register/agnosia-register-galleries-options.php:181
+#: ../inc/register/agnosia-register-images-options.php:181
+#: ../inc/register/agnosia-register-links-options.php:41
+#: ../inc/register/agnosia-register-links-options.php:181
+#: ../inc/register/agnosia-register-pages-options.php:131
+#: ../inc/register/agnosia-register-posts-options.php:27
+#: ../inc/register/agnosia-register-posts-options.php:167
+#: ../inc/register/agnosia-register-quotes-options.php:195
+#: ../inc/register/agnosia-register-status-options.php:209
+#: ../inc/register/agnosia-register-videos-options.php:181
+msgid "Show title"
+msgstr "Show title"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:73
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:163
+msgid "Hide title"
+msgstr "Hide title"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:78
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:183
+#: ../inc/register/agnosia-register-aside-options.php:55
+#: ../inc/register/agnosia-register-aside-options.php:209
+#: ../inc/register/agnosia-register-audios-options.php:55
+#: ../inc/register/agnosia-register-audios-options.php:209
+#: ../inc/register/agnosia-register-chats-options.php:55
+#: ../inc/register/agnosia-register-chats-options.php:209
+#: ../inc/register/agnosia-register-galleries-options.php:55
+#: ../inc/register/agnosia-register-galleries-options.php:209
+#: ../inc/register/agnosia-register-images-options.php:55
+#: ../inc/register/agnosia-register-images-options.php:209
+#: ../inc/register/agnosia-register-pages-options.php:59
+#: ../inc/register/agnosia-register-pages-options.php:160
+#: ../inc/register/agnosia-register-posts-options.php:195
+#: ../inc/register/agnosia-register-quotes-options.php:69
+#: ../inc/register/agnosia-register-status-options.php:83
+#: ../inc/register/agnosia-register-status-options.php:237
+#: ../inc/register/agnosia-register-videos-options.php:55
+#: ../inc/register/agnosia-register-videos-options.php:209
+msgid "Show author"
+msgstr "Show author"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:79
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:184
+msgid "Hide author"
+msgstr "Hide author"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:84
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:256
+#: ../inc/register/agnosia-register-aside-options.php:69
+#: ../inc/register/agnosia-register-aside-options.php:336
+#: ../inc/register/agnosia-register-audios-options.php:69
+#: ../inc/register/agnosia-register-audios-options.php:336
+#: ../inc/register/agnosia-register-chats-options.php:69
+#: ../inc/register/agnosia-register-chats-options.php:336
+#: ../inc/register/agnosia-register-galleries-options.php:69
+#: ../inc/register/agnosia-register-galleries-options.php:336
+#: ../inc/register/agnosia-register-images-options.php:69
+#: ../inc/register/agnosia-register-images-options.php:337
+#: ../inc/register/agnosia-register-links-options.php:336
+#: ../inc/register/agnosia-register-pages-options.php:230
+#: ../inc/register/agnosia-register-posts-options.php:55
+#: ../inc/register/agnosia-register-posts-options.php:322
+#: ../inc/register/agnosia-register-quotes-options.php:83
+#: ../inc/register/agnosia-register-quotes-options.php:350
+#: ../inc/register/agnosia-register-status-options.php:97
+#: ../inc/register/agnosia-register-status-options.php:364
+#: ../inc/register/agnosia-register-videos-options.php:69
+#: ../inc/register/agnosia-register-videos-options.php:336
+msgid "Show author avatar"
+msgstr "Show author avatar"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:85
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:257
+msgid "Hide author avatar"
+msgstr "Hide author avatar"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:90
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:170
+#: ../inc/register/agnosia-register-aside-options.php:83
+#: ../inc/register/agnosia-register-aside-options.php:195
+#: ../inc/register/agnosia-register-audios-options.php:83
+#: ../inc/register/agnosia-register-audios-options.php:195
+#: ../inc/register/agnosia-register-chats-options.php:83
+#: ../inc/register/agnosia-register-chats-options.php:195
+#: ../inc/register/agnosia-register-galleries-options.php:83
+#: ../inc/register/agnosia-register-galleries-options.php:195
+#: ../inc/register/agnosia-register-images-options.php:83
+#: ../inc/register/agnosia-register-images-options.php:195
+#: ../inc/register/agnosia-register-links-options.php:83
+#: ../inc/register/agnosia-register-links-options.php:195
+#: ../inc/register/agnosia-register-pages-options.php:74
+#: ../inc/register/agnosia-register-pages-options.php:145
+#: ../inc/register/agnosia-register-posts-options.php:69
+#: ../inc/register/agnosia-register-quotes-options.php:97
+#: ../inc/register/agnosia-register-quotes-options.php:209
+#: ../inc/register/agnosia-register-status-options.php:111
+#: ../inc/register/agnosia-register-status-options.php:223
+#: ../inc/register/agnosia-register-videos-options.php:83
+#: ../inc/register/agnosia-register-videos-options.php:195
+msgid "Show meta data"
+msgstr "Show meta data"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:91
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:171
+msgid "Hide meta data"
+msgstr "Hide meta data"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:105
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:191
+#: ../inc/register/agnosia-register-aside-options.php:97
+#: ../inc/register/agnosia-register-aside-options.php:223
+#: ../inc/register/agnosia-register-audios-options.php:97
+#: ../inc/register/agnosia-register-audios-options.php:223
+#: ../inc/register/agnosia-register-chats-options.php:97
+#: ../inc/register/agnosia-register-chats-options.php:223
+#: ../inc/register/agnosia-register-galleries-options.php:97
+#: ../inc/register/agnosia-register-galleries-options.php:223
+#: ../inc/register/agnosia-register-images-options.php:97
+#: ../inc/register/agnosia-register-images-options.php:223
+#: ../inc/register/agnosia-register-links-options.php:97
+#: ../inc/register/agnosia-register-links-options.php:223
+#: ../inc/register/agnosia-register-posts-options.php:83
+#: ../inc/register/agnosia-register-posts-options.php:209
+#: ../inc/register/agnosia-register-quotes-options.php:111
+#: ../inc/register/agnosia-register-quotes-options.php:237
+#: ../inc/register/agnosia-register-status-options.php:125
+#: ../inc/register/agnosia-register-status-options.php:251
+#: ../inc/register/agnosia-register-videos-options.php:97
+#: ../inc/register/agnosia-register-videos-options.php:223
+msgid "Show date"
+msgstr "Show date"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:106
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:192
+msgid "Hide date"
+msgstr "Hide date"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:111
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:197
+#: ../inc/register/agnosia-register-aside-options.php:111
+#: ../inc/register/agnosia-register-aside-options.php:237
+#: ../inc/register/agnosia-register-audios-options.php:111
+#: ../inc/register/agnosia-register-audios-options.php:237
+#: ../inc/register/agnosia-register-chats-options.php:111
+#: ../inc/register/agnosia-register-chats-options.php:237
+#: ../inc/register/agnosia-register-galleries-options.php:111
+#: ../inc/register/agnosia-register-galleries-options.php:237
+#: ../inc/register/agnosia-register-images-options.php:111
+#: ../inc/register/agnosia-register-images-options.php:237
+#: ../inc/register/agnosia-register-links-options.php:111
+#: ../inc/register/agnosia-register-links-options.php:237
+#: ../inc/register/agnosia-register-posts-options.php:97
+#: ../inc/register/agnosia-register-posts-options.php:223
+#: ../inc/register/agnosia-register-quotes-options.php:125
+#: ../inc/register/agnosia-register-quotes-options.php:251
+#: ../inc/register/agnosia-register-status-options.php:139
+#: ../inc/register/agnosia-register-status-options.php:265
+#: ../inc/register/agnosia-register-videos-options.php:111
+#: ../inc/register/agnosia-register-videos-options.php:237
+#, fuzzy
+msgid "Show categories"
+msgstr "Categories"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:112
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:198
+#, fuzzy
+msgid "Hide categories"
+msgstr "Categories"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:117
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:203
+#: ../inc/register/agnosia-register-aside-options.php:125
+#: ../inc/register/agnosia-register-aside-options.php:251
+#: ../inc/register/agnosia-register-audios-options.php:125
+#: ../inc/register/agnosia-register-audios-options.php:251
+#: ../inc/register/agnosia-register-chats-options.php:125
+#: ../inc/register/agnosia-register-chats-options.php:251
+#: ../inc/register/agnosia-register-galleries-options.php:125
+#: ../inc/register/agnosia-register-galleries-options.php:251
+#: ../inc/register/agnosia-register-images-options.php:125
+#: ../inc/register/agnosia-register-images-options.php:251
+#: ../inc/register/agnosia-register-links-options.php:125
+#: ../inc/register/agnosia-register-links-options.php:251
+#: ../inc/register/agnosia-register-posts-options.php:111
+#: ../inc/register/agnosia-register-posts-options.php:237
+#: ../inc/register/agnosia-register-quotes-options.php:139
+#: ../inc/register/agnosia-register-quotes-options.php:265
+#: ../inc/register/agnosia-register-status-options.php:153
+#: ../inc/register/agnosia-register-status-options.php:279
+#: ../inc/register/agnosia-register-videos-options.php:125
+#: ../inc/register/agnosia-register-videos-options.php:251
+msgid "Show tags"
+msgstr "Show tags"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:118
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:204
+msgid "Hide tags"
+msgstr "Hide tags"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:125
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:211
+#, fuzzy
+msgid "Show # of comments"
+msgstr "No Comments"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:126
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:212
+#, fuzzy
+msgid "Hide # of comments"
+msgstr "No Comments"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:131
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:217
+msgid "Show permalink"
+msgstr "Show permalink"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:132
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:218
+msgid "Hide permalink"
+msgstr "Hide permalink"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:145
+#, php-format
+msgid "Show %s footer"
+msgstr "Show %s footer"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:146
+#, php-format
+msgid "Hide %s footer"
+msgstr "Hide %s footer"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:231
+#: ../inc/register/agnosia-register-aside-options.php:293
+#: ../inc/register/agnosia-register-posts-options.php:279
+msgid "Show posts navigation"
+msgstr "Show posts navigation"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:232
+msgid "Hide posts navigation"
+msgstr "Hide posts navigation"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:243
+#: ../inc/register/agnosia-register-aside-options.php:322
+#: ../inc/register/agnosia-register-audios-options.php:322
+#: ../inc/register/agnosia-register-chats-options.php:322
+#: ../inc/register/agnosia-register-galleries-options.php:322
+#: ../inc/register/agnosia-register-images-options.php:323
+#: ../inc/register/agnosia-register-links-options.php:322
+#: ../inc/register/agnosia-register-pages-options.php:216
+#: ../inc/register/agnosia-register-posts-options.php:308
+#: ../inc/register/agnosia-register-quotes-options.php:336
+#: ../inc/register/agnosia-register-status-options.php:350
+#: ../inc/register/agnosia-register-videos-options.php:322
+msgid "Show author information"
+msgstr "Show author information"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:244
+msgid "Hide author information"
+msgstr "Hide author information"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:270
+#: ../inc/register/agnosia-register-sidebar-options.php:12
+msgid "Show left sidebar"
+msgstr "Show left sidebar"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:271
+msgid "Hide left sidebar"
+msgstr "Hide left sidebar"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:276
+#: ../inc/register/agnosia-register-sidebar-options.php:27
+msgid "Show right sidebar"
+msgstr "Show right sidebar"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:277
+msgid "Hide right sidebar"
+msgstr "Hide right sidebar"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:282
+msgid "Show site footer"
+msgstr "Show site footer"
+
+#: ../inc/admin/agnosia-load-dynamic-post-settings.php:283
+msgid "Hide site footer"
+msgstr "Hide site footer"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:124
+#: ../inc/admin/agnosia-post-metaboxes.php:199
+msgid "Into post"
+msgstr "Into post"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:125
+#: ../inc/admin/agnosia-post-metaboxes.php:200
+msgid "Into index"
+msgstr "Into index"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:131
+msgid "Show excerpt before content"
+msgstr "Show excerpt before content"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:138
+msgid "Show excerpt"
+msgstr "Show excerpt"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:141
+msgid "Show content"
+msgstr "Show content"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:166
+msgid "Use custom CSS file for this entry."
+msgstr "Use custom CSS file for this entry."
+
+#: ../inc/admin/agnosia-post-metaboxes.php:171
+msgid ""
+"Use your own CSS file for adding details and/or overriding the main styles."
+"<br /><strong>It must be a valid URL, and you have to upload the file to "
+"your desired location on you own.</strong>"
+msgstr ""
+"Use your own CSS file for adding details and/or overriding the main styles."
+"<br /><strong>It must be a valid URL, and you have to upload the file to "
+"your desired location on you own.</strong>"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:206
+msgid "After site header as <code>img</code>"
+msgstr "After site header as <code>img</code>"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:209
+msgid "After site header as background"
+msgstr "After site header as background"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:212
+#: ../inc/admin/agnosia-post-metaboxes.php:234
+msgid "Before post header"
+msgstr "Before post header"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:215
+#: ../inc/admin/agnosia-post-metaboxes.php:237
+msgid "After post title"
+msgstr "After post title"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:218
+#: ../inc/admin/agnosia-post-metaboxes.php:240
+msgid "After post author"
+msgstr "After post author"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:221
+#: ../inc/admin/agnosia-post-metaboxes.php:243
+#, fuzzy
+msgid "After post meta"
+msgstr "to post a comment."
+
+#: ../inc/admin/agnosia-post-metaboxes.php:224
+#: ../inc/admin/agnosia-post-metaboxes.php:246
+msgid "Not show"
+msgstr "Not show"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:227
+#: ../inc/admin/agnosia-post-metaboxes.php:249
+msgid "Replace Gravatar"
+msgstr "Replace Gravatar"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:270
+msgid "Ajax URL"
+msgstr "Ajax URL"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:271
+msgid "Home path"
+msgstr "Home path"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:298
+msgid "Block custom stylesheet option"
+msgstr "Block custom stylesheet option"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:302
+msgid "Block additional HTML option"
+msgstr "Block additional HTML option"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:306
+msgid "Block featured image position option"
+msgstr "Block featured image position option"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:309
+msgid "Block override default settings option"
+msgstr "Block override default settings option"
+
+#: ../inc/classes/agnosia-setup.class.php:290
+msgid "Select Media"
+msgstr "Select Media"
+
+#: ../inc/filters/agnosia-filters.php:50
+msgid "Tag Archive for &quot;"
+msgstr "Tag Archive for &quot;"
+
+#: ../inc/filters/agnosia-filters.php:56
+msgid "Archive"
+msgstr "Archive"
+
+#: ../inc/filters/agnosia-filters.php:61
+msgid "Search For"
+msgstr "Search For"
+
+#: ../inc/filters/agnosia-filters.php:99
+msgid "Page"
+msgstr "Page"
+
+#: ../inc/filters/agnosia-filters.php:189
+msgid "Click here to cancel reply."
+msgstr "Click here to cancel reply."
+
+#: ../inc/outputs/agnosia-outputs.php:170
+#: ../inc/outputs/agnosia-outputs.php:173
+#: ../inc/outputs/agnosia-outputs.php:176
+#, fuzzy
+msgid "Archive For "
+msgstr "Archive For"
+
+#: ../inc/outputs/agnosia-outputs.php:182
+msgid "Blog Archives"
+msgstr "Blog Archives"
+
+#: ../inc/outputs/agnosia-outputs.php:1267
+#, fuzzy
+msgid "Pages:"
+msgstr "Pages"
+
+#: ../inc/outputs/agnosia-outputs.php:1272
+msgid "Next page"
+msgstr "Next page"
+
+#: ../inc/outputs/agnosia-outputs.php:1273
+msgid "Previous page"
+msgstr "Previous page"
+
+#: ../inc/register/agnosia-register-advanced-post-options.php:17
+msgid "Advanced permissions for pages and posts"
+msgstr "Advanced permissions for pages and posts"
+
+#: ../inc/register/agnosia-register-advanced-post-options.php:31
+msgid "Add additional HTML"
+msgstr "Add additional HTML"
+
+#: ../inc/register/agnosia-register-advanced-post-options.php:53
+msgid "Set custom stylesheet"
+msgstr "Set custom stylesheet"
+
+#: ../inc/register/agnosia-register-advanced-post-options.php:67
+msgid "Set featured image position"
+msgstr "Set featured image position"
+
+#: ../inc/register/agnosia-register-advanced-post-options.php:81
+msgid "Override default theme settings"
+msgstr "Override default theme settings"
+
+#: ../inc/register/agnosia-register-aside-options.php:12
+msgid "Aside"
+msgstr "Aside"
+
+#: ../inc/register/agnosia-register-aside-options.php:13
+msgid "Enable aside post format"
+msgstr "Enable aside post format"
+
+#: ../inc/register/agnosia-register-aside-options.php:27
+#: ../inc/register/agnosia-register-audios-options.php:27
+#: ../inc/register/agnosia-register-chats-options.php:27
+#: ../inc/register/agnosia-register-galleries-options.php:27
+#: ../inc/register/agnosia-register-header-options.php:14
+#: ../inc/register/agnosia-register-images-options.php:27
+#: ../inc/register/agnosia-register-pages-options.php:29
+#: ../inc/register/agnosia-register-posts-options.php:13
+#: ../inc/register/agnosia-register-quotes-options.php:41
+#: ../inc/register/agnosia-register-status-options.php:55
+#: ../inc/register/agnosia-register-videos-options.php:27
+msgid "Show header"
+msgstr "Show header"
+
+#: ../inc/register/agnosia-register-aside-options.php:28
+#: ../inc/register/agnosia-register-audios-options.php:28
+#: ../inc/register/agnosia-register-chats-options.php:28
+#: ../inc/register/agnosia-register-galleries-options.php:28
+#: ../inc/register/agnosia-register-images-options.php:28
+#: ../inc/register/agnosia-register-posts-options.php:14
+#: ../inc/register/agnosia-register-quotes-options.php:28
+#: ../inc/register/agnosia-register-status-options.php:56
+#: ../inc/register/agnosia-register-videos-options.php:28
+msgid ""
+"Show title, author and meta data of the currently retrieved post into post "
+"header."
+msgstr ""
+"Show title, author and meta data of the currently retrieved post into post "
+"header."
+
+#: ../inc/register/agnosia-register-aside-options.php:84
+#: ../inc/register/agnosia-register-aside-options.php:196
+#: ../inc/register/agnosia-register-audios-options.php:84
+#: ../inc/register/agnosia-register-audios-options.php:196
+#: ../inc/register/agnosia-register-chats-options.php:84
+#: ../inc/register/agnosia-register-chats-options.php:196
+#: ../inc/register/agnosia-register-galleries-options.php:84
+#: ../inc/register/agnosia-register-galleries-options.php:196
+#: ../inc/register/agnosia-register-images-options.php:84
+#: ../inc/register/agnosia-register-images-options.php:196
+#: ../inc/register/agnosia-register-posts-options.php:70
+#: ../inc/register/agnosia-register-posts-options.php:182
+#: ../inc/register/agnosia-register-quotes-options.php:98
+#: ../inc/register/agnosia-register-quotes-options.php:210
+#: ../inc/register/agnosia-register-status-options.php:112
+#: ../inc/register/agnosia-register-status-options.php:224
+#: ../inc/register/agnosia-register-videos-options.php:84
+#: ../inc/register/agnosia-register-videos-options.php:196
+msgid "Show adittional information about the currently retrieved post."
+msgstr "Show adittional information about the currently retrieved post."
+
+#: ../inc/register/agnosia-register-aside-options.php:139
+#: ../inc/register/agnosia-register-aside-options.php:265
+#: ../inc/register/agnosia-register-audios-options.php:139
+#: ../inc/register/agnosia-register-audios-options.php:265
+#: ../inc/register/agnosia-register-chats-options.php:139
+#: ../inc/register/agnosia-register-chats-options.php:265
+#: ../inc/register/agnosia-register-galleries-options.php:139
+#: ../inc/register/agnosia-register-galleries-options.php:265
+#: ../inc/register/agnosia-register-images-options.php:139
+#: ../inc/register/agnosia-register-images-options.php:265
+#: ../inc/register/agnosia-register-links-options.php:139
+#: ../inc/register/agnosia-register-links-options.php:265
+#: ../inc/register/agnosia-register-pages-options.php:88
+#: ../inc/register/agnosia-register-posts-options.php:125
+#: ../inc/register/agnosia-register-posts-options.php:251
+#: ../inc/register/agnosia-register-quotes-options.php:153
+#: ../inc/register/agnosia-register-quotes-options.php:279
+#: ../inc/register/agnosia-register-status-options.php:167
+#: ../inc/register/agnosia-register-status-options.php:293
+#: ../inc/register/agnosia-register-videos-options.php:139
+#: ../inc/register/agnosia-register-videos-options.php:265
+msgid "Show number of comments"
+msgstr "Show number of comments"
+
+#: ../inc/register/agnosia-register-aside-options.php:153
+#: ../inc/register/agnosia-register-aside-options.php:279
+#: ../inc/register/agnosia-register-audios-options.php:153
+#: ../inc/register/agnosia-register-audios-options.php:279
+#: ../inc/register/agnosia-register-galleries-options.php:279
+#: ../inc/register/agnosia-register-images-options.php:153
+#: ../inc/register/agnosia-register-posts-options.php:139
+#: ../inc/register/agnosia-register-quotes-options.php:167
+#: ../inc/register/agnosia-register-quotes-options.php:293
+#: ../inc/register/agnosia-register-status-options.php:181
+#: ../inc/register/agnosia-register-status-options.php:307
+#: ../inc/register/agnosia-register-videos-options.php:153
+msgid "Show permalink to post"
+msgstr "Show permalink to post"
+
+#: ../inc/register/agnosia-register-aside-options.php:167
+#: ../inc/register/agnosia-register-audios-options.php:167
+#: ../inc/register/agnosia-register-chats-options.php:167
+#: ../inc/register/agnosia-register-footer-options.php:14
+#: ../inc/register/agnosia-register-galleries-options.php:167
+#: ../inc/register/agnosia-register-images-options.php:167
+#: ../inc/register/agnosia-register-pages-options.php:117
+#: ../inc/register/agnosia-register-posts-options.php:153
+#: ../inc/register/agnosia-register-quotes-options.php:181
+#: ../inc/register/agnosia-register-status-options.php:195
+#: ../inc/register/agnosia-register-videos-options.php:167
+msgid "Show footer"
+msgstr "Show footer"
+
+#: ../inc/register/agnosia-register-aside-options.php:168
+#: ../inc/register/agnosia-register-audios-options.php:168
+#: ../inc/register/agnosia-register-chats-options.php:168
+#: ../inc/register/agnosia-register-galleries-options.php:168
+#: ../inc/register/agnosia-register-images-options.php:168
+#: ../inc/register/agnosia-register-posts-options.php:154
+#: ../inc/register/agnosia-register-quotes-options.php:182
+#: ../inc/register/agnosia-register-status-options.php:196
+#: ../inc/register/agnosia-register-videos-options.php:168
+msgid ""
+"Show title, author and meta data of the currently retrieved post into post "
+"footer."
+msgstr ""
+"Show title, author and meta data of the currently retrieved post into post "
+"footer."
+
+#: ../inc/register/agnosia-register-aside-options.php:294
+#: ../inc/register/agnosia-register-audios-options.php:294
+#: ../inc/register/agnosia-register-chats-options.php:294
+#: ../inc/register/agnosia-register-galleries-options.php:294
+#: ../inc/register/agnosia-register-images-options.php:294
+#: ../inc/register/agnosia-register-links-options.php:294
+#: ../inc/register/agnosia-register-posts-options.php:280
+#: ../inc/register/agnosia-register-quotes-options.php:308
+#: ../inc/register/agnosia-register-status-options.php:322
+#: ../inc/register/agnosia-register-videos-options.php:294
+#, php-format
+msgid "Display %1$sNext Post%2$s and %1$sPrevious Post%2$s links."
+msgstr "Display %1$sNext Post%2$s and %1$sPrevious Post%2$s links."
+
+#: ../inc/register/agnosia-register-aside-options.php:308
+#: ../inc/register/agnosia-register-audios-options.php:308
+#: ../inc/register/agnosia-register-chats-options.php:308
+#: ../inc/register/agnosia-register-galleries-options.php:308
+#: ../inc/register/agnosia-register-images-options.php:308
+#: ../inc/register/agnosia-register-links-options.php:308
+#: ../inc/register/agnosia-register-pages-options.php:202
+#: ../inc/register/agnosia-register-posts-options.php:294
+#: ../inc/register/agnosia-register-quotes-options.php:322
+#: ../inc/register/agnosia-register-status-options.php:336
+#: ../inc/register/agnosia-register-videos-options.php:308
+msgid "Show edit link"
+msgstr "Show edit link"
+
+#: ../inc/register/agnosia-register-aside-options.php:309
+#: ../inc/register/agnosia-register-audios-options.php:309
+#: ../inc/register/agnosia-register-chats-options.php:309
+#: ../inc/register/agnosia-register-galleries-options.php:309
+#: ../inc/register/agnosia-register-images-options.php:309
+#: ../inc/register/agnosia-register-pages-options.php:203
+#: ../inc/register/agnosia-register-posts-options.php:295
+#: ../inc/register/agnosia-register-quotes-options.php:323
+#: ../inc/register/agnosia-register-status-options.php:337
+#: ../inc/register/agnosia-register-videos-options.php:309
+msgid "Display edit link to users with given permissions."
+msgstr "Display edit link to users with given permissions."
+
+#: ../inc/register/agnosia-register-aside-options.php:323
+#: ../inc/register/agnosia-register-audios-options.php:323
+#: ../inc/register/agnosia-register-chats-options.php:323
+#: ../inc/register/agnosia-register-galleries-options.php:323
+#: ../inc/register/agnosia-register-images-options.php:324
+#: ../inc/register/agnosia-register-posts-options.php:309
+#: ../inc/register/agnosia-register-quotes-options.php:337
+#: ../inc/register/agnosia-register-status-options.php:351
+#: ../inc/register/agnosia-register-videos-options.php:323
+msgid "Display information about the author of the post."
+msgstr "Display information about the author of the post."
+
+#: ../inc/register/agnosia-register-audios-options.php:12
+msgid "Audios"
+msgstr "Audios"
+
+#: ../inc/register/agnosia-register-audios-options.php:13
+msgid "Enable audio post format"
+msgstr "Enable audio post format"
+
+#: ../inc/register/agnosia-register-audios-options.php:41
+#: ../inc/register/agnosia-register-chats-options.php:41
+#: ../inc/register/agnosia-register-images-options.php:41
+#: ../inc/register/agnosia-register-pages-options.php:44
+#: ../inc/register/agnosia-register-quotes-options.php:55
+#: ../inc/register/agnosia-register-status-options.php:69
+#: ../inc/register/agnosia-register-videos-options.php:41
+msgid "Show titles"
+msgstr "Show titles"
+
+#: ../inc/register/agnosia-register-audios-options.php:293
+#: ../inc/register/agnosia-register-chats-options.php:293
+#: ../inc/register/agnosia-register-quotes-options.php:307
+#: ../inc/register/agnosia-register-status-options.php:321
+#: ../inc/register/agnosia-register-videos-options.php:293
+msgid "Show posts navigation on bottom of post"
+msgstr "Show posts navigation on bottom of post"
+
+#: ../inc/register/agnosia-register-chats-options.php:12
+msgid "Chats"
+msgstr "Chats"
+
+#: ../inc/register/agnosia-register-chats-options.php:13
+msgid "Enable chat post format"
+msgstr "Enable chat post format"
+
+#: ../inc/register/agnosia-register-chats-options.php:153
+#: ../inc/register/agnosia-register-chats-options.php:279
+#: ../inc/register/agnosia-register-links-options.php:153
+#: ../inc/register/agnosia-register-links-options.php:279
+msgid "Show permalinks"
+msgstr "Show permalinks"
+
+#: ../inc/register/agnosia-register-footer-options.php:23
+msgid "One"
+msgstr "One"
+
+#: ../inc/register/agnosia-register-footer-options.php:23
+msgid "Two"
+msgstr "Two"
+
+#: ../inc/register/agnosia-register-footer-options.php:23
+msgid "Three"
+msgstr "Three"
+
+#: ../inc/register/agnosia-register-footer-options.php:23
+msgid "Four"
+msgstr "Four"
+
+#: ../inc/register/agnosia-register-footer-options.php:29
+msgid "Number of columns"
+msgstr "Number of columns"
+
+#: ../inc/register/agnosia-register-footer-options.php:43
+msgid "Credits"
+msgstr "Credits"
+
+#: ../inc/register/agnosia-register-footer-options.php:44
+msgid "Show credits"
+msgstr "Show credits"
+
+#: ../inc/register/agnosia-register-footer-options.php:45
+#, php-format
+msgid "Support %1$sAgnosia%2$s development!"
+msgstr "Support %1$sAgnosia%2$s development!"
+
+#: ../inc/register/agnosia-register-galleries-options.php:12
+#, fuzzy
+msgid "Galleries"
+msgstr "Categories"
+
+#: ../inc/register/agnosia-register-galleries-options.php:13
+msgid "Enable gallery post format"
+msgstr "Enable gallery post format"
+
+#: ../inc/register/agnosia-register-galleries-options.php:153
+#: ../inc/register/agnosia-register-images-options.php:279
+msgid "Show permalink top post"
+msgstr "Show permalink top post"
+
+#: ../inc/register/agnosia-register-galleries-options.php:293
+msgid "Show navigation on bottom of gallery"
+msgstr "Show navigation on bottom of gallery"
+
+#: ../inc/register/agnosia-register-general-options.php:11
+msgid "Compatibility"
+msgstr "Compatibility"
+
+#: ../inc/register/agnosia-register-general-options.php:12
+#, php-format
+msgid "Make %1$sAgnosia%2$s responsive"
+msgstr "Make %1$sAgnosia%2$s responsive"
+
+#: ../inc/register/agnosia-register-general-options.php:13
+#, php-format
+msgid "Enable %1$sBootstrap%2$s responsive features"
+msgstr "Enable %1$sBootstrap%2$s responsive features"
+
+#: ../inc/register/agnosia-register-general-options.php:13
+#: ../inc/register/agnosia-register-general-options.php:28
+#, php-format
+msgid "%1$sView more info%2$s"
+msgstr "%1$sView more info%2$s"
+
+#: ../inc/register/agnosia-register-general-options.php:27
+#, php-format
+msgid "Use %1$s-prefix-free%2$s"
+msgstr "Use %1$s-prefix-free%2$s"
+
+#: ../inc/register/agnosia-register-general-options.php:28
+#, php-format
+msgid ""
+"The %1$s-prefix-free%2$s tool lets you use only unprefixed CSS properties "
+"everywhere. It works behind the scenes, adding the current browser's prefix "
+"to any CSS code, only when it's needed."
+msgstr ""
+"The %1$s-prefix-free%2$s tool lets you use only unprefixed CSS properties "
+"everywhere. It works behind the scenes, adding the current browser's prefix "
+"to any CSS code, only when it's needed."
+
+#: ../inc/register/agnosia-register-general-options.php:41
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: ../inc/register/agnosia-register-general-options.php:42
+msgid "Adapt buttons"
+msgstr "Adapt buttons"
+
+#: ../inc/register/agnosia-register-general-options.php:43
+msgid ""
+"Add <code>class=\"btn\"</code> to <code>button</code> and <code>input[type="
+"\"submit\"]</code> tags via jQuery."
+msgstr ""
+"Add <code>class=\"btn\"</code> to <code>button</code> and <code>input[type="
+"\"submit\"]</code> tags via jQuery."
+
+#: ../inc/register/agnosia-register-general-options.php:57
+msgid "Adapt tables"
+msgstr "Adapt tables"
+
+#: ../inc/register/agnosia-register-general-options.php:58
+msgid "Add <code>class=\"table\"</code> to <code>table</code> tags via jQuery."
+msgstr ""
+"Add <code>class=\"table\"</code> to <code>table</code> tags via jQuery."
+
+#: ../inc/register/agnosia-register-general-options.php:71
+msgid "Style"
+msgstr "Style"
+
+#: ../inc/register/agnosia-register-general-options.php:72
+msgid "Main Template"
+msgstr "Main Template"
+
+#: ../inc/register/agnosia-register-general-options.php:73
+#, php-format
+msgid "Choose from %1$sAgnosia%2$s built-in styles."
+msgstr "Choose from %1$sAgnosia%2$s built-in styles."
+
+#: ../inc/register/agnosia-register-general-options.php:84
+msgid "No wrap"
+msgstr "No wrap"
+
+#: ../inc/register/agnosia-register-general-options.php:85
+msgid "Wrap with container"
+msgstr "Wrap with container"
+
+#: ../inc/register/agnosia-register-general-options.php:86
+msgid "Wrap header to content"
+msgstr "Wrap header to content"
+
+#: ../inc/register/agnosia-register-general-options.php:87
+msgid "Wrap footer to content"
+msgstr "Wrap footer to content"
+
+#: ../inc/register/agnosia-register-general-options.php:88
+msgid "Wrap both header and footer to content"
+msgstr "Wrap both header and footer to content"
+
+#: ../inc/register/agnosia-register-general-options.php:95
+msgid "Wrapper style"
+msgstr "Wrapper style"
+
+#: ../inc/register/agnosia-register-general-options.php:96
+msgid "Define how to wrap the site containers."
+msgstr "Define how to wrap the site containers."
+
+#: ../inc/register/agnosia-register-general-options.php:112
+msgid "Custom stylesheet"
+msgstr "Custom stylesheet"
+
+#: ../inc/register/agnosia-register-general-options.php:113
+msgid ""
+"Use your own CSS file for adding details and/or overriding the main styles"
+msgstr ""
+"Use your own CSS file for adding details and/or overriding the main styles"
+
+#: ../inc/register/agnosia-register-general-options.php:113
+msgid ""
+"It must be a valid URL, and you have to upload the file to your desired "
+"location on your own."
+msgstr ""
+"It must be a valid URL, and you have to upload the file to your desired "
+"location on your own."
+
+#: ../inc/register/agnosia-register-general-options.php:127
+msgid "Custom Favicon"
+msgstr "Custom Favicon"
+
+#: ../inc/register/agnosia-register-general-options.php:128
+msgid "Use your own favicon."
+msgstr "Use your own favicon."
+
+#: ../inc/register/agnosia-register-general-options.php:128
+msgid ""
+"It must be a valid URL, and you have to upload the file manually or via FTP "
+"to your desired location into your WordPress installation."
+msgstr ""
+"It must be a valid URL, and you have to upload the file manually or via FTP "
+"to your desired location into your WordPress installation."
+
+#: ../inc/register/agnosia-register-header-options.php:30
+#: ../inc/register/agnosia-register-menus.php:6
+msgid "Top Menu"
+msgstr "Top Menu"
+
+#: ../inc/register/agnosia-register-header-options.php:31
+msgid "Show top menu"
+msgstr "Show top menu"
+
+#: ../inc/register/agnosia-register-header-options.php:46
+#: ../inc/register/agnosia-register-header-options.php:305
+msgid "Colour scheme"
+msgstr "Colour scheme"
+
+#: ../inc/register/agnosia-register-header-options.php:47
+#: ../inc/register/agnosia-register-header-options.php:306
+msgid ""
+"Use <code>class=\"navbar navbar-default\"</code> for navigation bar, or "
+"<code>class=\"navbar navbar-inverse\"</code> instead."
+msgstr ""
+"Use <code>class=\"navbar navbar-default\"</code> for navigation bar, or "
+"<code>class=\"navbar navbar-inverse\"</code> instead."
+
+#: ../inc/register/agnosia-register-header-options.php:47
+#: ../inc/register/agnosia-register-header-options.php:306
+#, php-format
+msgid "%1$sView more%2$s"
+msgstr "%1$sView more%2$s"
+
+#: ../inc/register/agnosia-register-header-options.php:61
+#: ../inc/register/agnosia-register-header-options.php:320
+msgid "Show sitename"
+msgstr "Show sitename"
+
+#: ../inc/register/agnosia-register-header-options.php:62
+#: ../inc/register/agnosia-register-header-options.php:321
+msgid "Show sitename as text."
+msgstr "Show sitename as text."
+
+#: ../inc/register/agnosia-register-header-options.php:76
+#: ../inc/register/agnosia-register-header-options.php:290
+msgid "Show navigation menu"
+msgstr "Show navigation menu"
+
+#: ../inc/register/agnosia-register-header-options.php:77
+#: ../inc/register/agnosia-register-header-options.php:336
+#, php-format
+msgid ""
+"When enabled, show %1$scustom menu%2$s (if specified) or default WordPress "
+"menu."
+msgstr ""
+"When enabled, show %1$scustom menu%2$s (if specified) or default WordPress "
+"menu."
+
+#: ../inc/register/agnosia-register-header-options.php:91
+#: ../inc/register/agnosia-register-header-options.php:168
+#: ../inc/register/agnosia-register-header-options.php:350
+#, fuzzy
+msgid "Show search form"
+msgstr "Search For"
+
+#: ../inc/register/agnosia-register-header-options.php:106
+#: ../inc/register/agnosia-register-header-options.php:365
+msgid "Fix to top"
+msgstr "Fix to top"
+
+#: ../inc/register/agnosia-register-header-options.php:107
+#, php-format
+msgid ""
+"Only works when this same option is not enabled for %1$sheader menu%2$s."
+msgstr ""
+"Only works when this same option is not enabled for %1$sheader menu%2$s."
+
+#: ../inc/register/agnosia-register-header-options.php:122
+msgid "Branding Section"
+msgstr "Branding Section"
+
+#: ../inc/register/agnosia-register-header-options.php:123
+msgid "Show branding section"
+msgstr "Show branding section"
+
+#: ../inc/register/agnosia-register-header-options.php:138
+#: ../inc/register/agnosia-register-header-options.php:382
+msgid "Show site description"
+msgstr "Show site description"
+
+#: ../inc/register/agnosia-register-header-options.php:139
+#, php-format
+msgid "Display site description defined in %1$sSettings%2$s."
+msgstr "Display site description defined in %1$sSettings%2$s."
+
+#: ../inc/register/agnosia-register-header-options.php:153
+#: ../inc/register/agnosia-register-header-options.php:335
+msgid "Show navigation"
+msgstr "Show navigation"
+
+#: ../inc/register/agnosia-register-header-options.php:154
+#, php-format
+msgid "When enabled, show %1$scustom menu%2$s (if specified)."
+msgstr "When enabled, show %1$scustom menu%2$s (if specified)."
+
+#: ../inc/register/agnosia-register-header-options.php:183
+msgid "Use logo image"
+msgstr "Use logo image"
+
+#: ../inc/register/agnosia-register-header-options.php:184
+msgid "Use logo instead of sitename text."
+msgstr "Use logo instead of sitename text."
+
+#: ../inc/register/agnosia-register-header-options.php:198
+msgid "Logo URL"
+msgstr "Logo URL"
+
+#: ../inc/register/agnosia-register-header-options.php:199
+#: ../inc/register/agnosia-register-header-options.php:259
+msgid "Type URL or add from Media"
+msgstr "Type URL or add from Media"
+
+#: ../inc/register/agnosia-register-header-options.php:213
+msgid "Use secondary brand"
+msgstr "Use secondary brand"
+
+#: ../inc/register/agnosia-register-header-options.php:214
+msgid "Use a secondary brand besides main branding."
+msgstr "Use a secondary brand besides main branding."
+
+#: ../inc/register/agnosia-register-header-options.php:228
+msgid "Secondary brand title"
+msgstr "Secondary brand title"
+
+#: ../inc/register/agnosia-register-header-options.php:229
+msgid ""
+"Name of secondary brand. Text for <code>title</code> and <code>alt</code> "
+"attributes for image logo when it's present."
+msgstr ""
+"Name of secondary brand. Text for <code>title</code> and <code>alt</code> "
+"attributes for image logo when it's present."
+
+#: ../inc/register/agnosia-register-header-options.php:243
+msgid "Secondary brand subtitle"
+msgstr "Secondary brand subtitle"
+
+#: ../inc/register/agnosia-register-header-options.php:244
+msgid "Subtitle for brand name when image logo is not present."
+msgstr "Subtitle for brand name when image logo is not present."
+
+#: ../inc/register/agnosia-register-header-options.php:258
+msgid "Secondary brand logo URL"
+msgstr "Secondary brand logo URL"
+
+#: ../inc/register/agnosia-register-header-options.php:273
+msgid "Secondary brand website"
+msgstr "Secondary brand website"
+
+#: ../inc/register/agnosia-register-header-options.php:274
+msgid "URL to link logo to."
+msgstr "URL to link logo to."
+
+#: ../inc/register/agnosia-register-header-options.php:289
+#: ../inc/register/agnosia-register-menus.php:14
+#, fuzzy
+msgid "Header Menu"
+msgstr "Header Options"
+
+#: ../inc/register/agnosia-register-header-options.php:366
+#, php-format
+msgid "Fix menu to top. Overrides this setting in %1$stop menu%2$s."
+msgstr "Fix menu to top. Overrides this setting in %1$stop menu%2$s."
+
+#: ../inc/register/agnosia-register-header-options.php:381
+#, fuzzy
+msgid "Site description"
+msgstr "Sidebar Options"
+
+#: ../inc/register/agnosia-register-header-options.php:383
+#, php-format
+msgid ""
+"Display site description defined in %1$sSettings%2$s into a separated element"
+msgstr ""
+"Display site description defined in %1$sSettings%2$s into a separated element"
+
+#: ../inc/register/agnosia-register-images-options.php:12
+#, fuzzy
+msgid "Images"
+msgstr "Pages"
+
+#: ../inc/register/agnosia-register-images-options.php:13
+msgid "Enable image post format"
+msgstr "Enable image post format"
+
+#: ../inc/register/agnosia-register-images-options.php:293
+msgid "Show navigation on bottom of image"
+msgstr "Show navigation on bottom of image"
+
+#: ../inc/register/agnosia-register-links-options.php:12
+msgid "Links"
+msgstr "Links"
+
+#: ../inc/register/agnosia-register-links-options.php:13
+msgid "Enable link post format"
+msgstr "Enable link post format"
+
+#: ../inc/register/agnosia-register-links-options.php:27
+msgid "Show headers"
+msgstr "Show headers"
+
+#: ../inc/register/agnosia-register-links-options.php:55
+#: ../inc/register/agnosia-register-links-options.php:209
+#: ../inc/register/agnosia-register-quotes-options.php:223
+msgid "Show authors"
+msgstr "Show authors"
+
+#: ../inc/register/agnosia-register-links-options.php:69
+msgid "Show authors gravatars"
+msgstr "Show authors gravatars"
+
+#: ../inc/register/agnosia-register-links-options.php:167
+msgid "Show footers"
+msgstr "Show footers"
+
+#: ../inc/register/agnosia-register-links-options.php:293
+msgid "Show posts navigation on bottom of link"
+msgstr "Show posts navigation on bottom of link"
+
+#: ../inc/register/agnosia-register-menus.php:10
+msgid "Branding Menu"
+msgstr "Branding Menu"
+
+#: ../inc/register/agnosia-register-pages-options.php:13
+msgid "Pages"
+msgstr "Pages"
+
+#: ../inc/register/agnosia-register-pages-options.php:14
+#, fuzzy
+msgid "Show hierarchy"
+msgstr "Search"
+
+#: ../inc/register/agnosia-register-pages-options.php:15
+msgid ""
+"Display a hierarchical navigation list containing the parent, children and "
+"sibling pages of the currently retrieved page."
+msgstr ""
+"Display a hierarchical navigation list containing the parent, children and "
+"sibling pages of the currently retrieved page."
+
+#: ../inc/register/agnosia-register-pages-options.php:30
+msgid ""
+"Show title, author and meta data of the currently retrieved page into page "
+"header."
+msgstr ""
+"Show title, author and meta data of the currently retrieved page into page "
+"header."
+
+#: ../inc/register/agnosia-register-pages-options.php:75
+msgid "Show adittional information about the currently retrieved page."
+msgstr "Show adittional information about the currently retrieved page."
+
+#: ../inc/register/agnosia-register-pages-options.php:102
+#: ../inc/register/agnosia-register-pages-options.php:188
+msgid "Show permalink to page"
+msgstr "Show permalink to page"
+
+#: ../inc/register/agnosia-register-pages-options.php:118
+msgid ""
+"Show title, author and meta data of the currently retrieved page into page "
+"footer."
+msgstr ""
+"Show title, author and meta data of the currently retrieved page into page "
+"footer."
+
+#: ../inc/register/agnosia-register-pages-options.php:146
+msgid "Show additional information about the currently retrieved page."
+msgstr "Show additional information about the currently retrieved page."
+
+#: ../inc/register/agnosia-register-pages-options.php:174
+msgid "Show number of comments on bottom of pages"
+msgstr "Show number of comments on bottom of pages"
+
+#: ../inc/register/agnosia-register-pages-options.php:217
+msgid "Display information about the author of the page."
+msgstr "Display information about the author of the page."
+
+#: ../inc/register/agnosia-register-posts-options.php:12
+msgid "Posts"
+msgstr "Posts"
+
+#: ../inc/register/agnosia-register-posts-options.php:41
+msgid "Show posts authors"
+msgstr "Show posts authors"
+
+#: ../inc/register/agnosia-register-posts-options.php:181
+msgid "Show meta data on bottom of posts"
+msgstr "Show meta data on bottom of posts"
+
+#: ../inc/register/agnosia-register-posts-options.php:265
+msgid "Show permalink to posts"
+msgstr "Show permalink to posts"
+
+#: ../inc/register/agnosia-register-posts-options.php:337
+msgid "Post formats support"
+msgstr "Post formats support"
+
+#: ../inc/register/agnosia-register-posts-options.php:338
+msgid "Enable post formats support for pages"
+msgstr "Enable post formats support for pages"
+
+#: ../inc/register/agnosia-register-posts-options.php:339
+msgid ""
+"Pages with a format type other than \"standard\" will be treated as posts."
+msgstr ""
+"Pages with a format type other than \"standard\" will be treated as posts."
+
+#: ../inc/register/agnosia-register-posts-options.php:352
+msgid "Enable post formats support for custom post types"
+msgstr "Enable post formats support for custom post types"
+
+#: ../inc/register/agnosia-register-posts-options.php:353
+msgid "By default, custom post types are treated as posts."
+msgstr "By default, custom post types are treated as posts."
+
+#: ../inc/register/agnosia-register-quotes-options.php:12
+msgid "Quotes"
+msgstr "Quotes"
+
+#: ../inc/register/agnosia-register-quotes-options.php:13
+msgid "Enable quote post format"
+msgstr "Enable quote post format"
+
+#: ../inc/register/agnosia-register-sidebars.php:10
+#: ../inc/templates/sidebar/left-sidebar.php:11
+msgid "Left sidebar"
+msgstr "Left sidebar"
+
+#: ../inc/register/agnosia-register-sidebars.php:23
+#: ../inc/templates/sidebar/right-sidebar.php:11
+msgid "Right sidebar"
+msgstr "Right sidebar"
+
+#: ../inc/register/agnosia-register-status-options.php:12
+msgid "Status"
+msgstr "Status"
+
+#: ../inc/register/agnosia-register-status-options.php:13
+msgid "Enable status post format"
+msgstr "Enable status post format"
+
+#: ../inc/register/agnosia-register-status-options.php:27
+msgid "Show author avatar as thumbnail"
+msgstr "Show author avatar as thumbnail"
+
+#: ../inc/register/agnosia-register-status-options.php:41
+msgid "Show author name before content"
+msgstr "Show author name before content"
+
+#: ../inc/register/agnosia-register-styles.php:3
+#, fuzzy
+msgid "Agnosia Basic"
+msgstr "Agnosia Options"
+
+#: ../inc/register/agnosia-register-styles.php:4
+#, fuzzy
+msgid "Agnosia Blank"
+msgstr "Agnosia Options"
+
+#: ../inc/register/agnosia-register-videos-options.php:12
+msgid "Videos"
+msgstr "Videos"
+
+#: ../inc/register/agnosia-register-videos-options.php:13
+msgid "Enable video post format"
+msgstr "Enable video post format"
+
+#: ../inc/register/agnosia-register-videos-options.php:279
+msgid "Show permalink to top"
+msgstr "Show permalink to top"
+
+#: ../inc/templates/content/page-edit.php:3
+#, fuzzy
+msgid "Edit this page"
+msgstr "Edit this entry"
+
+#: ../inc/templates/content/page-navigation.php:6
+msgid "&larr; Older Entries"
+msgstr "&larr; Older Entries"
+
+#: ../inc/templates/content/page-navigation.php:10
+msgid "Newer Entries &rarr;"
+msgstr "Newer Entries &rarr;"
+
+#: ../inc/templates/content/pages-meta-after.php:10
+#: ../inc/templates/content/pages-meta-before.php:8
+#: ../inc/templates/content/posts-meta-after.php:10
+#: ../inc/templates/content/posts-meta-before.php:8
+msgid "By"
+msgstr "By"
+
+#: ../inc/templates/content/pages-meta-after.php:18
+#: ../inc/templates/content/pages-meta-before.php:30
+#: ../inc/templates/content/posts-meta-after.php:42
+#: ../inc/templates/content/posts-meta-before.php:54
+msgid "No Comments"
+msgstr "No Comments"
+
+#: ../inc/templates/content/pages-meta-after.php:18
+#: ../inc/templates/content/pages-meta-before.php:30
+#: ../inc/templates/content/posts-meta-after.php:42
+#: ../inc/templates/content/posts-meta-before.php:54
+msgid "1 Comment"
+msgstr "1 Comment"
+
+#: ../inc/templates/content/pages-meta-after.php:18
+#: ../inc/templates/content/pages-meta-before.php:30
+#: ../inc/templates/content/posts-meta-after.php:42
+#: ../inc/templates/content/posts-meta-before.php:54
+msgid "% Comments"
+msgstr "% Comments"
+
+#: ../inc/templates/content/pages-meta-after.php:26
+#: ../inc/templates/content/pages-meta-before.php:38
+#: ../inc/templates/content/posts-meta-after.php:50
+#: ../inc/templates/content/posts-meta-before.php:62
+msgid "Permalink"
+msgstr "Permalink"
+
+#: ../inc/templates/content/post-edit.php:8
+msgid "Edit this entry"
+msgstr "Edit this entry"
+
+#: ../inc/templates/content/read-more.php:1
+msgid "Read more"
+msgstr "Read more"
+
+#: ../inc/templates/general/searchform.php:2
+#: ../inc/templates/header/branding-navbar-searchform.php:2
+#: ../inc/templates/header/top-navbar-searchform.php:2
+msgid "Search"
+msgstr "Search"
+
+#: ../inc/templates/sidebar/archives-list.php:1
+msgid "Archives"
+msgstr "Archives"
+
+#: ../inc/templates/sidebar/categories-list.php:1
+msgid "Categories"
+msgstr "Categories"
+
+#: ../inc/templates/sidebar/meta-links-list.php:1
+msgid "Meta"
+msgstr "Meta"
+
+#: ../inc/templates/sidebar/subscribe-links-list.php:1
+#, fuzzy
+msgid "Subscribe"
+msgstr "Suscribe"
+
+#: ../inc/templates/sidebar/subscribe-links-list.php:4
+msgid "Entries (RSS)"
+msgstr "Entries (RSS)"
+
+#: ../inc/templates/sidebar/subscribe-links-list.php:5
+msgid "Comments (RSS)"
+msgstr "Comments (RSS)"
+
+#~ msgid "(required)"
+#~ msgstr "(required)"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Submit Comment"
+
+#~ msgid "Tags: "
+#~ msgstr "Tags: "
+
+#~ msgid "Save Options"
+#~ msgstr "Save Options"
+
+#~ msgid "Posted in"
+#~ msgstr "Posted in"
+
+#~ msgid "F jS, Y"
+#~ msgstr "F jS, Y"
