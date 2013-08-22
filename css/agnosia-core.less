@@ -9,7 +9,7 @@
  * @package Agnosia
  */
 
- @base: #333333;
+@base: #333333;
 @black: #000000;
 @grey1: #999999;
 @grey2: #777777;
@@ -84,7 +84,7 @@ article {
 
 	.entry {
 
-		margin: 15px 0;
+		margin: 0;
 		padding: 15px 0;
 	
 		&.status {
@@ -188,7 +188,7 @@ article {
 
 	header {
 
-		margin: 15px 0;
+		margin: 0;
 		overflow: hidden;
 		padding: 15px 0;
 
@@ -599,6 +599,8 @@ body.medium, body.small {
 
 		.search-query {
 			.available;
+			min-height: 30px;
+			line-height: 30px;
 		}
 
 	}
@@ -1013,7 +1015,10 @@ body.medium, body.small {
 }
 
 .available (@width: available) {
-	width: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
 	width: -webkit-available;
 	width: -moz-available;
 	width: -ms-available;

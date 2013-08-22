@@ -35,8 +35,16 @@ function display_searchforms() {
 
 
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
+
 	display_searchforms();
+
+	if ( $.trim( $( '.page .page-footer' ).html() ) == '' ) {
+		$( '.page .page-footer' ).hide();
+	}
+
+	//$( '.page .page-footer' ).hide();
+
 });
 
 jQuery(window).resize(function() {

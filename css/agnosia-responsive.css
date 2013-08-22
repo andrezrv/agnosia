@@ -174,7 +174,7 @@ body.large header#header .page_item .sub-menu:not(.dropdown-menu) li:hover {
 }
 body.medium header#header .container,
 body.small header#header .container {
-  padding: 0px 15px;
+  padding: 0;
 }
 body.medium header#header #branding .container,
 body.small header#header #branding .container {

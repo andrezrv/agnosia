@@ -37,9 +37,9 @@ function agnosia_enqueue_scripts() {
 
    // Register Bootstrap default scripts
    if ( agnosia_style_has_custom_bootstrap( agnosia_get( 'stylesheet' ) ) ) :         
-      wp_enqueue_script( 'bootstrap.min.script' , agnosia_get_uri( '/bootstrap/' . agnosia_get( 'stylesheet' ) . '/js/bootstrap.min.js' ) , array() , '2.3.2' );     
+      wp_enqueue_script( 'bootstrap.min.script' , agnosia_get_uri( '/bootstrap/' . agnosia_get( 'stylesheet' ) . '/js/bootstrap.min.js' ) , array( 'jquery' ) , '2.3.2' );     
    else :
-      wp_enqueue_script( 'bootstrap.min.script' , agnosia_get_uri( '/bootstrap/js/bootstrap.min.js' ) , array() , '2.3.2' );
+      wp_enqueue_script( 'bootstrap.min.script' , agnosia_get_uri( '/bootstrap/js/bootstrap.min.js' ) , array( 'jquery' ) , '2.3.2' );
    endif;
 
    // Register Agnosia script in order to set body class by window size when responsive mode is enabled
