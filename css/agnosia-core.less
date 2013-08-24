@@ -35,6 +35,12 @@ div, section {
 	.bordered-box;
 }
 
+input {
+	&[type="text"], &[type="password"] {
+		min-height: 30px;
+	}
+}
+
 header#header {
 	background-color: @white;
 	.navbar-inner {
@@ -462,13 +468,24 @@ body.medium, body.small {
 
     position: relative;
 
-    input[type="text"], textarea {
+    textarea {
         .available;
     }
 
+    input[type="text"] {
+    	.available;
+    	clear: both;
+    	display: block;
+    	min-width: 200px;
+    	max-width: 350px;
+    }
+	
     label {
+    	display: block;
     	float: left;
-    	margin-right: 5px;
+    	+ .required {
+    		float: left;
+    	}
     }
 
     .required {
@@ -477,6 +494,10 @@ body.medium, body.small {
 
     .form-allowed-tags {
         margin-bottom: 20px;
+    }
+
+    .comment-form-url + .control-group {
+    	margin-top: 35px;
     }
 
 }

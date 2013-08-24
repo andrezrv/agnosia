@@ -21,6 +21,10 @@ section {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+input[type="text"],
+input[type="password"] {
+  min-height: 30px;
+}
 header#header {
   background-color: #ffffff;
 }
@@ -359,7 +363,6 @@ body.small #branding .navbar .brand {
 #commentform {
   position: relative;
 }
-#commentform input[type="text"],
 #commentform textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -371,15 +374,36 @@ body.small #branding .navbar .brand {
   width: -o-available;
   width: available;
 }
+#commentform input[type="text"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  width: -webkit-available;
+  width: -moz-available;
+  width: -ms-available;
+  width: -o-available;
+  width: available;
+  clear: both;
+  display: block;
+  min-width: 200px;
+  max-width: 350px;
+}
 #commentform label {
+  display: block;
   float: left;
-  margin-right: 5px;
+}
+#commentform label + .required {
+  float: left;
 }
 #commentform .required {
   float: left;
 }
 #commentform .form-allowed-tags {
   margin-bottom: 20px;
+}
+#commentform .comment-form-url + .control-group {
+  margin-top: 35px;
 }
 #credits {
   font-size: 11px;
