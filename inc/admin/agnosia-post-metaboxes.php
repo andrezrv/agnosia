@@ -275,8 +275,7 @@ if ( is_admin() ) :
 
 		<div id="agnosia-settings-container"></div>
 
-		<a id="agnosia-ajax-url" style="display:none;" href="<?php echo agnosia_get_uri( '/inc/admin/agnosia-load-dynamic-post-settings.php' ); ?>"><?php _e( 'Ajax URL' , 'agnosia' ); ?></a>
-		<a id="agnosia-home-path" style="display:none;" href="<?php echo get_home_path(); ?>"><?php _e( 'Home path' , 'agnosia' ); ?></a>
+		<a id="agnosia-ajax-url" style="display:none;" href="<?php echo get_admin_url(); ?>admin-ajax.php"><?php _e( 'Ajax URL' , 'agnosia' ); ?></a>
 
 		<?php
 		

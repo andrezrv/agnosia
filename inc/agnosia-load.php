@@ -48,6 +48,7 @@ function agnosia_initialize_main_modules() {
 	$agnosia_main_modules = array(
 		
 		'/theme-options.php', /* Load theme configuration page. */	
+		'/inc/admin/agnosia-load-dynamic-post-settings.php', /* Load settings for posts and and pages. */	
 		'/inc/admin/agnosia-admin-metaboxes.php', /* Load metaboxes for posts and pages. */	
 		'/inc/support/agnosia-theme-support.php', /* Add support for custom headers, backgrounds, post formats, post types, etc. */	
 		'/inc/support/agnosia-custom-theme-support.php', /* Additional custom theme support. */	### CUSTOMIZABLE FILE! ###
