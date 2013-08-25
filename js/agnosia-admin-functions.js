@@ -72,7 +72,7 @@ function load_dynamic_settings_with_format( format ) {
 	jQuery.ajax({
 		type: 'POST' ,
 		url: url ,
-		data: { post_type : post_type , post_ID : post_ID , post_format : post_format , home_path : home_path }
+		data: { action : 'agnosia_load_dynamic_post_settings' , post_type : post_type , post_ID : post_ID , post_format : post_format }
 	}).done( function( html ) {
 		jQuery("#agnosia-settings-container").html(html);
 	});
