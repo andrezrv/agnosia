@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Agnosia 1.0\n"
-"POT-Creation-Date: 2013-08-01 16:56-0300\n"
-"PO-Revision-Date: 2013-08-01 17:04-0300\n"
-"Last-Translator: Andrés Villarreal <andrezrv@gmail.com>\n"
+"POT-Creation-Date: 2013-08-25 01:01-0300\n"
+"PO-Revision-Date: 2013-08-25 01:31-0300\n"
+"Last-Translator: andrezrv <andrezrv@gmail.com>\n"
 "Language-Team: Agnosia Team <andrezrv@gmail.com>\n"
 "Language: English\n"
 "MIME-Version: 1.0\n"
@@ -125,7 +125,7 @@ msgstr "Sitio web"
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados."
 
-#: ../index.php:112 ../inc/filters/agnosia-filters.php:93
+#: ../index.php:112 ../inc/filters/agnosia-filters.php:106
 msgid "Not Found"
 msgstr "Página no encontrada"
 
@@ -550,6 +550,27 @@ msgstr "Mostrar pie de página"
 msgid "Hide site footer"
 msgstr "Ocultar pie de página"
 
+#: ../inc/admin/agnosia-post-metaboxes.php:41
+msgid "Excerpt settings"
+msgstr "Configuración de extracto"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:56
+#: ../inc/register/agnosia-register-general-options.php:123
+msgid "Custom stylesheet"
+msgstr "Hoja de estilos propia"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:73
+msgid "Featured image position"
+msgstr "Posición de imagen destacada"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:90
+msgid "Override default settings"
+msgstr "Sobreescribir configuración principal"
+
+#: ../inc/admin/agnosia-post-metaboxes.php:103
+msgid "Block advanced options"
+msgstr "Bloquear opciones avanzadas"
+
 #: ../inc/admin/agnosia-post-metaboxes.php:132
 #: ../inc/admin/agnosia-post-metaboxes.php:207
 msgid "Into post"
@@ -657,23 +678,23 @@ msgstr "Bloquear opción de sobreescribir configuración principal"
 msgid "Select Media"
 msgstr "Seleccionar Archivo"
 
-#: ../inc/filters/agnosia-filters.php:61
+#: ../inc/filters/agnosia-filters.php:74
 msgid "Tag Archive for &quot;"
 msgstr "Archivo de Etiquetas para &quot;"
 
-#: ../inc/filters/agnosia-filters.php:67
+#: ../inc/filters/agnosia-filters.php:80
 msgid "Archive"
 msgstr "Archivo"
 
-#: ../inc/filters/agnosia-filters.php:72
+#: ../inc/filters/agnosia-filters.php:85
 msgid "Search For"
 msgstr "Buscar"
 
-#: ../inc/filters/agnosia-filters.php:110
+#: ../inc/filters/agnosia-filters.php:123
 msgid "Page"
 msgstr "Página"
 
-#: ../inc/filters/agnosia-filters.php:200
+#: ../inc/filters/agnosia-filters.php:213
 msgid "Click here to cancel reply."
 msgstr "Click para cancelar respuesta"
 
@@ -1090,10 +1111,6 @@ msgstr "Estilo del contenedor"
 #: ../inc/register/agnosia-register-general-options.php:107
 msgid "Define how to wrap the site containers."
 msgstr "Definir cómo agrupar los contenedores del sitio."
-
-#: ../inc/register/agnosia-register-general-options.php:123
-msgid "Custom stylesheet"
-msgstr "Hoja de estilos propia"
 
 #: ../inc/register/agnosia-register-general-options.php:124
 msgid ""
@@ -1547,6 +1564,7 @@ msgid "Edit this entry"
 msgstr "Editar esta entrada"
 
 #: ../templates/content/read-more.php:16
+#: ../templates/content/the-content.php:26
 msgid "Read more"
 msgstr "Leer más"
 
