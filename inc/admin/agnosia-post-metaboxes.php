@@ -38,7 +38,7 @@ if ( is_admin() ) :
 
 		add_meta_box(
 			'post-excerpt-settings',			// Unique ID
-			esc_html__( 'Excerpt settings', 'agnosia' ),		// Title
+			esc_html( __( 'Excerpt settings', 'agnosia' ) ),		// Title
 			'agnosia_post_excerpt_settings_meta_box',		// Callback function
 			'',					// Admin page (or post type)
 			'side',					// Context
@@ -53,7 +53,7 @@ if ( is_admin() ) :
 
 			add_meta_box(
 				'post-custom-stylesheet',			// Unique ID
-				esc_html__( 'Custom stylesheet', 'agnosia' ),		// Title
+				esc_html( __( 'Custom stylesheet', 'agnosia' ) ),		// Title
 				'agnosia_post_custom_stylesheet_meta_box',		// Callback function
 				'',					// Admin page (or post type)
 				'advanced',					// Context
@@ -70,7 +70,7 @@ if ( is_admin() ) :
 
 			add_meta_box(
 				'post-featured-image-settings',			// Unique ID
-				esc_html__( 'Featured image position', 'agnosia' ),		// Title
+				esc_html( __( 'Featured image position', 'agnosia' ) ),		// Title
 				'agnosia_post_featured_image_settings_meta_box',		// Callback function
 				'',					// Admin page (or post type)
 				'side',					// Context
@@ -87,7 +87,7 @@ if ( is_admin() ) :
 
 			add_meta_box(
 				'post-custom-settings',			// Unique ID
-				esc_html__( 'Override default settings', 'agnosia' ),		// Title
+				esc_html ( __( 'Override default settings', 'agnosia' ) ),		// Title
 				'agnosia_post_settings_meta_box',		// Callback function
 				'',					// Admin page (or post type)
 				'advanced',					// Context
@@ -100,7 +100,7 @@ if ( is_admin() ) :
 
 			add_meta_box(
 				'post-block-advanced-options',		// Unique ID
-				esc_html__( 'Block advanced options', 'agnosia' ),		// Title
+				esc_html( __( 'Block advanced options', 'agnosia' ) ),		// Title
 				'agnosia_post_block_advanced_options',		// Callback function
 				'',					// Admin page (or post type)
 				'advanced',					// Context
