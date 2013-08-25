@@ -87,10 +87,10 @@ function agnosia_support_post_formats_custom_post_types() {
 
 }
 
-add_action( 'agnosia_after_setup' , 'agnosia_initialize_post_formats' );
-add_action( 'agnosia_after_setup' , 'agnosia_support_post_formats' );
-add_action( 'agnosia_after_setup' , 'agnosia_support_post_formats_pages' );
-add_action( 'agnosia_after_setup' , 'agnosia_support_post_formats_custom_post_types' );
+add_action( 'init' , 'agnosia_initialize_post_formats' );
+add_action( 'init' , 'agnosia_support_post_formats' );
+add_action( 'init' , 'agnosia_support_post_formats_pages' );
+add_action( 'init' , 'agnosia_support_post_formats_custom_post_types' );
 
 
 ?>
