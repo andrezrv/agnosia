@@ -146,8 +146,22 @@ function agnosia_add_theme_support( $modules ) {
 
         foreach ( $modules as $name => $attrs ) :
 
-            if ( $attrs ) :  add_theme_support( $name, $attrs );
-            else : add_theme_support( $name );
+            if ( $attrs and 'custom-header' == $name ) :
+
+                add_theme_support( 'custom-header', $attrs ); // Required to pass theme checks
+
+            elseif ( $attrs and 'custom-background' == $name ) :
+
+                add_theme_support( 'custom-background', $attrs ); // Required to pass theme checks
+
+            elseif ( $attrs ) :  
+
+               add_theme_support( $name, $attrs );
+
+            else : 
+
+               add_theme_support( $name );
+
             endif;
 
         endforeach;
