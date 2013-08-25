@@ -41,6 +41,9 @@ header#header .navbar-inner .sub-menu:not(.dropdown-menu) li a:hover {
 article .entry {
   overflow: visible;
 }
+article .entry p {
+  overflow: auto;
+}
 article .metadata {
   overflow: hidden;
 }
