@@ -66,7 +66,7 @@ function agnosia_initialize_custom_theme_support() {
 		 * You can add support for the following functions via child themes.
 		 */
 
-		//'agnosia-post-formats' => false , /* Allows to manage and support post formats through the Agnosia Options admin page. */
+		'agnosia-post-formats' => true , /* Allows to manage and support post formats through the Agnosia Options admin page. */
 		//'agnosia-post-formats-custom-post-types' => false , /* Allows to manage and support post formats for custom post types through the Agnosia Options page. */
 		//'agnosia-post-formats-pages' => false , /* Allows to manage and support post formats for pages through the Agnosia Options page. */
 		//'agnosia-widget-shortcodes' => false , /* Adds shortcode parsing in widgets. */
