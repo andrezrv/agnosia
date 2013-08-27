@@ -153,7 +153,7 @@ if ( current_theme_supports( 'agnosia-branding' ) ) :
 		'html' => array(
 			'before' => '<div class="dependent" id="header[show_header_branding_section][dependent]">' ,
 			'label' => '<strong>' . __( 'Show site description' , 'agnosia' ) . '</strong>' ,
-			'description' => '<small>' . sprintf( __( 'Display site description defined in %1$sSettings%2$s.' , 'agnosia' ) , '<a href="options-general.php">', '</a>' ) . '</small>' ,
+			'description' => '<small>' . sprintf( __( 'Display site description defined in %1$sSettings%2$s.' , 'agnosia' ) , '<a href="' . agnosia_get_admin_settings_url() . '">', '</a>' ) . '</small>' ,
 			'after' => '' ,
 		),
 	) );
@@ -409,7 +409,7 @@ if ( current_theme_supports( 'agnosia-additional-site-description' ) ) :
 		'html' => array(
 			'before' => '<div class="misc-pub-section" style="padding: 0; border-bottom: none;"><h4>' . __( 'Site description' , 'agnosia' ) . '</h4>' ,
 			'label' => '<strong>' . __( 'Show site description' , 'agnosia' ) . '</strong>' ,
-			'description' => '<small>' . sprintf( __( 'Display site description defined in %1$sSettings%2$s into a separated element' , 'agnosia' ) , '<a href="options-general.php">', '</a>' ) . '</small>' ,
+			'description' => '<small>' . sprintf( __( 'Display site description defined in %1$sSettings%2$s into a separated element' , 'agnosia' ) , '<a href="' . agnosia_get_admin_settings_url() . '">', '</a>' ) . '</small>' ,
 			'after' => '</div></div>' ,
 		),
 	) );
