@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Agnosia 1.0\n"
 "POT-Creation-Date: 2013-08-25 01:01-0300\n"
-"PO-Revision-Date: 2013-08-25 01:31-0300\n"
+"PO-Revision-Date: 2013-08-27 12:07-0300\n"
 "Last-Translator: andrezrv <andrezrv@gmail.com>\n"
 "Language-Team: Agnosia Team <andrezrv@gmail.com>\n"
 "Language: English\n"
@@ -34,7 +34,7 @@ msgstr "No se encontraron resultados"
 
 #: ../author.php:28 ../inc/outputs/agnosia-outputs.php:191
 msgid "Author Archive"
-msgstr "Archivo de Autor"
+msgstr "Archivo de autor"
 
 #: ../category.php:28 ../inc/outputs/agnosia-outputs.php:176
 #, php-format
@@ -680,7 +680,7 @@ msgstr "Seleccionar Archivo"
 
 #: ../inc/filters/agnosia-filters.php:74
 msgid "Tag Archive for &quot;"
-msgstr "Archivo de Etiquetas para &quot;"
+msgstr "Archivo de etiquetas para &quot;"
 
 #: ../inc/filters/agnosia-filters.php:80
 msgid "Archive"
@@ -702,7 +702,7 @@ msgstr "Click para cancelar respuesta"
 #: ../inc/outputs/agnosia-outputs.php:185
 #: ../inc/outputs/agnosia-outputs.php:188
 msgid "Archive For "
-msgstr "Archivo De"
+msgstr "Archivo de"
 
 #: ../inc/outputs/agnosia-outputs.php:194
 msgid "Blog Archives"
