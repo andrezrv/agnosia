@@ -21,7 +21,7 @@ agnosia_register_option( 'responsive' , array(
 	'html' => array(
 		'before' => '<div class="misc-pub-section" style="padding:0;"><h4>' . __( 'Compatibility' , 'agnosia' ) . '</h4>' ,
 		'label' => sprintf( __( 'Make %1$sAgnosia%2$s responsive' , 'agnosia' ), '<strong>', '</strong>' ) ,
-		'description' => '<small>' . sprintf( __( 'Enable %1$sBootstrap%2$s responsive features' , 'agnosia') , '<strong>' , '</strong>' ) . '. ' . sprintf( __( '%1$sView more info%2$s' , 'agnosia' ), '<a href="http://twitter.github.com/bootstrap/">', '</a>' ) . '.</small>' ,
+		'description' => '<small>' . sprintf( __( 'Enable %1$sBootstrap%2$s responsive features' , 'agnosia') , '<strong>' , '</strong>' ) . '. ' . sprintf( __( '%1$sView more info%2$s' , 'agnosia' ), '<a href="' . agnosia_get_bootstrap_url() . '">', '</a>' ) . '.</small>' ,
 		'after' => '' ,
 	),
 ) );
@@ -36,7 +36,7 @@ agnosia_register_option( 'use_prefixfree' , array(
 	'html' => array(
 		'before' => '' ,
 		'label' => sprintf( __( 'Use %1$s-prefix-free%2$s' , 'agnosia' ), '<strong>', '</strong>' ) ,
-		'description' => '<small>' . sprintf( __( 'The %1$s-prefix-free%2$s tool lets you use only unprefixed CSS properties everywhere. It works behind the scenes, adding the current browser\'s prefix to any CSS code, only when it\'s needed.' , 'agnosia' ) , '<strong>' , '</strong>' ) . ' ' . sprintf( __( '%1$sView more info%2$s' , 'agnosia' ), '<a href="http://leaverou.github.com/prefixfree/">', '</a>' ) . '</small>' ,
+		'description' => '<small>' . sprintf( __( 'The %1$s-prefix-free%2$s tool lets you use only unprefixed CSS properties everywhere. It works behind the scenes, adding the current browser\'s prefix to any CSS code, only when it\'s needed.' , 'agnosia' ) , '<strong>' , '</strong>' ) . ' ' . sprintf( __( '%1$sView more info%2$s' , 'agnosia' ), '<a href="' . agnosia_get_prefixfree_url() . '">', '</a>' ) . '</small>' ,
 		'after' => '' ,
 	),
 ) );
