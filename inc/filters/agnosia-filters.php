@@ -76,8 +76,7 @@ function agnosia_filter_title($text) {
 
     elseif ( is_archive() ) :
 
-        wp_title('');
-        echo ' ' . __( 'Archive' , 'agnosia' ) . ' - ';
+        echo agnosia_get_archive_title() . ' - ';
         bloginfo('name');
 
     elseif ( is_search() ) :
