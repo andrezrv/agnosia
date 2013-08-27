@@ -176,7 +176,7 @@ function agnosia_get_archive_title() {
         echo sprintf( __('Archive for the %s Category' , 'agnosia' ) , single_term_title('',false) );
 
     /* If this is a tag archive */ elseif ( is_tag() ) :
-        _e( 'Posts Tagged' , 'agnosia' ); echo ' &#8216'; single_tag_title(); echo '&#8217';
+        _e( 'Posts tagged' , 'agnosia' ); echo ' &#8216'; single_tag_title(); echo '&#8217';
 
     /* If this is a daily archive */ elseif ( is_day() ) :
         _e( 'Archive For ' , 'agnosia' ); echo ' '; the_time();
