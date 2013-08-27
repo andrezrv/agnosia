@@ -81,7 +81,7 @@ function agnosia_theme_options_do_page() {
 
 					<a href="#agnosia_footer_options" class="nav-tab"><?php _e( 'Footer' , 'agnosia' ); ?></a>
 
-					<small><?php echo sprintf( __( 'Agnosia is built with %1$sBootstrap%2$s.' , 'agnosia' ) , '<a href="http://twitter.github.com/bootstrap/">', '</a>' ); ?></small>
+					<small><?php echo sprintf( __( 'Agnosia is built with %1$sBootstrap%2$s.' , 'agnosia' ) , '<a href="' . agnosia_get_bootstrap_url() . '">', '</a>' ); ?></small>
 
 				</h2>
 
@@ -169,7 +169,7 @@ function agnosia_theme_options_do_page() {
 
 					<p class="submit">
 						<input type="submit" class="button button-primary button-large" value="<?php _e( 'Update' , 'agnosia' ); ?>" /> 
-						<a href="themes.php?page=agnosia-theme-options&reset=defaults"><?php _e( 'Reset to default settings' , 'agnosia' ); ?></a>
+						<a href="<?php agnosia_reset_link_url(); ?>"><?php _e( 'Reset to default settings' , 'agnosia' ); ?></a>
 					</p>
 
 				</section>

@@ -38,6 +38,98 @@ function agnosia_get_home_url() {
 
 
 
+function agnosia_admin_settings_url() {
+
+    $agnosia_admin_settings_url = agnosia_get_admin_settings_url();
+    $agnosia_admin_settings_url = apply_filters( __FUNCTION__ , $agnosia_admin_settings_url );
+
+    echo $agnosia_admin_settings_url;
+
+}
+
+
+/**
+ * Obtain URL of settings page in admin dashboard.
+ * Is there a native way to do this? I didn't find any and feel kinda silly doing this.
+ * @author: andrezrv
+ */
+function agnosia_get_admin_settings_url() {
+
+    $agnosia_admin_settings_url = get_admin_url() . 'options-general.php';
+    $agnosia_admin_settings_url = apply_filters( __FUNCTION__, $agnosia_admin_settings_url );
+
+    return $agnosia_admin_settings_url;
+
+}
+
+
+
+function agnosia_reset_link_url() {
+
+    $agnosia_reset_link_url = agnosia_get_reset_link_url();
+    $agnosia_reset_link_url = apply_filters( __FUNCTION__ , $agnosia_reset_link_url );
+
+    echo $agnosia_reset_link_url;
+
+}
+
+
+
+function agnosia_get_reset_link_url() {
+
+    $agnosia_reset_link_url = get_admin_url() . 'themes.php?page=agnosia-theme-options&reset=defaults';
+    $agnosia_reset_link_url = apply_filters( __FUNCTION__, $agnosia_reset_link_url );
+
+    return $agnosia_reset_link_url;
+
+}
+
+
+
+function agnosia_bootstrap_url() {
+
+    $agnosia_bootstrap_url = agnosia_get_bootstrap_url();
+    $agnosia_bootstrap_url = apply_filters( __FUNCTION__ , $agnosia_bootstrap_url );
+
+    echo $agnosia_bootstrap_url;
+
+}
+
+
+
+function agnosia_get_bootstrap_url() {
+
+    $agnosia_bootstrap_url = 'http://getbootstrap.com/';
+    $agnosia_bootstrap_url = apply_filters( __FUNCTION__, $agnosia_bootstrap_url );
+
+    return $agnosia_bootstrap_url;
+
+}
+
+
+
+function agnosia_prefixfree_url() {
+
+    $agnosia_prefixfree_url = agnosia_get_prefixfree_url();
+    $agnosia_prefixfree_url = apply_filters( __FUNCTION__ , $agnosia_prefixfree_url );
+
+    echo $agnosia_prefixfree_url;
+
+}
+
+
+
+function agnosia_get_prefixfree_url() {
+
+    $agnosia_prefixfree_url = 'http://leaverou.github.com/prefixfree/';
+    $agnosia_prefixfree_url = apply_filters( __FUNCTION__, $agnosia_prefixfree_url );
+
+    return $agnosia_prefixfree_url;
+
+}
+
+
+
 function agnosia_body_class() {
 
     $output =  agnosia_get_body_class();
@@ -179,18 +271,18 @@ function agnosia_get_archive_title() {
         _e( 'Posts tagged' , 'agnosia' ); echo ' &#8216'; single_tag_title(); echo '&#8217';
 
     /* If this is a daily archive */ elseif ( is_day() ) :
-        _e( 'Archive For ' , 'agnosia' ); echo ' '; the_time();
+        _e( 'Archive For ' , 'agnosia' ); echo ' '; the_time( get_option( 'date_format' ) );
 
     /* If this is a monthly archive */ elseif ( is_month() ) :
-        _e( 'Archive For ' , 'agnosia' ); echo ' '; the_time('F, Y');
+        _e( 'Archive For ' , 'agnosia' ); echo ' '; the_time( agnosia_get_month_format() );
 
     /* If this is a yearly archive */ elseif ( is_year() ) :
-        _e( 'Archive For ' , 'agnosia' ); echo ' '; the_time('Y');
+        _e( 'Archive For ' , 'agnosia' ); echo ' '; the_time( agnosia_get_year_format() );
 
     /* If this is an author archive */ elseif ( is_author() ) :
         _e( 'Author Archive' , 'agnosia' );
 
-    /* If this is a paged archive */ elseif ( get_query_var('paged') ) :
+    /* If this is a paged archive */ elseif ( get_query_var( 'paged' ) ) :
         _e( 'Blog Archives' , 'agnosia' );
             
     endif;
@@ -205,6 +297,28 @@ function agnosia_get_archive_title() {
 
     return $archive_title;
 
+}
+
+
+/**
+ * This should be obtained from an option, not hardcoded. Set for v1.0-RC1.2
+ * @author: andrezrv
+ */
+function agnosia_get_month_format() {
+    $output = 'F, Y';
+    $output = apply_filters( __FUNCTION__, $output );
+    return $output;
+}
+
+
+/**
+ * This should be obtained from an option, not hardcoded. Set for v1.0-RC1.2
+ * @author: andrezrv
+ */
+function agnosia_get_year_format() {
+    $output = 'Y';
+    $output = apply_filters( __FUNCTION__, $output );
+    return $output;
 }
 
 
