@@ -50,6 +50,8 @@
 
 		jQuery(href).show();
 
+		jQuery('body').scrollTop(0);
+
 	});
 
 	if ( window.location.hash ) {
@@ -58,6 +60,14 @@
 		jQuery('#agnosia_options_navigation a').removeClass('nav-tab-active');
 		/* Add class active to clicked element */
 		jQuery( '#agnosia_options_navigation a[href="' + window.location.hash + '"]' ).addClass('nav-tab-active');
+
+		jQuery('.wrap > form').attr( 'action' , 'themes.php?page=agnosia-theme-options' + window.location.hash );
+		jQuery('#agnosia_options_container fieldset').hide();
+		jQuery(window.location.hash).show();
+
+		jQuery('body').scrollTop(0);
+		jQuery( '#agnosia_options .updated.fade' ).fadeOut(5000);
+
 	}
 
 });
