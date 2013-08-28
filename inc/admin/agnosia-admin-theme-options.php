@@ -169,7 +169,9 @@ function agnosia_theme_options_do_page() {
 
 					<p class="submit">
 						<input type="submit" class="button button-primary button-large" value="<?php _e( 'Update' , 'agnosia' ); ?>" /> 
-						<a href="<?php agnosia_reset_link_url(); ?>"><?php _e( 'Reset to default settings' , 'agnosia' ); ?></a>
+						<?php if ( defined( AGNOSIA_DEVELOPMENT_MODE ) and AGNOSIA_DEVELOPMENT_MODE ) : ?>
+							<a href="<?php agnosia_reset_link_url(); ?>"><?php _e( 'Reset to default settings' , 'agnosia' ); ?></a>
+						<?php endif; ?>
 					</p>
 
 				</section>
