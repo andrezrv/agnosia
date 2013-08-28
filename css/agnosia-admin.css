@@ -13,6 +13,11 @@
 	font-size: 10px;
 }
 
+#agnosia_options_navigation a.nav-tab-active {
+	pointer-events: none;
+	cursor: default;
+}
+
 #agnosia_options_container fieldset {
 	display: none;
 }
