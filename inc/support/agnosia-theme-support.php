@@ -68,13 +68,13 @@ function agnosia_initialize_custom_theme_support() {
 		 * You can add support for the following functions via child themes.
 		 */
 
-		'agnosia-post-formats' => true , /* Allows to manage and support post formats through the Agnosia Options admin page. */
+		'agnosia-post-formats' => false , /* Allows to manage and support post formats through the Agnosia Options admin page. */
 		//'agnosia-post-formats-custom-post-types' => false , /* Allows to manage and support post formats for custom post types through the Agnosia Options page. */
 		//'agnosia-post-formats-pages' => false , /* Allows to manage and support post formats for pages through the Agnosia Options page. */
 		//'agnosia-widget-shortcodes' => false , /* Adds shortcode parsing in widgets. */
 		//'agnosia-excerpt-shortcodes' => false , /* Adds shortcode parsing in excerpts. */
 		//'agnosia-term-shortcodes' => false , /* Adds shortcode parsing in taxonomies descriptions. */
-		//'agnosia-top-navbar' => false , /* Allows to manage an additional navigation bar, by default in the top of the site. */
+		'agnosia-top-navbar' => false , /* Allows to manage an additional navigation bar, by default in the top of the site. */
 		//'agnosia-secondary-branding' => false , /* Adds options to manage a secondary brand into branding template. */
 		//'agnosia-additional-site-description' => false , /* Allows to show the site description in a separate template, by default after the site header. */
 		//'agnosia-left-sidebar' => false , /* Adds options to manage an additional navigation bar, by default to the left of the content. */
