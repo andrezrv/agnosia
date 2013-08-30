@@ -38,6 +38,9 @@ header#header .navbar-inner {
 header#header .navbar-inner .sub-menu:not(.dropdown-menu) li a:hover {
   background-image: linear-gradient(#0081c2, #0077b3);
 }
+article.status .entry {
+  overflow: hidden;
+}
 article .entry {
   overflow: visible;
 }

@@ -199,7 +199,6 @@ article {
     &.gallery {
 
         .post-thumbnail img:first-child {
-            .Shadowed;
         }
 
     }
@@ -211,12 +210,10 @@ article {
         }
 
         embed:first-child {
-            .Shadowed;
             width: 100%;
         }
 
         iframe {
-            .Shadowed;
             max-width: 100%;
         }
     }
@@ -232,19 +229,16 @@ article {
         }
 
         img:first-child {
-            .Shadowed;
         }
 
         .wp-caption {
 
-            .Shadowed;
             .Square;
             background: @lighterGrey;
             line-height: 20px;
 
             img:first-child {
-                .Shadowed(none);
-                margin: 0;
+                margin: -1px;
             }
 
             .wp-caption-dt {
@@ -418,13 +412,11 @@ p , .info, .edit-entry, .content ul li, .content ol li, #footer ul li, #footer o
 
 blockquote {
 
-    border-bottom: 1px solid @lighterGrey;
-    border-left: medium none;
-    border-top: 1px solid @lighterGrey;
+    border: none;
     color: @base;
     font-style: italic;
     overflow: hidden;
-    padding: 15px;
+    padding: 15px 0;
 
     p {
 
@@ -446,7 +438,7 @@ blockquote {
         content: "“";
         float: left;
         font-size: 48px;
-        left: 15px;
+        left: 0;
         margin: 9px 5px 0 0;
         position: absolute;
     }
@@ -627,7 +619,6 @@ blockquote {
 }
 
 .post-thumbnail img {
-    .Shadowed;
 }
 
 .page-header {
@@ -687,6 +678,11 @@ body {
                 margin: 0 auto;
             }
 
+        }
+
+        .container.main {
+            background-color: @white;
+            margin: 15px auto;
         }
 
     }
@@ -833,5 +829,5 @@ body.small, body.medium {
 }
 
 .Square {
-    border: 1px solid rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.05);
 }

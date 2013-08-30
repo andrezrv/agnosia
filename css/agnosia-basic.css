@@ -176,18 +176,13 @@ article.sticky {
   border-top: 5px solid #0081c2;
   padding-top: 10px;
 }
-article.gallery .post-thumbnail img:first-child {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
 article.video .entry {
   overflow: inherit;
 }
 article.video embed:first-child {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   width: 100%;
 }
 article.video iframe {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   max-width: 100%;
 }
 article.image p:empty {
@@ -196,18 +191,13 @@ article.image p:empty {
 article.image .entry {
   overflow: inherit;
 }
-article.image img:first-child {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
 article.image .wp-caption {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   background: #ededed;
   line-height: 20px;
 }
 article.image .wp-caption img:first-child {
-  box-shadow: none;
-  margin: 0;
+  margin: -1px;
 }
 article.image .wp-caption .wp-caption-dt {
   font-weight: normal;
@@ -335,13 +325,11 @@ p,
   font-family: Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
 }
 blockquote {
-  border-bottom: 1px solid #ededed;
-  border-left: medium none;
-  border-top: 1px solid #ededed;
+  border: none;
   color: #333333;
   font-style: italic;
   overflow: hidden;
-  padding: 15px;
+  padding: 15px 0;
 }
 blockquote p {
   clear: both;
@@ -359,7 +347,7 @@ blockquote:before {
   content: "“";
   float: left;
   font-size: 48px;
-  left: 15px;
+  left: 0;
   margin: 9px 5px 0 0;
   position: absolute;
 }
@@ -513,9 +501,6 @@ blockquote cite:before {
 .btn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.post-thumbnail img {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
 .page-header {
   border-bottom: none;
   margin: 0;
@@ -545,6 +530,10 @@ body.custom-background.wrap-footer header#header {
 body.custom-background.wrap-both #global-wrap {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
+}
+body.custom-background .container.main {
+  background-color: #ffffff;
+  margin: 15px auto;
 }
 body.small article footer .metadata section.permalink {
   float: left;
@@ -592,5 +581,5 @@ body.medium #header #branding .navbar-inner .container {
   width: 16px;
 }
 .Square {
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
