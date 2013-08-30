@@ -30,6 +30,13 @@
 		) ) :
 
 			echo $agnosia_branding_menu;
+		
+		else : 
+
+			wp_page_menu( array(
+					'menu_class' => 'menu-header-menu-container',
+				)
+			);
 
 		endif;
 
