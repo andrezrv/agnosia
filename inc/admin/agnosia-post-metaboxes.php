@@ -42,7 +42,7 @@ if ( is_admin() ) :
 			'agnosia_post_excerpt_settings_meta_box',		// Callback function
 			'',					// Admin page (or post type)
 			'side',					// Context
-			'default'					// Priority
+			'core'					// Priority
 		);
 
 		if ( current_user_can( 'content_enable_custom_stylesheet' ) 
@@ -74,7 +74,7 @@ if ( is_admin() ) :
 				'agnosia_post_featured_image_settings_meta_box',		// Callback function
 				'',					// Admin page (or post type)
 				'side',					// Context
-				'default'					// Priority
+				'low'					// Priority
 			);
 
 		endif;
@@ -91,7 +91,7 @@ if ( is_admin() ) :
 				'agnosia_post_settings_meta_box',		// Callback function
 				'',					// Admin page (or post type)
 				'advanced',					// Context
-				'default'					// Priority
+				'core'					// Priority
 			);
 
 		endif;

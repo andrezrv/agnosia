@@ -30,7 +30,7 @@ function agnosia_initialize_wordpress_theme_support() {
 
 	$agnosia_wordpress_theme_support = array(
 
-		'post-thumbnails' => true, // Adds support for featured images - support by default
+		'post-thumbnails' => false, // Adds support for featured images - support by default
 		'custom-background' => false,
 		'custom-header' => array( 'default-text-color' => '000000' ),
 
