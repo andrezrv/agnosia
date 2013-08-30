@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Agnosia 1.0\n"
-"POT-Creation-Date: 2013-08-25 01:32-0300\n"
-"PO-Revision-Date: 2013-08-25 01:32-0300\n"
-"Last-Translator: andrezrv <andrezrv@gmail.com>\n"
+"POT-Creation-Date: 2013-08-29 22:56-0300\n"
+"PO-Revision-Date: 2013-08-29 22:57-0300\n"
+"Last-Translator: Andrés Villarreal <andrezrv@gmail.com>\n"
 "Language-Team: Agnosia Team <andrezrv@gmail.com>\n"
 "Language: English\n"
 "MIME-Version: 1.0\n"
@@ -32,11 +32,11 @@ msgstr ""
 msgid "Nothing Found"
 msgstr "Nothing Found"
 
-#: ../author.php:28 ../inc/outputs/agnosia-outputs.php:191
+#: ../author.php:28 ../inc/outputs/agnosia-outputs.php:283
 msgid "Author Archive"
 msgstr "Author Archive"
 
-#: ../category.php:28 ../inc/outputs/agnosia-outputs.php:176
+#: ../category.php:28 ../inc/outputs/agnosia-outputs.php:268
 #, php-format
 msgid "Archive for the %s Category"
 msgstr "Archive for the %s Category"
@@ -123,7 +123,7 @@ msgstr "Website"
 msgid "Comments are closed."
 msgstr "Comments are closed."
 
-#: ../index.php:112 ../inc/filters/agnosia-filters.php:106
+#: ../index.php:112 ../inc/filters/agnosia-filters.php:105
 msgid "Not Found"
 msgstr "Not Found"
 
@@ -140,7 +140,7 @@ msgstr "You searched for &quot;%s&quot;"
 msgid "No posts found"
 msgstr "No posts found"
 
-#: ../tag.php:28 ../inc/outputs/agnosia-outputs.php:179
+#: ../tag.php:28
 msgid "Posts Tagged"
 msgstr "Posts Tagged"
 
@@ -204,7 +204,7 @@ msgstr "Footer Options"
 msgid "Update"
 msgstr "Update"
 
-#: ../inc/admin/agnosia-admin-theme-options.php:172
+#: ../inc/admin/agnosia-admin-theme-options.php:173
 msgid "Reset to default settings"
 msgstr "Reset to default settings"
 
@@ -651,23 +651,19 @@ msgstr "Replace Gravatar"
 msgid "Ajax URL"
 msgstr "Ajax URL"
 
-#: ../inc/admin/agnosia-post-metaboxes.php:279
-msgid "Home path"
-msgstr "Home path"
-
-#: ../inc/admin/agnosia-post-metaboxes.php:306
+#: ../inc/admin/agnosia-post-metaboxes.php:305
 msgid "Block custom stylesheet option"
 msgstr "Block custom stylesheet option"
 
-#: ../inc/admin/agnosia-post-metaboxes.php:310
+#: ../inc/admin/agnosia-post-metaboxes.php:309
 msgid "Block additional HTML option"
 msgstr "Block additional HTML option"
 
-#: ../inc/admin/agnosia-post-metaboxes.php:314
+#: ../inc/admin/agnosia-post-metaboxes.php:313
 msgid "Block featured image position option"
 msgstr "Block featured image position option"
 
-#: ../inc/admin/agnosia-post-metaboxes.php:317
+#: ../inc/admin/agnosia-post-metaboxes.php:316
 msgid "Block override default settings option"
 msgstr "Block override default settings option"
 
@@ -679,41 +675,41 @@ msgstr "Select Media"
 msgid "Tag Archive for &quot;"
 msgstr "Tag Archive for &quot;"
 
-#: ../inc/filters/agnosia-filters.php:80
-msgid "Archive"
-msgstr "Archive"
-
-#: ../inc/filters/agnosia-filters.php:85
+#: ../inc/filters/agnosia-filters.php:84
 msgid "Search For"
 msgstr "Search For"
 
-#: ../inc/filters/agnosia-filters.php:123
+#: ../inc/filters/agnosia-filters.php:122
 msgid "Page"
 msgstr "Page"
 
-#: ../inc/filters/agnosia-filters.php:213
+#: ../inc/filters/agnosia-filters.php:212
 msgid "Click here to cancel reply."
 msgstr "Click here to cancel reply."
 
-#: ../inc/outputs/agnosia-outputs.php:182
-#: ../inc/outputs/agnosia-outputs.php:185
-#: ../inc/outputs/agnosia-outputs.php:188
+#: ../inc/outputs/agnosia-outputs.php:271
+msgid "Posts tagged"
+msgstr "Posts tagged"
+
+#: ../inc/outputs/agnosia-outputs.php:274
+#: ../inc/outputs/agnosia-outputs.php:277
+#: ../inc/outputs/agnosia-outputs.php:280
 msgid "Archive For "
 msgstr "Archive For "
 
-#: ../inc/outputs/agnosia-outputs.php:194
+#: ../inc/outputs/agnosia-outputs.php:286
 msgid "Blog Archives"
 msgstr "Blog Archives"
 
-#: ../inc/outputs/agnosia-outputs.php:1284
+#: ../inc/outputs/agnosia-outputs.php:1398
 msgid "Pages:"
 msgstr "Pages:"
 
-#: ../inc/outputs/agnosia-outputs.php:1289
+#: ../inc/outputs/agnosia-outputs.php:1403
 msgid "Next page"
 msgstr "Next page"
 
-#: ../inc/outputs/agnosia-outputs.php:1290
+#: ../inc/outputs/agnosia-outputs.php:1404
 msgid "Previous page"
 msgstr "Previous page"
 
@@ -1489,12 +1485,12 @@ msgid "Show author name before content"
 msgstr "Show author name before content"
 
 #: ../inc/register/agnosia-register-styles.php:16
-msgid "Agnosia Basic"
-msgstr "Agnosia Basic"
+msgid "Éros (Agnosia Basic Style)"
+msgstr "Éros (Agnosia Basic Style)"
 
 #: ../inc/register/agnosia-register-styles.php:17
-msgid "Agnosia Blank"
-msgstr "Agnosia Blank"
+msgid "Gea (Agnosia Blank Style)"
+msgstr "Gea (Agnosia Blank Style)"
 
 #: ../inc/register/agnosia-register-videos-options.php:23
 msgid "Videos"
@@ -1589,6 +1585,12 @@ msgstr "Entries (RSS)"
 #: ../templates/sidebar/subscribe-links-list.php:20
 msgid "Comments (RSS)"
 msgstr "Comments (RSS)"
+
+#~ msgid "Home path"
+#~ msgstr "Home path"
+
+#~ msgid "Archive"
+#~ msgstr "Archive"
 
 #~ msgid ""
 #~ "Use your own CSS file for adding details and/or overriding the main "

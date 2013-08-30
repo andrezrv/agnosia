@@ -13,8 +13,8 @@
 
 function agnosia_load_styles() {
 
-	agnosia_register_style( 'agnosia-basic' , __( 'Agnosia Basic' , 'agnosia' ) );
-	agnosia_register_style( 'agnosia-blank' , __( 'Agnosia Blank' , 'agnosia' ) );
+	agnosia_register_style( 'agnosia-basic' , __( 'Éros (Agnosia Basic Style)' , 'agnosia' ) );
+	agnosia_register_style( 'agnosia-blank' , __( 'Gea (Agnosia Blank Style)' , 'agnosia' ) );
 
 }
 

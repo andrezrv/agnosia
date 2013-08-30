@@ -10,7 +10,10 @@
  */
 
 #agnosia_options_navigation small {
-	font-size: 10px;
+    display: block;
+    font-size: 10px;
+    position: absolute;
+    right: 20px;
 }
 
 #agnosia_options_navigation a.nav-tab-active {
@@ -84,7 +87,7 @@
 
 .agnosia-field select ,
 .agnosia-field input[type="text"] {
-	width: 25%;
+	width: 30%;
 }
 
 .agnosia-field input[type="checkbox"] {
