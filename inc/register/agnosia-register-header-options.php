@@ -64,7 +64,7 @@ if ( current_theme_supports( 'agnosia-top-navbar' ) ) :
 
 	agnosia_register_option( 'header_top_navbar_show_brand' , array( 
 		'type' => 'checkbox' , 
-		'value' => 'true' , 
+		'value' => 'false' , 
 		'values' => array( 'true' , 'false' ) , 
 		'category' => 'header' , 
 		'parent' => 'show_header_top_navbar' , 
@@ -94,7 +94,7 @@ if ( current_theme_supports( 'agnosia-top-navbar' ) ) :
 
 	agnosia_register_option( 'header_top_navbar_show_search' , array( 
 		'type' => 'checkbox' , 
-		'value' => 'true' , 
+		'value' => 'false' , 
 		'values' => array( 'true' , 'false' ) , 
 		'category' => 'header' , 
 		'parent' => 'show_header_top_navbar' , 
@@ -145,7 +145,7 @@ if ( current_theme_supports( 'agnosia-branding' ) ) :
 
 	agnosia_register_option( 'header_branding_section_site_description' , array( 
 		'type' => 'checkbox' , 
-		'value' => 'false' , 
+		'value' => 'true' , 
 		'values' => array( 'true' , 'false' ) , 
 		'category' => 'header' , 
 		'parent' => 'show_header_branding_section' , 
@@ -160,7 +160,7 @@ if ( current_theme_supports( 'agnosia-branding' ) ) :
 
 	agnosia_register_option( 'header_branding_section_show_navigation' , array( 
 		'type' => 'checkbox' , 
-		'value' => 'true' , 
+		'value' => 'false' , 
 		'values' => array( 'true' , 'false' ) , 
 		'category' => 'header' , 
 		'parent' => 'show_header_branding_section' , 

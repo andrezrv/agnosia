@@ -29,7 +29,7 @@ agnosia_register_option( 'content_enable_post_audio' , array(
 
 agnosia_register_option( 'content_show_post_audio_header' , array( 
 	'type' => 'checkbox' , 
-	'value' => 'false' , 
+	'value' => 'true' , 
 	'values' => array( 'true' , 'false' ) , 
 	'category' => 'content' , 
 	'parent' => '' , 

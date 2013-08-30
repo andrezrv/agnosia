@@ -43,7 +43,7 @@ agnosia_register_option( 'content_show_post_quote_source' , array(
 
 agnosia_register_option( 'content_show_post_quote_header' , array( 
 	'type' => 'checkbox' , 
-	'value' => 'false' , 
+	'value' => 'true' , 
 	'values' => array( 'true' , 'false' ) , 
 	'category' => 'content' , 
 	'parent' => '' , 

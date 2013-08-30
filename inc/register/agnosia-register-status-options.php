@@ -57,7 +57,7 @@ agnosia_register_option( 'content_show_post_status_author_name' , array(
 
 agnosia_register_option( 'content_show_post_status_header' , array( 
 	'type' => 'checkbox' , 
-	'value' => 'false' , 
+	'value' => 'true' , 
 	'values' => array( 'true' , 'false' ) , 
 	'category' => 'content' , 
 	'parent' => '' , 
