@@ -93,6 +93,7 @@ function agnosia_theme_options_do_page() {
 							<p>
 								<strong><?php _e( 'Options saved', 'agnosia' ); ?></strong>
 							</p>
+							<span class="close" onclick="jQuery(this).parent().hide();">x</span>
 						</div>
 
 					<?php endif; ?>
@@ -169,8 +170,8 @@ function agnosia_theme_options_do_page() {
 
 					<p class="submit">
 						<input type="submit" class="button button-primary button-large" value="<?php _e( 'Update' , 'agnosia' ); ?>" /> 
-						<?php if ( defined( AGNOSIA_DEVELOPMENT_MODE ) and AGNOSIA_DEVELOPMENT_MODE ) : ?>
-							<a href="<?php agnosia_reset_link_url(); ?>"><?php _e( 'Reset to default settings' , 'agnosia' ); ?></a>
+						<?php if ( defined( AGNOSIA_DEVELOPMENT_MODE ) or AGNOSIA_DEVELOPMENT_MODE ) : ?>
+							<a class="reset-defaults" href="<?php agnosia_reset_link_url(); ?>"><?php _e( 'Reset to default settings' , 'agnosia' ); ?></a>
 						<?php endif; ?>
 					</p>
 

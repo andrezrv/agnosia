@@ -45,6 +45,7 @@
 		/* Add class active to clicked element */
 		jQuery(this).addClass('nav-tab-active');
 		jQuery('.wrap > form').attr( 'action' , 'themes.php?page=agnosia-theme-options' + this.hash );
+		jQuery('.reset-defaults').attr( 'href' , 'themes.php?page=agnosia-theme-options&reset=defaults' + this.hash );
 
 		jQuery('#agnosia_options_container fieldset').hide();
 
@@ -62,11 +63,15 @@
 		jQuery( '#agnosia_options_navigation a[href="' + window.location.hash + '"]' ).addClass('nav-tab-active');
 
 		jQuery('.wrap > form').attr( 'action' , 'themes.php?page=agnosia-theme-options' + window.location.hash );
+		jQuery('.reset-defaults').attr( 'href' , 'themes.php?page=agnosia-theme-options&reset=defaults' + window.location.hash );
 		jQuery('#agnosia_options_container fieldset').hide();
 		jQuery(window.location.hash).show();
 
 		jQuery('body').scrollTop(0);
-		jQuery( '#agnosia_options .updated.fade' ).fadeOut(5000);
+
+		setTimeout( function() {
+			window.scrollTo(0, 0);
+		}, 1 );
 
 	}
 
