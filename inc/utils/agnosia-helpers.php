@@ -47,35 +47,6 @@ function agnosia_get( $option ) {
 
 
 
-function agnosia_evaluate( $option ) {
-
-	global $agnosia;
-	
-	return $agnosia->evaluate( $option ); 
-
-}
-
-
-
-function agnosia_evaluate_variable( $variable ) {
-
-    if ( 'true' === $variable or true === $variable ) : return true; endif;
-    return false;
-
-}
-
-
-
-function agnosia_evaluate_show( $show_key , $hide_key , $object = false , $context = false ) {
-
-    global $agnosia;
-
-    return $agnosia->evaluate_show( $show_key , $hide_key , $object , $context );
-
-}
-
-
-
 function agnosia_get_template( $template , $type ) {
 
     global $agnosia;

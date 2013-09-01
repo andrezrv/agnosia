@@ -1237,5 +1237,47 @@ function agnosia_page_has_large_header() {
 
 }
 
+/** Element evaluations */
+
+function agnosia_evaluate( $option ) {
+
+	global $agnosia;
+	
+	$boolean = $agnosia->evaluate( $option );
+
+	$boolean = apply_filters( __FUNCTION__, $boolean );
+
+	return $boolean; 
+
+}
+
+
+
+function agnosia_evaluate_variable( $variable ) {
+
+    $boolean = false;
+
+    if ( 'true' === $variable or true === $variable ) : $boolean = true; endif;
+
+    $boolean = apply_filters( __FUNCTION__, $boolean );
+
+	return $boolean;
+
+}
+
+
+
+function agnosia_evaluate_show( $show_key , $hide_key , $object = false , $context = false ) {
+
+    global $agnosia;
+
+    $boolean = $agnosia->evaluate_show( $show_key , $hide_key , $object , $context );
+
+    $boolean = apply_filters( __FUNCTION__, $boolean );
+
+	return $boolean;
+
+}
+
 
 ?>
