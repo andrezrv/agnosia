@@ -305,7 +305,7 @@ function agnosia_get_archive_title() {
  * @author: andrezrv
  */
 function agnosia_get_month_format() {
-    $output = 'F, Y';
+    $output = agnosia_get( 'general_month_format' );
     $output = apply_filters( __FUNCTION__, $output );
     return $output;
 }
@@ -316,7 +316,7 @@ function agnosia_get_month_format() {
  * @author: andrezrv
  */
 function agnosia_get_year_format() {
-    $output = 'Y';
+    $output = agnosia_get( 'general_year_format' );;
     $output = apply_filters( __FUNCTION__, $output );
     return $output;
 }
