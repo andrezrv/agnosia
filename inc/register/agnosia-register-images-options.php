@@ -27,6 +27,20 @@ agnosia_register_option( 'content_enable_post_image' , array(
 	),
 ) );
 
+agnosia_register_option( 'content_show_post_image_breadcrumb' , array( 
+	'type' => 'checkbox' , 
+	'value' => 'true' , 
+	'values' => array( 'true' , 'false' ) , 
+	'category' => 'content' , 
+	'parent' => '' , 
+	'html' => array(
+		'before' => '',
+		'label' => __( 'Show breadcrumb if available' , 'agnosia' ) ,
+		'description' => '<em><small>' . __( 'Show breadcrumb if the WordPress SEO plugin is installed and active.' , 'agnosia' ) . '</small></em>' ,
+		'after' => '' ,
+	),
+) );
+
 agnosia_register_option( 'content_show_post_image_header' , array( 
 	'type' => 'checkbox' , 
 	'value' => 'true' , 

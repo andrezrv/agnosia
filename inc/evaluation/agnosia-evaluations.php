@@ -353,6 +353,32 @@ function agnosia_show_footer() {
 
 
 
+function agnosia_show_post_breadcrumb() {
+
+	global $post;
+
+	$boolean = agnosia_evaluate_show( 'content_show_post' . agnosia_get_prefixed_post_format() . '_breadcrumb' , 'content_hide_post' . agnosia_get_prefixed_post_format() . '_breadcrumb' , $post ) ; 
+	$boolean = apply_filters( __FUNCTION__ , $boolean ); 
+
+	return $boolean;
+
+}
+
+
+
+function agnosia_show_page_breadcrumb() {
+
+	global $post;
+
+	$boolean = agnosia_evaluate_show( 'content_show' . agnosia_get_prefixed_page_format() . '_breadcrumb' , 'content_hide' . agnosia_get_prefixed_page_format() . '_breadcrumb' , $post ) ;
+	$boolean = apply_filters( __FUNCTION__ , $boolean ); 
+
+	return $boolean;
+
+}
+
+
+
 function agnosia_show_post_header() {
 	
 	global $post;

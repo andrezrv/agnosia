@@ -21,6 +21,8 @@
 
 <section id="page-container" class="<?php agnosia_content_colspan(); ?> <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
 
+	<?php agnosia_page_breadcrumb(); ?>
+
 	<?php if ( function_exists( 'agnosia_ac_post_additional_html' ) ) : ?>
 		<?php agnosia_load_template( 'before-content' , 'content' ); ?>
 	<?php endif; ?>

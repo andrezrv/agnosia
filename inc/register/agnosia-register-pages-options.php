@@ -19,11 +19,24 @@ agnosia_register_option( 'content_show_page_hierarchy' , array(
 	'values' => array( 'true' , 'false' ) , 
 	'category' => 'content' , 
 	'parent' => '' , 
-	'position' => 8 ,
 	'html' => array(
 		'before' => '<div class="misc-pub-section" style="padding: 0;"><h4>' . __( 'Pages' , 'agnosia' ) . '</h4> ',
 		'label' => __( 'Show hierarchy' , 'agnosia' ) ,
 		'description' => '<em><small>' . __( 'Display a hierarchical navigation list containing the parent, children and sibling pages of the currently retrieved page.' , 'agnosia' ) . '</small></em>' ,
+		'after' => '' ,
+	),
+) );
+
+agnosia_register_option( 'content_show_page_breadcrumb' , array( 
+	'type' => 'checkbox' , 
+	'value' => 'true' , 
+	'values' => array( 'true' , 'false' ) , 
+	'category' => 'content' , 
+	'parent' => '' , 
+	'html' => array(
+		'before' => '',
+		'label' => __( 'Show breadcrumb if available' , 'agnosia' ) ,
+		'description' => '<em><small>' . __( 'Show breadcrumb if the WordPress SEO plugin is installed and active.' , 'agnosia' ) . '</small></em>' ,
 		'after' => '' ,
 	),
 ) );

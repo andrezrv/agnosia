@@ -2014,4 +2014,42 @@ function agnosia_get_page_parent_for_hierarchy($post) {
 }
 
 
+
+function agnosia_page_breadcrumb() {
+
+    ob_start();
+
+    if ( function_exists( 'yoast_breadcrumb' ) and agnosia_show_page_breadcrumb() ) :
+        yoast_breadcrumb( '<div id="breadcrumbs"><p>', '</p></div>' );
+    endif;
+
+    $output = ob_get_contents();
+    ob_end_clean();
+
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+
+function agnosia_post_breadcrumb() {
+
+    ob_start();
+
+    if ( function_exists( 'yoast_breadcrumb' ) and agnosia_show_post_breadcrumb() ) :
+        yoast_breadcrumb( '<div id="breadcrumbs"><p>', '</p></div>' );
+    endif;
+
+    $output = ob_get_contents();
+    ob_end_clean();
+
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
 ?>

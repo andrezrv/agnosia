@@ -67,6 +67,12 @@ function agnosia_load_dynamic_post_settings() {
 		endif;
 
 		agnosia_override_show( 
+			$evaluated = agnosia_evaluate( 'content_show_' . $post_type . $post_format . '_breadcrumb' , 'content' ) , 
+			$show = array( 'key' => 'content_show_' . $post_type . $post_format . '_breadcrumb' ,	'value' => isset( $meta_value['content_show_' . $post_type . $post_format . '_breadcrumb'] ) ? $meta_value['content_show_' . $post_type . $post_format . '_breadcrumb'] : '' , 'text' => __( 'Show breadcrumb' , 'agnosia' ) ) , 
+			$hide = array( 'key' => 'content_hide_' . $post_type . $post_format . '_breadcrumb' , 'value' => isset( $meta_value['content_hide_' . $post_type . $post_format . '_breadcrumb'] ) ? $meta_value['content_hide_' . $post_type . $post_format . '_breadcrumb'] : '' , 'text' => __( 'Hide breadcrumb' , 'agnosia' ) )
+		);
+
+		agnosia_override_show( 
 			$evaluated = agnosia_evaluate( 'content_show_' . $post_type . $post_format . '_header' , 'content' ) , 
 			$show = array( 'key' => 'content_show_' . $post_type . $post_format . '_header' ,	'value' => isset( $meta_value['content_show_' . $post_type . $post_format . '_header'] ) ? $meta_value['content_show_' . $post_type . $post_format . '_header'] : '' , 'text' => sprintf( __( 'Show %s header' , 'agnosia' ) , $_POST['post_type'] ) ) , 
 			$hide = array( 'key' => 'content_hide_' . $post_type . $post_format . '_header' , 'value' => isset( $meta_value['content_hide_' . $post_type . $post_format . '_header'] ) ? $meta_value['content_hide_' . $post_type . $post_format . '_header'] : '' , 'text' => sprintf( __( 'Hide %s header' , 'agnosia' ) , $_POST['post_type'] ) ) ,

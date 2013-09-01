@@ -27,6 +27,20 @@ agnosia_register_option( 'content_enable_post_quote' , array(
 	),
 ) );
 
+agnosia_register_option( 'content_show_post_quote_breadcrumb' , array( 
+	'type' => 'checkbox' , 
+	'value' => 'true' , 
+	'values' => array( 'true' , 'false' ) , 
+	'category' => 'content' , 
+	'parent' => '' , 
+	'html' => array(
+		'before' => '',
+		'label' => __( 'Show breadcrumb if available' , 'agnosia' ) ,
+		'description' => '<em><small>' . __( 'Show breadcrumb if the WordPress SEO plugin is installed and active.' , 'agnosia' ) . '</small></em>' ,
+		'after' => '' ,
+	),
+) );
+
 agnosia_register_option( 'content_show_post_quote_source' , array( 
 	'type' => 'checkbox' , 
 	'value' => 'true' , 
