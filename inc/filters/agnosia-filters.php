@@ -86,19 +86,11 @@ function agnosia_filter_title($text) {
     
     elseif ( !( is_404() ) and ( is_single () ) or ( is_page() ) ) :
 
-        if ( !wp_title( '' , false ) ) : 
+        global $post;
 
-            bloginfo('name');
-            echo ' - '; 
-            bloginfo('description');
-
-        else :
-
-            wp_title(''); 
-            echo ' - ';
-            bloginfo('name');
-
-        endif;
+        echo $post->post_title;
+        echo ' - '; 
+        bloginfo('name');
     
     elseif ( is_404 () ) :
 
