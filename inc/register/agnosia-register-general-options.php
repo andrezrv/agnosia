@@ -122,7 +122,7 @@ agnosia_register_option( 'custom_stylesheet' , array(
 		'before' => '' ,
 		'label' => '<strong>' . __( 'Custom stylesheet' , 'agnosia' ) . '</strong>' ,
 		'description' => '<br /><small>' . __( 'Use your own CSS file for adding details and/or overriding the main styles' , 'agnosia' ) . '.<br /><strong>' . __( 'It must be a valid URL, and you have to upload the file to your desired location on your own.', 'agnosia' ) . '</strong></small>' ,
-		'after' => '</div>' ,
+		'after' => '' ,
 	) ,
 ) );
 
@@ -134,12 +134,40 @@ agnosia_register_option( 'custom_favicon' , array(
 	'parent' => '' , 
 	'position' => 7 ,
 	'html' => array(
-		'before' => '<div class="misc-pub-section" style="padding:0; border-bottom: none;">' ,
+		'before' => '' ,
 		'label' => '<strong>' . __( 'Custom Favicon' , 'agnosia' ) . '</strong>' ,
 		'description' => '<br /><small>' . __( 'Use your own favicon.' , 'agnosia' ) . ' <strong>' . __( 'It must be a valid URL, and you have to upload the file manually or via FTP to your desired location into your WordPress installation.' , 'agnosia' ) . '</strong></small>' ,
 		'after' => '</div>' ,
 		'relative_to' => agnosia_get_home_url() . '/' ,
 	) ,
+) );
+
+agnosia_register_option( 'general_month_format' , array( 
+	'type' => 'input' , 
+	'value' => 'F, Y' , 
+	'values' => 'any' , 
+	'category' => 'general' , 
+	'parent' => '' , 
+	'html' => array(
+		'before' => '<div class="misc-pub-section" style="padding:0; border-bottom: none;"><h4>' . __( 'Date formats for archive pages' , 'agnosia' ) . '</h4>' ,
+		'label' => __( 'Month format' , 'agnosia' ) ,
+		'description' => '<br /><small>' . __( 'Default values are recommended', 'agnosia' ) . '</small>' ,
+		'after' => '' ,
+	),
+) );
+
+agnosia_register_option( 'general_year_format' , array( 
+	'type' => 'input' , 
+	'value' => 'Y' , 
+	'values' => 'any' , 
+	'category' => 'general' , 
+	'parent' => '' , 
+	'html' => array(
+		'before' => '' ,
+		'label' => __( 'Year format' , 'agnosia' ),
+		'description' => '<br /><small>' . __( 'Default values are recommended', 'agnosia' ) . '</small>' ,
+		'after' => '</div>' ,
+	),
 ) );
 
 ?>
