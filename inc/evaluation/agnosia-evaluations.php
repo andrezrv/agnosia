@@ -1273,6 +1273,28 @@ function agnosia_evaluate_show( $show_key , $hide_key , $object = false , $conte
 
     $boolean = $agnosia->evaluate_show( $show_key , $hide_key , $object , $context );
 
+    /**
+     * To do: evaluate for 404, category, tag, date, author, search and archive
+     */
+
+    if ( ( !is_single() or !is_page() ) 
+    	and ( 'show_right_sidebar' == $show_key or 'show_left_sidebar' == $show_key ) 
+    ) :
+
+	    if ( ( is_home() and !agnosia_evaluate( $show_key . '_home' ) )
+	    	or ( is_category() and !agnosia_evaluate( $show_key . '_category' ) )
+	    	or ( is_search() and !agnosia_evaluate( $show_key . '_search' ) )
+	    	or ( is_tag() and !agnosia_evaluate( $show_key . '_tag' ) )
+	    	or ( is_404() and !agnosia_evaluate( $show_key . '_404' ) )
+	    	or ( is_date() and !agnosia_evaluate( $show_key . '_date' ) )
+	    	or ( is_author() and !agnosia_evaluate( $show_key . '_author' ) )
+	    	or ( is_archive() and !agnosia_evaluate( $show_key . '_archive' ) )
+	    ) :
+	    	$boolean = false;
+	    endif;
+
+    endif;
+
     $boolean = apply_filters( __FUNCTION__, $boolean );
 
 	return $boolean;
