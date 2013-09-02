@@ -13,20 +13,6 @@
 
 /*Posts options*/
 
-agnosia_register_option( 'content_show_post_header' , array( 
-	'type' => 'checkbox' , 
-	'value' => 'true' , 
-	'values' => array( 'true' , 'false' ) , 
-	'category' => 'content' , 
-	'parent' => '' , 
-	'html' => array(
-		'before' => '<div class="misc-pub-section" style="padding: 0;"><h4>' . __( 'Posts' , 'agnosia' ) . '</h4> ',
-		'label' => __( 'Show header' , 'agnosia' ) ,
-		'description' => '<em><small>' . __( 'Show title, author and meta data of the currently retrieved post into post header.' , 'agnosia' ) . '</small></em>' ,
-		'after' => '' ,
-	),
-) );
-
 agnosia_register_option( 'content_show_post_breadcrumb' , array( 
 	'type' => 'checkbox' , 
 	'value' => 'true' , 
@@ -34,9 +20,23 @@ agnosia_register_option( 'content_show_post_breadcrumb' , array(
 	'category' => 'content' , 
 	'parent' => '' , 
 	'html' => array(
-		'before' => '',
+		'before' => '<div class="misc-pub-section" style="padding: 0;"><h4>' . __( 'Posts' , 'agnosia' ) . '</h4> ',
 		'label' => __( 'Show breadcrumb if available' , 'agnosia' ) ,
 		'description' => '<em><small>' . __( 'Show breadcrumb if the WordPress SEO plugin is installed and active.' , 'agnosia' ) . '</small></em>' ,
+		'after' => '' ,
+	),
+) );
+
+agnosia_register_option( 'content_show_post_header' , array( 
+	'type' => 'checkbox' , 
+	'value' => 'true' , 
+	'values' => array( 'true' , 'false' ) , 
+	'category' => 'content' , 
+	'parent' => '' , 
+	'html' => array(
+		'before' => '',
+		'label' => __( 'Show header' , 'agnosia' ) ,
+		'description' => '<em><small>' . __( 'Show title, author and meta data of the currently retrieved post into post header.' , 'agnosia' ) . '</small></em>' ,
 		'after' => '' ,
 	),
 ) );

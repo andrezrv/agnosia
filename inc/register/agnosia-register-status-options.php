@@ -34,7 +34,7 @@ agnosia_register_option( 'content_show_post_status_breadcrumb' , array(
 	'category' => 'content' , 
 	'parent' => '' , 
 	'html' => array(
-		'before' => '',
+		'before' => '<div class="dependent" id="content[content_enable_post_status][dependent]">',
 		'label' => __( 'Show breadcrumb if available' , 'agnosia' ) ,
 		'description' => '<em><small>' . __( 'Show breadcrumb if the WordPress SEO plugin is installed and active.' , 'agnosia' ) . '</small></em>' ,
 		'after' => '' ,
@@ -48,7 +48,7 @@ agnosia_register_option( 'content_show_post_status_thumbnail' , array(
 	'category' => 'content' , 
 	'parent' => '' , 
 	'html' => array(
-		'before' => '<div class="dependent" id="content[content_enable_post_status][dependent]">',
+		'before' => '',
 		'label' => __( 'Show author avatar as thumbnail' , 'agnosia' ) ,
 		'description' => '' ,
 		'after' => '' ,
