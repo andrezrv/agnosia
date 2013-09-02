@@ -43,7 +43,13 @@ jQuery(document).ready(function($) {
 		$( '.page .page-footer' ).hide();
 	}
 
-	//$( '.page .page-footer' ).hide();
+	( function( $ ) {
+	    $( document.body ).on( 'post-load', function () {
+	    	if ( $('#page-navigation').length ) {
+		        $('#page-navigation').hide();
+		    }
+	    } );
+	} )( jQuery );
 
 });
 

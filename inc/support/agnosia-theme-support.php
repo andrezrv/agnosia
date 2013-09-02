@@ -33,6 +33,7 @@ function agnosia_initialize_wordpress_theme_support() {
 		'post-thumbnails' => false, // Adds support for featured images - support by default
 		'custom-background' => false,
 		'custom-header' => array( 'default-text-color' => '000000' ),
+		'infinite-scroll' => array( 'container' => 'posts-container', 'footer' => false, 'render' => 'agnosia_infinite_render'),
 
 	);
 

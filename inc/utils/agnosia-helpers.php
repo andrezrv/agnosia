@@ -166,6 +166,19 @@ function agnosia_load_text_domain() {
 
 
 
+function agnosia_infinite_render() {
+
+    while( have_posts() ) :
+        
+        the_post();  
+        agnosia_load_template( 'home-post' , 'content' );
+        
+    endwhile;
+
+}
+
+
+
 function debug( $element , $die = false ) {
 
     echo '<pre>';
