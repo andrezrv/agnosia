@@ -69,12 +69,7 @@ function agnosia_filter_title($text) {
     /* Block output */
     ob_start();
 
-    if ( function_exists('is_tag') && is_tag() ) :
-        
-        single_tag_title( __( 'Tag Archive for &quot;' , 'agnosia' ) );
-        echo '&quot; - '; 
-
-    elseif ( is_archive() ) :
+    if ( is_archive() ) :
 
         echo agnosia_get_archive_title() . ' - ';
         bloginfo('name');
