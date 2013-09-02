@@ -25,8 +25,7 @@
 
 			<div class="entry <?php agnosia_post_class(); ?>">
 
-				<h2 class="pagetitle"><?php echo sprintf( __('Archive for the %s Category' , 'agnosia' ) , single_term_title('',false) ); ?></h2>
-
+				<?php agnosia_static_breadcrumb(); ?>
 				<?php echo category_description(); ?>
 
 			</div>

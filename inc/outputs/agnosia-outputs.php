@@ -2052,4 +2052,24 @@ function agnosia_post_breadcrumb() {
 }
 
 
+function agnosia_static_breadcrumb() {
+
+    ob_start();
+
+    if ( function_exists( 'yoast_breadcrumb' ) ) :
+        yoast_breadcrumb( '<div id="breadcrumbs"><p>', '</p></div>' );
+    else :
+        echo '<h4 class="pagetitle">' . agnosia_get_archive_title() . '</h4>';
+    endif;
+
+    $output = ob_get_contents();
+    ob_end_clean();
+
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
 ?>

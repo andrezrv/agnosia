@@ -25,7 +25,7 @@
 
 			<div class="entry <?php agnosia_post_class(); ?>">
 
-				<h4 class="pagetitle"><?php agnosia_archive_title(); ?></h4>
+				<?php agnosia_static_breadcrumb(); ?>
 
 			</div>
 

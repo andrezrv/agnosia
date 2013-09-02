@@ -25,8 +25,8 @@
 
 			<div class="entry <?php agnosia_post_class(); ?>">
 
-				<h2 class="pagetitle"><?php _e( 'Posts Tagged' , 'agnosia' ); echo ' &#8216'; single_tag_title(); echo '&#8217'; ?></h2>
-
+				<?php agnosia_static_breadcrumb(); ?>
+				
 			</div>
 
 		<?php while ( have_posts() ) : the_post(); ?>

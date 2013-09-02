@@ -21,13 +21,13 @@
 
 	<?php if ( have_posts() ) : ?>
 
-			<?php $post = $posts[0]; // Little hack. Set $post so that the_date() works. ?>
+		<?php $post = $posts[0]; // Little hack. Set $post so that the_date() works. ?>
 
-			<div class="entry <?php agnosia_post_class(); ?>">
+		<div class="entry <?php agnosia_post_class(); ?>">
 
-				<h4 class="pagetitle"><?php agnosia_archive_title(); ?></h4>
+			<?php agnosia_static_breadcrumb(); ?>
 
-			</div>
+		</div>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 		

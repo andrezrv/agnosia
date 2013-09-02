@@ -23,9 +23,13 @@
 
 		<div class="search-data">
 
-			<h3><?php _e( 'Search Results' , 'agnosia' ); ?></h3>
+			<?php agnosia_static_breadcrumb(); ?>
 
-			<p><em><?php echo sprintf( __( 'You searched for &quot;%s&quot;' , 'agnosia' ) , esc_html( $_GET['s'] ) ); ?></em></p>
+			<h4><?php _e( 'Search Results' , 'agnosia' ); ?></h4>
+
+			<?php if ( !function_exists( 'yoast_breadcrumb' ) ) : ?>
+				<p><em><?php echo sprintf( __( 'You searched for &quot;%s&quot;' , 'agnosia' ) , esc_html( $_GET['s'] ) ); ?></em></p>
+			<?php endif; ?>
 
 		</div>
 		
