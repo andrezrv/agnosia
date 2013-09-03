@@ -11,6 +11,8 @@
  * @package Agnosia
  */
 
+global $post;
+
 ?>
 
-<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<h2><a href="<?php the_permalink(); ?>"><?php echo $post->post_title; ?></a></h2>

@@ -42,7 +42,7 @@ body.wrap-footer.small #footer-wrap {
 body.wide #header .searchform-container,
 body.wide #header .searchform,
 body.wide #header .navbar-search {
-  width: 265px;
+  width: 261px;
 }
 body.wide .container {
   width: 1170px;
@@ -50,7 +50,7 @@ body.wide .container {
 body.large #header .searchform-container,
 body.large #header .searchform,
 body.large #header .navbar-search {
-  width: 215px;
+  width: 211px;
 }
 body.large #header .container {
   width: 940px;
@@ -237,6 +237,10 @@ body.small header#header .navbar .page_item .sub-menu:not(.dropdown-menu) a {
 }
 body.medium header#header .navbar .navbar-inner,
 body.small header#header .navbar .navbar-inner {
+  padding: 0 20px;
+}
+body.medium header#header .navbar .navbar-inner .container,
+body.small header#header .navbar .navbar-inner .container {
   padding: 0 20px;
 }
 body.medium header#header .navbar .nav-collapse,

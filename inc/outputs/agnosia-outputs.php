@@ -147,7 +147,7 @@ function agnosia_get_body_class() {
     $body_class = '';
 
     // Add class depending on responsive settings
-    if( agnosia_evaluate('responsive') ) : $body_class .= ' responsive';
+    if( agnosia_evaluate('responsive') ) : $body_class .= ' responsive wide';
     else : $body_class .= 'non-responsive';
     endif;
 

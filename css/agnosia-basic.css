@@ -559,9 +559,12 @@ body.small #header #branding .brand,
 body.medium #header #branding .brand {
   margin: 0px 0px 5px;
 }
-body.small #header #branding .navbar-inner .container,
-body.medium #header #branding .navbar-inner .container {
-  padding: 10px 0;
+body.small header#header .navbar .navbar-inner .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+body.medium #header .navbar-inner .container {
+  padding: 10px 20px;
 }
 .Box {
   background: none;

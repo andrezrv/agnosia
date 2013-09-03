@@ -15,6 +15,8 @@
 
 <?php
 
+global $post;
+
 $post_meta = get_post_meta( get_the_ID(), 'agnosia_post_meta' , true ) ;
 
 if ( ( is_home() or is_archive() or is_search() or is_author() ) and 'standard' == agnosia_get_post_format() ) :
@@ -76,7 +78,7 @@ else :
 
 				<?php if ( agnosia_show_page_quote_source() ) : ?>
 
-					<cite><?php the_title(); ?></cite>
+					<cite><?php echo $post->post_title; ?></cite>
 
 				<?php endif ; ?>
 
