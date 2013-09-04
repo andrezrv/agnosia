@@ -40,6 +40,16 @@ if ( is_page() or is_single() ) :
 
 						<?php agnosia_load_template( 'the-title'  , 'content' ); ?>
 
+						<?php if ( agnosia_post_show_thumbnail_after_title() ) : ?>
+
+						    <section class="post-thumbnail <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
+
+						        <?php agnosia_post_thumbnail_img(); ?>
+
+						    </section>
+
+						<?php endif; ?>
+
 						<div class="page-excerpt">
 							<?php the_excerpt(); ?>
 						</div>
