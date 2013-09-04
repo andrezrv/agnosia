@@ -172,6 +172,7 @@ function agnosia_infinite_render() {
         
         the_post();  
         agnosia_load_template( 'home-post' , 'content' );
+        echo '<script type="text/javascript">add_btn_class();</script>';
         
     endwhile;
 

@@ -61,7 +61,6 @@ nav {
             margin-bottom: 30px;
 
             h1, h2, h3 {
-                text-transform: lowercase;
                 padding: 0 15px 0 15px;
             }
 
@@ -119,7 +118,7 @@ nav {
             }
 
             li .rsswidget {
-                .KameronBold;
+                .OpenSans;
                 display: block;
                 font-size: 16px;
             }
@@ -164,6 +163,8 @@ h4, h5, h6 {
         padding: 0 20px;
         h1 {
             font-size: 15px;
+            line-height: normal;
+            padding: 9px 0 11px;
         }
     }
 
@@ -171,6 +172,8 @@ h4, h5, h6 {
 
 #site-description {
     .Georgia;
+    background-color: @lighterGrey;
+    border-bottom: 1px solid @lightGrey;
 }
 
 footer#footer {
@@ -516,7 +519,7 @@ blockquote {
         .fn {
 
             font-size:22px;
-            .KameronBold;
+            .OpenSans;
             margin-left: 20px;
 
             a {
@@ -608,8 +611,6 @@ blockquote {
     text-align: right;
 
     .agnosia {
-        .Lobster;
-        font-size: 14px;
     }
 
 }
@@ -747,31 +748,9 @@ body.medium {
     }
 }
 
-.KameronBold() {
-    font-family: 'KameronBold', Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
-    font-weight: normal;
-}
-
-.KameronRegular() {
-    font-family: 'KameronRegular', Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
-    font-weight: normal;
-}
-
-.Lobster() {
-    font-family: 'Lobster13Regular', 'KameronBold', Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
-    font-weight: normal;
-    text-transform: lowercase;
-}
-
 .Georgia() {
 
     font-family: Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
-
-}
-
-.BebasNeue() {
-
-    font-family: 'BebasNeue', Tahoma, Arial, Verdana;
 
 }
 

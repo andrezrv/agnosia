@@ -38,6 +38,8 @@ div, section {
 input {
 	&[type="text"], &[type="password"] {
 		min-height: 30px;
+		.available;
+		width: auto;
 	}
 }
 
@@ -514,9 +516,7 @@ body.medium, body.small {
     font-size: 11px;
     text-align: right;
 
-    .agnosia {
-        font-size: 14px;
-    }
+    .agnosia {}
 
     .container {
     	width: auto;
@@ -549,6 +549,10 @@ body.medium, body.small {
 
 	ul, ol {
 		margin: 0 0 10px 15px;
+	}
+
+	.navbar-search input {
+		.available;
 	}
 
 }
@@ -624,6 +628,8 @@ body.medium, body.small {
 	}
 
 	.navbar-search {
+
+		margin-bottom: 5px;
 
 		.search-query {
 			.available;
@@ -1014,10 +1020,72 @@ body.medium, body.small {
 
 }
 
+.menu.nav {
+	float: right;
+	margin: 0; 
+}
+
+.searchform-container {
+	margin-left: 10px;
+}
+
 .fix-to-top.fixed {
 	position: fixed;
 	z-index: 1;
 }
+
+body.wide.has-left-sidebar.has-right-sidebar .mejs-time-rail {
+	width: 368px !important;
+}
+
+body.medium.has-left-sidebar.has-right-sidebar .mejs-time-rail {
+	width: 150px !important;
+}
+
+
+/* Styles for videos */
+
+body.wide.has-right-sidebar article.video iframe.youtube-player ,
+body.wide.has-left-sidebar article.video iframe.youtube-player {
+    height: 498px;
+}
+
+body.large.has-right-sidebar article.video iframe.youtube-player ,
+body.large.has-left-sidebar article.video iframe.youtube-player {
+    height: 417px;
+}
+
+body.medium.has-right-sidebar article.video iframe.youtube-player ,
+body.medium.has-left-sidebar article.video iframe.youtube-player {
+    height: 326px;
+}
+
+body.wide.has-left-sidebar.has-right-sidebar article.video iframe.youtube-player {
+    height: 336px;
+}
+body.large.has-left-sidebar.has-right-sidebar article.video iframe.youtube-player {
+    height: 279px;
+}
+body.medium.has-left-sidebar.has-right-sidebar article.video iframe.youtube-player {
+    height: 412px;
+}
+
+body.wide.no-left-sidebar.no-right-sidebar article.video iframe.youtube-player {
+    height: 661px;
+}
+body.large.no-left-sidebar.no-right-sidebar article.video iframe.youtube-player {
+    height: 537px;
+}
+body.medium.no-left-sidebar.no-right-sidebar article.video iframe.youtube-player {
+    height: 213px;
+}
+
+body.small article.video iframe.youtube-player {
+    height: 296px;
+    float: left !important;
+    width: 480px;
+}
+
 
 /* Utils */
 

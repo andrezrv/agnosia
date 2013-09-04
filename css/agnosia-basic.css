@@ -40,7 +40,6 @@ nav .extra.widget {
 nav .extra.widget h1,
 nav .extra.widget h2,
 nav .extra.widget h3 {
-  text-transform: lowercase;
   padding: 0 15px 0 15px;
 }
 nav .extra.widget h1 a,
@@ -107,7 +106,7 @@ nav .extra.widget .textwidget {
   padding: 0 15px 10px;
 }
 nav .extra.widget li .rsswidget {
-  font-family: 'KameronBold', Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   display: block;
   font-size: 16px;
@@ -156,9 +155,13 @@ h6 {
 #top-navbar .brand h1,
 #header-navbar .brand h1 {
   font-size: 15px;
+  line-height: normal;
+  padding: 9px 0 11px;
 }
 #site-description {
   font-family: Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
+  background-color: #ededed;
+  border-bottom: 1px solid #dedede;
 }
 footer#footer {
   font-family: Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
@@ -416,7 +419,7 @@ blockquote cite:before {
 }
 .commentlist .vcard .fn {
   font-size: 22px;
-  font-family: 'KameronBold', Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   margin-left: 20px;
 }
@@ -491,12 +494,6 @@ blockquote cite:before {
   font-size: 11px;
   padding: 15px;
   text-align: right;
-}
-#credits .agnosia {
-  font-family: 'Lobster13Regular', 'KameronBold', Georgia, 'Times New Roman', Tahoma, Arial, Verdana;
-  font-weight: normal;
-  text-transform: lowercase;
-  font-size: 14px;
 }
 .btn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -174,7 +174,7 @@ body.large header#header .page_item .sub-menu:not(.dropdown-menu) li:hover {
 }
 body.medium header#header .container,
 body.small header#header .container {
-  padding: 0;
+  padding: 0 20px;
 }
 body.medium header#header #branding .container,
 body.small header#header #branding .container {
@@ -183,6 +183,10 @@ body.small header#header #branding .container {
 body.medium header#header #branding .btn-navbar,
 body.small header#header #branding .btn-navbar {
   right: 0;
+}
+body.medium header#header #branding .navbar .navbar-inner,
+body.small header#header #branding .navbar .navbar-inner {
+  padding: 15px 20px 25px;
 }
 body.medium header#header #double-branding-container.row-fluid,
 body.small header#header #double-branding-container.row-fluid {
