@@ -64,44 +64,44 @@ function agnosia_filter_content_more_link( $html ) {
 
 
 
-function agnosia_filter_title($text) {
+function agnosia_filter_title( $text ) {
 
     /* Block output */
     ob_start();
 
-    if ( is_archive() ) :
+    if ( is_front_page() or is_home() ) :
 
-        echo agnosia_get_archive_title() . ' - ';
-        bloginfo('name');
+       bloginfo( 'name' );
+       echo ' - '; 
+       bloginfo( 'description' );
 
-    elseif ( is_search() ) :
-
-        echo ' ' . __( 'Search For' , 'agnosia' ) . ' &quot;'. esc_html($_GET['s']) . '&quot; - '; 
-        bloginfo('name');
-    
-    elseif ( !( is_404() ) and ( is_single () ) or ( is_page() ) ) :
+    elseif ( is_single() or is_page() ) :
 
         global $post;
 
         echo $post->post_title;
         echo ' - '; 
-        bloginfo('name');
+        bloginfo( 'name' );
+
+    elseif ( is_archive() ) :
+
+        echo agnosia_get_archive_title() . ' - ';
+        bloginfo( 'name' );
+
+    elseif ( is_search() ) :
+
+        echo ' ' . __( 'Search For' , 'agnosia' ) . ' &quot;'. esc_html($_GET['s']) . '&quot; - '; 
+        bloginfo( 'name' );
     
-    elseif ( is_404 () ) :
+    elseif ( is_404() ) :
 
         echo __( 'Not Found' , 'agnosia' );
         echo ' - ';
-        bloginfo('name');
-
-    elseif ( is_home () ) :
-
-       bloginfo('name');
-       echo ' - '; 
-       bloginfo('description');
+        bloginfo( 'name' );
 
     else :
 
-        bloginfo('name');
+        bloginfo( 'name' );
 
     endif;
     
