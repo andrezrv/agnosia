@@ -211,21 +211,21 @@ function agnosia_show_top_responsive_button() {
 
 function agnosia_show_branding_responsive_button() {
 
-	$boolean = false;
+    $boolean = false;
 
-	if ( agnosia_evaluate( 'responsive' )
-		and ( agnosia_evaluate( 'header_branding_show_navigation' )
-			or agnosia_evaluate( 'header_branding_section_show_search' ) 
-		)
-	) :
+    if ( agnosia_evaluate( 'responsive' )
+        and ( agnosia_evaluate( 'header_branding_section_show_navigation' )
+            or agnosia_evaluate( 'header_branding_section_show_search' ) 
+        )
+    ) :
 
-		$boolean = true;
+        $boolean = true;
 
-	endif;
+    endif;
 
-	$boolean = apply_filters( __FUNCTION__, $boolean );
-	
-	return $boolean;
+    $boolean = apply_filters( __FUNCTION__, $boolean );
+
+    return $boolean;
 
 }
 
