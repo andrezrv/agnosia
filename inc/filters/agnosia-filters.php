@@ -41,6 +41,7 @@ function agnosia_get_filters() {
             'comment_reply_link' => 'agnosia_filter_comment_reply',
             'comment_text' => 'agnosia_filter_comment_text', 
             'the_content' => 'agnosia_filter_content',
+            'the_excerpt' => 'agnosia_filter_excerpt',
             'the_content_more_link' => 'agnosia_filter_content_more_link'
     );
 
@@ -247,6 +248,24 @@ function agnosia_filter_content($html) {
 
     /* Modifiy content */
     $html = str_replace( 'id="content"' , 'id="article-content"' , $html );
+
+    if ( agnosia_show_page_quote_source() ) :
+        global $post;
+        ob_start();
+        echo '<cite>' . $post->post_title . '</cite>';
+        $html = '<blockquote>' . $html . ob_get_contents() . '</blockquote>';
+        ob_end_clean();
+    endif;
+
+    return $html;
+
+}
+
+
+
+function agnosia_filter_excerpt( $html ) {
+
+    $html = $html . agnosia_get_template( 'read-more' , 'content' );
 
     return $html;
 

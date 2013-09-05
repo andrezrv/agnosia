@@ -34,7 +34,6 @@ if ( ( is_home() or is_archive() or is_search() or is_author() ) and 'standard' 
 		<div id="post-excerpt" role="excerpt">
 
 			<?php the_excerpt(); ?>
-			<?php agnosia_load_template( 'read-more' , 'content' ); ?>
 
 		</div>
 
@@ -72,17 +71,7 @@ else :
 
 		case 'quote' : ?>
 
-			<blockquote>
-				
-				<?php the_content(); ?>
-
-				<?php if ( agnosia_show_page_quote_source() ) : ?>
-
-					<cite><?php echo $post->post_title; ?></cite>
-
-				<?php endif ; ?>
-
-			</blockquote>
+			<?php the_content(); ?>
 
 		<?php break;
 
