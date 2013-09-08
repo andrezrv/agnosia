@@ -1055,22 +1055,43 @@ class agnosia_setup {
 
 
 
-	/* Load a template from theme files */
-	public function get_template( $template , $type ) {
+	/**
+	  * Gets a template from theme files. It's like a get_template_part()
+	  * (in fact, it uses that function) on steroids: besides getting a
+	  * template HTML, it executes actions and applies filters to the HTML,
+	  * so you can modify it in any way you want.
+	  * 
+	  * @author andrezrv
+	  * 
+	  */
+	public function get_template( $template, $type, $insert = false ) {
 
 		do_action( 'agnosia_before_get_template', $template, $type );
 
 		if ( function_exists( 'get_template_directory' ) ) :
 
+			/**
+			 * This little snippet allows you to insert external HTML in 
+			 * any place that a template accepts it, making it possible
+			 * through the global variable.
+			 */
+			if ( $insert ) :  
+				global $inserted_html; 
+				$inserted_html = $insert;
+			endif;
+			
+			/** Start catching the HTML output. */
 			ob_start();
 
 			get_template_part( '/templates/' . $type . '/' . $template );
 
 			$output = ob_get_contents();
-
 			ob_end_clean();
 
-			/* Create a filter for this template. */
+			/** Set the $insert global variable to false, clearing it for further uses. */
+			if ( $insert ) : $insert = false; endif;
+
+			/** Create a filter for this template. */
 			$output = apply_filters( 'agnosia_get_template_' . $type . '_' . $template , $output );
 
 			return $output;
@@ -1084,11 +1105,18 @@ class agnosia_setup {
 	}
 
 
-	public function load_template( $template , $type ) {
+	/**
+	 * Outputs the HTML obtained with $this->get_template().
+	 * See that method for further reference.
+	 * 
+	 * @author andrezrv
+	 * 
+	 */
+	public function load_template( $template , $type, $locator = false ) {
 
-		do_action( 'agnosia_before_load_template', $template, $type );
+		do_action( 'agnosia_before_load_template', $template, $type, $locator );
 
-		$output = $this->get_template( $template , $type );
+		$output = $this->get_template( $template, $type, $locator );
 		$output = apply_filters( 'agnosia_load_template_' . $type . '_' . $template , $output );
 		echo $output;
 

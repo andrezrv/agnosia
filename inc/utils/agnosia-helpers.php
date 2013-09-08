@@ -47,24 +47,48 @@ function agnosia_get( $option ) {
 
 
 
-function agnosia_get_template( $template , $type ) {
+function agnosia_get_template( $template, $type, $insert = false ) {
 
     global $agnosia;
 
-    return $agnosia->get_template( $template , $type );
+    return $agnosia->get_template( $template , $type, $insert );
 
 }
 
 
 
-function agnosia_load_template( $template , $type ) {
+function agnosia_load_template( $template, $type, $insert = false ) {
 
     global $agnosia;
 
-    $agnosia->load_template( $template , $type );
+    $agnosia->load_template( $template , $type, $insert );
 
 }
 
+
+
+function agnosia_inserted_html() {
+
+    $output = agnosia_get_inserted_html();
+
+    echo $output;
+
+}
+
+
+function agnosia_get_inserted_html() {
+
+    global $inserted_html;
+
+    $html = '';
+
+    if ( $inserted_html ) :
+        $html = $inserted_html;
+    endif;
+
+    return $html;
+
+}
 
 
 function agnosia_override_show( $evaluated , $show , $hide , $dependent = false ) {

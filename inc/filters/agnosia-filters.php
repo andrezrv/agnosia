@@ -244,18 +244,48 @@ function agnosia_comment_form( $args ) {
 
 
 
-function agnosia_filter_content($html) {
+function agnosia_filter_content( $html ) {
 
     /* Modifiy content */
     $html = str_replace( 'id="content"' , 'id="article-content"' , $html );
 
-    if ( agnosia_show_page_quote_source() ) :
-        global $post;
-        ob_start();
-        echo '<cite>' . $post->post_title . '</cite>';
-        $html = '<blockquote>' . $html . ob_get_contents() . '</blockquote>';
-        ob_end_clean();
-    endif;
+    $html = agnosia_get_post_format_content( $html );
+
+    return $html;
+
+}
+
+
+
+function agnosia_get_post_format_content( $html ) {
+
+    switch ( agnosia_get_post_format() ) {
+
+        case 'quote' : 
+            $html = agnosia_get_template( 'quote-content', 'content', $insert = $html );
+        break;
+
+        case 'chat' : 
+            $html = agnosia_get_template( 'chat-content', 'content', $insert = $html );
+        break;
+
+        case 'aside' : 
+            $html = agnosia_get_template( 'aside-content', 'content', $insert = $html );
+        break;
+
+        case 'video' : 
+            $html = agnosia_get_template( 'video-content', 'content', $insert = $html );
+        break;
+
+        case 'status' : 
+            $html = agnosia_get_template( 'status-content', 'content', $insert = $html );
+        break;
+
+        default :
+        
+        break;
+ 
+    }
 
     return $html;
 

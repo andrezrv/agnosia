@@ -31,11 +31,7 @@ if ( ( is_home() or is_archive() or is_search() or is_author() ) and 'standard' 
 
 		?>
 
-		<div id="post-excerpt" role="excerpt">
-
-			<?php the_excerpt(); ?>
-
-		</div>
+		<?php agnosia_load_template( 'post-excerpt', 'content' ); ?>
 
 		<?php
 
@@ -47,94 +43,13 @@ else :
 
 		?>
 		
-		<div id="post-excerpt" role="excerpt">
-
-			<?php the_excerpt(); ?>
-
-		</div>
+		<?php agnosia_load_template( 'post-excerpt', 'content' ); ?>
 
 		<?php
 			
 	endif;
 
-	switch ( agnosia_get_post_format() ) {
-
-		case 'aside' : ?>
-
-			<aside>
-				
-				<?php the_content(); ?>
-
-			</aside>
-
-		<?php break;
-
-		case 'quote' : ?>
-
-			<?php the_content(); ?>
-
-		<?php break;
-
-		case 'status' : ?>
-
-			<?php if ( ( is_page() and agnosia_show_page_status_thumbnail() ) or ( ( is_single() or is_home() ) and agnosia_show_post_status_thumbnail() )  ) : ?>
-				
-				<div class="gravatar">
-					
-					<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-					
-				</div>
-				
-			<?php endif; ?>
-
-			<div class="status">
-				
-				<?php if ( ( is_page() and agnosia_show_page_status_author_name() ) or ( ( is_single() or is_home() ) and agnosia_show_post_status_author_name() ) ) : ?>
-					
-					<h4><?php the_author_posts_link(); ?></h4>
-
-				<?php endif; ?>
-
-				<div class="content">
-					
-					<?php the_content(); ?>
-
-				</div>
-
-			</div>
-
-		<?php break;
-
-		case 'video' :
-
-			the_content();
-
-			if ( agnosia_show_post_title_bottom() ) :
-
-				agnosia_load_template( 'the-title'  , 'content' );
-
-			endif;
-
-		break;
-
-		case 'chat' : 
-
-			?>
-
-			<pre>
-				<?php the_content(); ?>
-			</pre>
-
-			<?php
-
-		break;
-
-		default:
-			
-			the_content();
-
-		break;
-	}
+	the_content();
 
 endif;
 

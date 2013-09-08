@@ -2072,4 +2072,139 @@ function agnosia_static_breadcrumb() {
 }
 
 
+/**
+  * Mock the_content() in order to get a non filtered (at least by default) version of it.
+  * @author andrezrv
+  */ 
+function agnosia_the_content() {
+
+    $output = agnosia_get_the_content();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+/**
+  * Mock get_the_content() in order to get a non filtered (at least by default) version of it.
+  * @author andrezrv
+  */ 
+function agnosia_get_the_content() {
+
+    global $post;
+
+    $html = do_shortcode( wpautop( $post->post_content ) );
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_quote_cite() {
+
+    $output = agnosia_get_quote_cite();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_quote_cite() {
+
+    $html = '';
+
+    if ( agnosia_show_page_quote_source() ) :
+        $html = agnosia_get_template( 'quote-cite', 'content' );
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_status_gravatar() {
+
+    $output = agnosia_get_status_gravatar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_status_gravatar() {
+
+    $html = '';
+
+    if ( ( is_page() and agnosia_show_page_status_thumbnail() ) 
+        or ( ( is_single() or is_home() ) and agnosia_show_post_status_thumbnail() ) ) :
+        $html = agnosia_get_template( 'gravatar', 'content' );
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_the_author_posts_link() {
+
+    $output = agnosia_get_the_author_posts_link();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+    
+}
+
+
+function agnosia_get_the_author_posts_link() {
+
+    $html = '';
+
+    if ( ( is_page() and agnosia_show_page_status_author_name() ) or ( ( is_single() or is_home() ) and agnosia_show_post_status_author_name() ) ) :
+
+        $html = agnosia_get_template( 'author-posts-link', 'content' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_post_title_bottom() {
+
+    $output = agnosia_get_post_title_bottom();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_post_title_bottom() {
+
+    $html = '';
+
+    if ( agnosia_show_post_title_bottom() ) :
+
+        $html = agnosia_get_template( 'the-title'  , 'content' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
 ?>
