@@ -107,6 +107,7 @@ article {
 			.gravatar {
 
 				float: left;
+				margin-bottom: 15px;
 				margin-right: 15px;
 
 				+ .status {
@@ -1020,9 +1021,15 @@ body.medium, body.small {
 
 }
 
-.menu.nav {
+body.wide .menu.nav,
+body.large .menu.nav {
 	float: right;
 	margin: 0; 
+}
+
+body.medium .menu.nav,
+body.small .menu.nav {
+	margin-top: 5px; 
 }
 
 .searchform-container {
@@ -1086,6 +1093,11 @@ body.small article.video iframe.youtube-player {
     width: 480px;
 }
 
+/* Styles for Jetpack */
+div.sharedaddy {
+	margin-bottom: -15px;
+	margin-top: 15px;
+}
 
 /* Utils */
 

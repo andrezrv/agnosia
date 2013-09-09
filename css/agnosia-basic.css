@@ -175,6 +175,13 @@ footer#footer li {
 footer#footer a {
   color: #777777;
 }
+article .gravatar img {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
 article.sticky {
   border-top: 5px solid #0081c2;
   padding-top: 10px;
@@ -218,6 +225,15 @@ article.chat pre p {
 article.quote .entry {
   padding: 0;
 }
+article.link p:first-child a:first-child {
+  background-color: #0088cc;
+  color: #ffffff;
+  display: block;
+  font-size: 24px;
+  margin: 0;
+  overflow: hidden;
+  padding: 15px;
+}
 article header {
   margin-top: 0;
   padding: 0;
@@ -253,6 +269,13 @@ article header .gravatar + h2 + .info .author {
 }
 article header .gravatar + h2 + .info .metadata {
   padding-top: 0;
+}
+article header .gravatar img {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 article + hr {
   border-top: 5px solid #ededed;
@@ -337,7 +360,7 @@ blockquote {
 blockquote p {
   clear: both;
   float: left;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   margin: 5px 0;
   padding-left: 36px;
@@ -351,12 +374,13 @@ blockquote:before {
   float: left;
   font-size: 48px;
   left: 0;
-  margin: 9px 5px 0 0;
+  margin: 20px 5px 0 0;
   position: absolute;
 }
 blockquote cite {
   clear: both;
   display: block;
+  font-size: 18px;
   text-align: right;
   padding: 15px 0 0;
 }
@@ -376,6 +400,11 @@ blockquote cite:before {
 }
 #authorarea .gravatar img {
   margin-top: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 #authorarea .authorinfo {
   margin-left: 96px;
@@ -562,6 +591,10 @@ body.small header#header .navbar .navbar-inner .container {
 }
 body.medium #header .navbar-inner .container {
   padding: 10px 20px;
+}
+/* Styles for Jetpack */
+div.sharedaddy div.sd-block {
+  border-top: 1px solid #ededed !important;
 }
 .Box {
   background: none;

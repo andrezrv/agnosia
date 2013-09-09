@@ -194,6 +194,12 @@ footer#footer {
 
 article {
 
+    .gravatar {
+        img {
+            .Rounded(2px);
+        }
+    }
+
     &.sticky {
         border-top: 5px solid @lightBlue;
         padding-top: 10px;
@@ -276,6 +282,16 @@ article {
         .entry { padding: 0; }
     }
 
+    &.link p:first-child a:first-child {
+        background-color: @lighterBlue;
+        color: @white;
+        display: block;
+        font-size: 24px;
+        margin: 0;
+        overflow: hidden;
+        padding: 15px;
+    }
+
     header {
 
         margin-top: 0;
@@ -330,6 +346,10 @@ article {
                         padding-top: 0;
                     }
                 }
+            }
+
+            img {
+                .Rounded(2px);
             }
 
         }
@@ -425,7 +445,7 @@ blockquote {
 
         clear: both;
         float: left;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 26px;
         margin: 5px 0;
         padding-left: 36px;
@@ -442,13 +462,14 @@ blockquote {
         float: left;
         font-size: 48px;
         left: 0;
-        margin: 9px 5px 0 0;
+        margin: 20px 5px 0 0;
         position: absolute;
     }
 
     cite {
         clear: both;
         display: block;
+        font-size: 18px;
         text-align: right;
         padding: 15px 0 0;
         &:before {
@@ -468,6 +489,7 @@ blockquote {
         float: left;
         img {
             margin-top: 5px;
+            .Rounded(2px);
         }
     }
 
@@ -745,6 +767,15 @@ body.medium {
         .navbar-inner .container {
             padding: 10px 20px;
         }
+    }
+}
+
+
+/* Styles for Jetpack */
+
+div.sharedaddy {
+    div.sd-block {
+        border-top: 1px solid @lighterGrey !important;
     }
 }
 
