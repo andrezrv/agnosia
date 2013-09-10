@@ -8,53 +8,18 @@
  * This file is an HTML template that shows the single brand section.
  * You can add or remove functionality via child themes.
  * 
+ * agnosia_single_branding_contents() uses agnosia_get_template( 'single-branding-text' , 'header' ) 
+ * or agnosia_get_template( 'single-branding-image' , 'header' ), depending on the result of
+ * agnosia_header_branding_has_logo().
+ * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( !agnosia_header_branding_has_secondary_logo() ) : ?>
-
-	<div id="single-branding-container" class="<?php agnosia_single_branding_container_class(); ?>">
-
-		<?php if ( !agnosia_header_branding_has_logo() ) : ?>
-
-			<section id="single-branding-text" class="brand">
-
-				<?php if ( agnosia_evaluate_show_branding_text() ) : ?>
-
-					<h1><a href="<?php agnosia_home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
-
-					<?php if ( agnosia_evaluate('header_branding_section_site_description') ) : ?>
-
-						<h2><?php bloginfo('description'); ?></h2>
-
-					<?php endif; ?>
-				
-				<?php endif; ?>
-
-			</section>
-
-		<?php else : ?>
-
-			<section id="single-branding-image" class="brand">
-
-				<h1>
-					<a href="<?php agnosia_home_url(); ?>/">
-						<img alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" src="<?php agnosia_header_branding_logo(); ?>" />
-					</a>
-				</h1>
-
-				<?php if ( agnosia_evaluate('header_branding_section_site_description') ) : ?>
-
-					<h2><?php bloginfo('description'); ?></h2>
-
-				<?php endif; ?>
-
-			</section>
-
-		<?php endif; ?>
-
-	</div>
-
-<?php endif; ?>
+<div id="single-branding-container" class="<?php agnosia_single_branding_container_class(); ?>">
+	<?php agnosia_single_branding_contents(); ?>
+</div>

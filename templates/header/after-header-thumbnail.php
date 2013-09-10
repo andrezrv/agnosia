@@ -5,18 +5,17 @@
  * Please don't modify this file unless you know exactly what you're doing.
  * Keep in mind that any modification to this file may be overwritten by future core updates.
  *
- * This file is an HTML template that shows the extra site description section.
+ * This file is an HTML template that shows a thumbnail after the site's header block.
  * You can add or remove functionality via child themes.
+ * 
+ * @since 1.0
+ * @author andrezrv
  * 
  * @package Agnosia
  */
 
 ?>
 
-<section id="site-description" class="description">
-
-	<div class="<?php agnosia_wrapper_style(); ?>">
-		<span class=""><?php bloginfo('description'); ?></span>
-	</div>
-
+<section class="post-thumbnail">
+	<?php agnosia_post_thumbnail_img(); ?>
 </section>

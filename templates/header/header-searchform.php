@@ -8,21 +8,18 @@
  * This file is an HTML template that shows the header navigation bar searchform.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_evaluate('header_navbar_show_search') ) : ?>
+<div id="header-searchform-container" class="<?php agnosia_top_searchform_container_class(); ?>">
 
-	<div id="header-searchform-container" class="<?php agnosia_top_searchform_container_class(); ?>">
+	<section id="header-searchform" class="searchform">
+		<?php agnosia_header_navbar_search_form(); ?>
+	</section>
 
-		<section id="header-searchform" class="searchform">
-
-			<?php agnosia_header_navbar_search_form(); ?>
-
-		</section>
-
-	</div>
-
-<?php endif; ?>
+</div>

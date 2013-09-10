@@ -8,41 +8,20 @@
  * This file is an HTML template that shows the site header block.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_get('show_header') == 'true' ) : ?>
+<header id="header" role="main-header">
 
-	<header id="header">
+	<?php agnosia_top_navbar(); // Uses agnosia_get_template( 'top-navbar', 'header' ); ?>
+	<?php agnosia_branding(); // Uses agnosia_get_template( 'branding', 'header' ); ?>
+	<?php agnosia_header_navbar(); // Uses agnosia_get_template( 'header-navbar', 'header' ); ?>
+	<?php agnosia_site_description(); // Uses agnosia_get_template( 'site-description', 'header' ); ?>
+	<?php agnosia_after_header_thumbnail(); // Uses agnosia_get_template( 'after-header-thumbnail', 'header' ); ?>
 
-		<?php if ( current_theme_supports( 'agnosia-top-navbar' )) : 
-			agnosia_load_template( 'top-navbar' , 'header' ); 
-		endif; ?>
-
-		<?php if ( current_theme_supports( 'agnosia-branding' ) ) : 
-			agnosia_load_template( 'branding' , 'header' );
-		endif; ?>
-
-		<?php if ( current_theme_supports( 'agnosia-header-navbar' ) ) : 
-			agnosia_load_template( 'header-navbar' , 'header' );
-		endif; ?>
-
-		<?php if ( current_theme_supports( 'agnosia-additional-site-description' ) ) :
-			agnosia_load_template( 'site-description' , 'header' );
-		endif; ?>
-
-		<?php if ( agnosia_post_show_thumbnail_after_header_img() ) : ?> 
-
-			<section class="post-thumbnail">
-
-				<?php agnosia_post_thumbnail_img(); ?>
-
-			</section>
-
-		<?php endif; ?>
-
-	</header>
-
-<?php endif; ?>
+</header>

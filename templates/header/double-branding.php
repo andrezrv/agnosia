@@ -8,19 +8,15 @@
  * This file is an HTML template that shows both the primary and secondary brands.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_header_branding_has_secondary_logo() ) : ?>
-
-	<div id="double-branding-container" class="<?php agnosia_double_branding_container_class(); ?>">
-
-		<?php agnosia_load_template( 'primary-brand' , 'header' ); ?>
-
-		<?php agnosia_load_template( 'secondary-brand' , 'header' ); ?>
-
-	</div>
-
-<?php endif; ?>
+<div id="double-branding-container" class="<?php agnosia_double_branding_container_class(); ?>">
+	<?php agnosia_load_template( 'primary-brand' , 'header' ); ?>
+	<?php agnosia_load_template( 'secondary-brand' , 'header' ); ?>
+</div>

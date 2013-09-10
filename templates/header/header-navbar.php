@@ -8,43 +8,42 @@
  * This file is an HTML template that shows the header navigation bar.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_evaluate('show_header_navbar') ) : ?>
+<section id="header-navbar" class="<?php agnosia_header_navbar_class(); ?>">
 
-	<section id="header-navbar" class="<?php agnosia_header_navbar_class(); ?>">
+	<nav class="navbar <?php agnosia_header_navbar_color_scheme(); ?>">
 
-		<nav class="navbar <?php agnosia_header_navbar_color_scheme(); ?>">
+		<section class="navbar-inner">
 
-			<section class="navbar-inner">
+			<section class="<?php agnosia_wrapper_style(); ?>">
 
-				<section class="<?php agnosia_wrapper_style(); ?>">
+				<?php agnosia_header_responsive_button(); // Uses agnosia_get_template( 'header-responsive-button' , 'header' ); ?>
 
-					<?php agnosia_load_template( 'header-responsive-button' , 'header' ); ?>
+				<div id="top-navbar-row" class="<?php agnosia_top_navbar_row_class(); ?>">
 
-					<div id="top-navbar-row" class="<?php agnosia_top_navbar_row_class(); ?>">
+					<?php agnosia_header_navbar_brand(); // Uses agnosia_load_template( 'header-brand' , 'header' ); ?>
 
-						<?php agnosia_load_template( 'header-brand' , 'header' ); ?>
+					<div id="header-navigation" class="<?php agnosia_header_navigation_class(); ?>">
+								
+						<?php agnosia_header_menu(); // Uses agnosia_get_template( 'header-menu' , 'header' ); ?>
 
-						<div id="header-navigation" class="<?php agnosia_header_navigation_class(); ?>">
-									
-							<?php agnosia_load_template( 'header-menu' , 'header' ); ?>
-
-							<?php agnosia_load_template( 'header-searchform' , 'header' ); ?>
-
-						</div>
+						<?php agnosia_header_navbar_searchform(); // Uses agnosia_load_template( 'header-searchform' , 'header' ); ?>
 
 					</div>
 
-				</section>
+				</div>
 
 			</section>
 
-		</nav>
+		</section>
 
-	</section>
+	</nav>
 
-<?php endif; ?>
+</section>

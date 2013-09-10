@@ -13,12 +13,8 @@
 
 ?>
 
-<?php if ( agnosia_show_branding_responsive_button() ) : ?>
-
-	<a class="btn btn-navbar" data-toggle="collapse" data-target="#branding-navigation">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	</a>
-
-<?php endif; ?>
+<a class="btn btn-navbar" data-toggle="collapse" data-target="#branding-navigation">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</a>

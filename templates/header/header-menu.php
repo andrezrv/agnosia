@@ -8,40 +8,14 @@
  * This file is an HTML template that shows the header navigation menu.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_evaluate('header_navbar_show_navigation') ) : ?>
-
-	<section id="header-menu" class="<?php agnosia_header_menu_class(); ?>">
-
-		<?php
-
-		if ( $agnosia_header_menu = wp_nav_menu( array( 
-					'theme_location' => 'header-menu' ,
-					'container'  => 'div' , 
-					'container_class' => 'menu-header-menu-container', 
-					'menu_class' => 'menu nav' ,
-					'fallback_cb' => false ,
-					'echo' => 0 ,
-					) 
-			) ) :
-
-			echo $agnosia_header_menu;
-
-		else : 
-
-			wp_page_menu( array(
-					'menu_class' => 'menu-header-menu-container',
-				)
-			);
-
-		endif;
-
-		?>
-
-	</section>
-
-<?php endif; ?>
+<section id="header-menu" class="<?php agnosia_header_menu_class(); ?>">
+	<?php agnosia_header_nav_menu(); ?>
+</section>

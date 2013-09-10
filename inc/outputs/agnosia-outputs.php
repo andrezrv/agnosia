@@ -1490,7 +1490,7 @@ function agnosia_get_span_for_search_single_branding() {
 
     $html = '';
 
-    if ( agnosia_evaluate('header_branding_section_show_navigation') ) : 
+    if ( agnosia_evaluate( 'header_branding_section_show_navigation' ) ) : 
     
         $html = 'span4';
     
@@ -2197,6 +2197,610 @@ function agnosia_get_post_title_bottom() {
     if ( agnosia_show_post_title_bottom() ) :
 
         $html = agnosia_get_template( 'the-title'  , 'content' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_branding_responsive_button() {
+
+    $output = agnosia_get_branding_responsive_button();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_branding_responsive_button() {
+
+    $html = '';
+
+    if ( agnosia_show_branding_responsive_button() ) :
+
+        $html = agnosia_get_template( 'branding-responsive-button' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_header_responsive_button() {
+
+    $output = agnosia_get_header_responsive_button();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_header_responsive_button() {
+
+    $html = '';
+
+    if ( agnosia_show_header_responsive_button() ) :
+
+        $html = agnosia_get_template( 'header-responsive-button' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_single_branding() {
+
+    $output = agnosia_get_single_branding();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_single_branding() {
+
+    $html = '';
+
+    if ( !agnosia_header_branding_has_secondary_logo() ) :
+
+        $html = agnosia_get_template( 'single-branding' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_single_branding_contents() {
+
+    $output = agnosia_get_single_branding_contents();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_single_branding_contents() {
+
+    $html = '';
+
+    if ( !agnosia_header_branding_has_logo() ) : 
+
+        $html = agnosia_get_template( 'single-branding-text', 'header' );
+
+    else :
+
+        $html = agnosia_get_template( 'single-branding-image', 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_secondary_branding() {
+
+    $output = agnosia_get_secondary_branding();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_secondary_branding() {
+
+    $html = '';
+
+    if ( current_theme_supports( 'agnosia-secondary-branding' )
+        and agnosia_header_branding_has_secondary_logo() 
+    ) :
+
+        $html = agnosia_get_template( 'double-branding' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_primary_brand_content() {
+
+    $output = agnosia_get_primary_brand_content();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_primary_brand_content() {
+
+    $html = '';
+
+    if ( !agnosia_header_branding_has_logo() and agnosia_evaluate_show_branding_text() ) : 
+
+        $html = agnosia_get_template( 'primary-brand-text', 'header' );
+
+    else : 
+
+        $html = agnosia_get_template( 'primary-brand-image', 'header' );
+
+    endif; 
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_secondary_brand_content() {
+
+    $output = agnosia_get_secondary_brand_content();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_secondary_brand_content() {
+
+    $html = '';
+
+    if ( agnosia_header_branding_secondary_logo_img_exists() ) : 
+
+        $html = agnosia_get_template( 'secondary-brand-image', 'content' );
+
+    else : 
+
+        $html = agnosia_get_template( 'secondary-brand-text', 'content' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_branding() {
+
+    $output = agnosia_get_branding();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_branding() {
+
+    $html = '';
+
+    if ( current_theme_supports( 'agnosia-branding' )
+        and agnosia_evaluate('show_header_branding_section')
+     ) :
+
+        $html = agnosia_get_template( 'branding' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_branding_menu() {
+
+    $output = agnosia_get_branding_menu();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_branding_menu() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_branding_section_show_navigation' ) ) :
+
+        $html = agnosia_get_template( 'branding-menu' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_header_menu() {
+
+    $output = agnosia_get_header_menu();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_header_menu() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_navbar_show_navigation' ) ) :
+
+        $html = agnosia_get_template( 'header-menu' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_branding_nav_menu() {
+
+    $output = agnosia_get_branding_nav_menu();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_branding_nav_menu() {
+
+    $html = '';
+
+    if ( $agnosia_branding_menu = wp_nav_menu( array( 
+        'theme_location' => 'branding-menu' ,
+        'container'  => 'div' , 
+        'container_class' => '', 
+        'menu_class' => 'menu nav' ,
+        'fallback_cb' => false ,
+        'echo' => 0 ,
+        ) 
+    ) ) :
+
+        $html = $agnosia_branding_menu;
+    
+    else : 
+
+        ob_start();
+
+        wp_page_menu( array(
+                'menu_class' => 'menu-header-menu-container',
+            )
+        );
+
+        $html = ob_get_contents();
+
+        ob_end_clean();
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_header_nav_menu() {
+
+    $output = agnosia_get_header_nav_menu();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_header_nav_menu() {
+
+    $html = '';
+
+    if ( $agnosia_header_menu = wp_nav_menu( array( 
+        'theme_location' => 'header-menu' ,
+        'container'  => 'div' , 
+        'container_class' => 'menu-header-menu-container', 
+        'menu_class' => 'menu nav' ,
+        'fallback_cb' => false ,
+        'echo' => 0 ,
+        ) 
+    ) ) :
+
+        $html = $agnosia_header_menu;
+    
+    else : 
+
+        ob_start();
+
+        wp_page_menu( array(
+                'menu_class' => 'menu-header-menu-container',
+            )
+        );
+
+        $html = ob_get_contents();
+
+        ob_end_clean();
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_branding_searchform() {
+
+    $output = agnosia_get_branding_searchform();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_branding_searchform() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_branding_section_show_search' ) ) :
+
+        $html = agnosia_get_template( 'branding-searchform' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_header_navbar_searchform() {
+
+    $output = agnosia_get_header_navbar_searchform();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_header_navbar_searchform() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_navbar_show_search' ) ) :
+
+        $html = agnosia_get_template( 'branding-searchform' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_header_navbar() {
+
+    $output = agnosia_get_header_navbar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_header_navbar() {
+
+    $html = '';
+
+    if ( current_theme_supports( 'agnosia-header-navbar' )
+        and agnosia_evaluate( 'show_header_navbar' )
+     ) :
+
+        $html = agnosia_get_template( 'header-navbar' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_header_navbar_brand() {
+
+    $output = agnosia_get_header_navbar_brand();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_header_navbar_brand() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_navbar_show_brand' ) ) :
+
+        $html = agnosia_get_template( 'header-brand' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_top_navbar() {
+
+    $output = agnosia_get_top_navbar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_top_navbar() {
+
+    $html = '';
+
+    if ( current_theme_supports( 'agnosia-top-navbar' )
+        and agnosia_evaluate( 'show_header_top_navbar' )
+     ) :
+
+        $html = agnosia_get_template( 'top-navbar' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_site_description() {
+
+    $output = agnosia_get_site_description();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_site_description() {
+
+    $html = '';
+
+    if ( current_theme_supports( 'agnosia-additional-site-description' )
+        and agnosia_evaluate( 'show_site_description' )
+     ) :
+
+        $html = agnosia_get_template( 'site-description' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_after_header_thumbnail() {
+
+    $output = agnosia_get_after_header_thumbnail();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_after_header_thumbnail() {
+
+    $html = '';
+
+    if ( agnosia_post_show_thumbnail_after_header_img() ) :
+
+        $html = agnosia_get_template( 'after-header-thumbnail', 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_header() {
+
+    $output = agnosia_get_header();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_header() {
+
+    $html = '';
+
+    if ( agnosia_show_header() ) : 
+
+        $html = agnosia_get_template( 'header' , 'header' );
 
     endif;
 

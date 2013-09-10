@@ -23,11 +23,7 @@
 			<div id="header-wrap" class="container">
 	<?php endif; ?>
 
-				<?php if ( agnosia_show_header() ) : ?>
-
-					<?php agnosia_load_template( 'header' , 'header' ); ?>
-
-				<?php endif; ?>
+				<?php agnosia_header(); ?>
 
 				<?php if ( agnosia_footer_is_wrapped() ) : ?>
 					<div id="footer-wrap" class="container">

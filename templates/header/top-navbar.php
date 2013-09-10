@@ -8,43 +8,42 @@
  * This file is an HTML template that shows the top navigation bar.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_evaluate('show_header_top_navbar') ) : ?>
+<section id="top-navbar" class="<?php agnosia_header_top_navbar_class(); ?>">
 
-	<section id="top-navbar" class="<?php agnosia_header_top_navbar_class(); ?>">
+	<nav class="navbar<?php agnosia_header_top_navbar_color_scheme(); ?>">
 
-		<nav class="navbar<?php agnosia_header_top_navbar_color_scheme(); ?>">
+		<section class="navbar-inner">
 
-			<section class="navbar-inner">
+			<section class="<?php agnosia_wrapper_style(); ?>">
 
-				<section class="<?php agnosia_wrapper_style(); ?>">
+				<?php agnosia_load_template( 'top-responsive-button' , 'header' ); ?>
 
-					<?php agnosia_load_template( 'top-responsive-button' , 'header' ); ?>
+				<div id="top-navbar-row" class="<?php agnosia_top_navbar_row_class(); ?>">
 
-					<div id="top-navbar-row" class="<?php agnosia_top_navbar_row_class(); ?>">
+					<?php agnosia_load_template( 'top-brand' , 'header' ); ?>
 
-						<?php agnosia_load_template( 'top-brand' , 'header' ); ?>
+					<div id="top-navigation" class="<?php agnosia_top_navigation_class(); ?>">
 
-						<div id="top-navigation" class="<?php agnosia_top_navigation_class(); ?>">
+						<?php agnosia_load_template( 'top-menu' , 'header' ); ?>
 
-							<?php agnosia_load_template( 'top-menu' , 'header' ); ?>
-
-							<?php agnosia_load_template( 'top-searchform' , 'header' ); ?>
-
-						</div>
+						<?php agnosia_load_template( 'top-searchform' , 'header' ); ?>
 
 					</div>
 
-				</section>
+				</div>
 
 			</section>
 
-		</nav>
+		</section>
 
-	</section>
+	</nav>
 
-<?php endif; ?>
+</section>

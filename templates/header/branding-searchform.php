@@ -8,21 +8,20 @@
  * This file is an HTML template that shows the branding searchform.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_evaluate('header_branding_section_show_search') ) : ?>
+<div id="branding-searchform-container" class="<?php agnosia_branding_searchform_container_class(); ?>">
 
-	<div id="branding-searchform-container" class="<?php agnosia_branding_searchform_container_class(); ?>">
+	<section id="branding-searchform" class="searchform">
 
-		<section id="branding-searchform" class="searchform">
+		<?php agnosia_header_branding_navbar_search_form(); ?>
 
-			<?php agnosia_header_branding_navbar_search_form(); ?>
+	</section>
 
-		</section>
-
-	</div>
-
-<?php endif; ?>
+</div>
