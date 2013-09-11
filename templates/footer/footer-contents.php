@@ -8,55 +8,24 @@
  * This file is an HTML template that shows the footer contents.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( function_exists( 'agnosia_ac_post_additional_html' ) ) : ?>
-	<?php agnosia_load_template( 'after-container' , 'content' ); ?>
-<?php endif; ?>
+<footer id="footer">
 
-<?php global $sidebar_templates ; ?>
+	<section id="footer-content" class="<?php agnosia_wrapper_style(); ?>">
 
-<?php if ( agnosia_show_footer() ) : ?>
+		<nav id="footer-sidebars" class="row-fluid">
+			<?php agnosia_footer_sidebars(); ?>
+		</nav>
 
-	<?php $sidebars = agnosia_get( 'footer_columns_number' , 'footer' ) ; ?>
+	</section>
 
-	<footer id="footer">
+</footer>
 
-		<section id="footer-content" class="<?php agnosia_wrapper_style(); ?>">
-
-			<nav id="footer-sidebar" class="row-fluid">
-
-				<?php $counter = 1; while ( $counter <= $sidebars ) : ?>
-
-					<div class="span<?php echo (12/$sidebars); ?> sidebar-<?php echo $sidebars; ?>">
-
-						<?php if ( dynamic_sidebar( __( 'Footer' , 'agnosia' ) . ' #' . $counter ) ) : ?>
-
-							<?php /* Sidebar is printed */ ?>
-
-						<?php else : ?>
-
-							<div class="extra widget">
-
-								<?php agnosia_load_template( $sidebar_templates[ $counter ] , 'sidebar' ); ?>
-								
-							</div>
-
-						<?php endif; ?>
-
-					</div>
-
-				<?php $counter++; endwhile; ?>
-
-			</nav>
-
-		</section>
-
-	</footer>
-
-	<?php agnosia_load_template( 'footer-credits'  , 'footer' ); ?>
-
-<?php endif; ?>
+<?php agnosia_footer_credits(); ?>

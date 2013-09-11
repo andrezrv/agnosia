@@ -8,6 +8,9 @@
  * This file is an HTML template that shows the end of the content wrapper.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -21,7 +24,8 @@
 
 								<?php endif; ?>
 
-								<?php agnosia_load_template( 'footer-contents' , 'footer' ); ?>
+								<?php agnosia_after_container(); ?>
+								<?php agnosia_footer_contents(); ?>
 
 						<?php if ( agnosia_footer_is_wrapped() ) : ?>
 
@@ -37,6 +41,7 @@
 
 <?php else : ?>
 
-	<?php agnosia_load_template( 'footer-contents' , 'footer' ); ?>
+	<?php agnosia_after_container(); ?>
+	<?php agnosia_footer_contents(); ?>
 
 <?php endif; ?>

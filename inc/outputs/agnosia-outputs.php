@@ -51,8 +51,10 @@ function agnosia_admin_settings_url() {
 
 /**
  * Obtain URL of settings page in admin dashboard.
+ * 
  * Is there a native way to do this? I didn't find any and feel kinda silly doing this.
- * @author: andrezrv
+ * 
+ * @author andrezrv
  */
 function agnosia_get_admin_settings_url() {
 
@@ -3014,6 +3016,222 @@ function agnosia_get_header() {
     if ( agnosia_show_header() ) : 
 
         $html = agnosia_get_template( 'header' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_footer_contents() {
+
+    $output = agnosia_get_footer_contents();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_footer_contents() {
+
+    $html = '';
+
+    if ( agnosia_show_footer() ) : 
+
+        $html = agnosia_get_template( 'footer-contents' , 'footer' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_footer_credits() {
+
+    $output = agnosia_get_footer_credits();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_footer_credits() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'footer_show_credits' ) ) : 
+
+        $html = agnosia_get_template( 'footer-credits' , 'footer' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_footer_sidebar() {
+
+    $output = agnosia_get_footer_sidebar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_footer_sidebar() {
+
+    $html = '';
+
+    ob_start();
+
+    if ( dynamic_sidebar( __( 'Footer' , 'agnosia' ) . ' #' . agnosia_get_footer_sidebar_counter() ) ) : 
+        // Sidebar is printed.
+    else :
+        agnosia_load_template( 'footer-widget' , 'footer' );            
+    endif;
+
+    $html = ob_get_contents();
+
+    ob_end_clean();
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_footer_sidebars() {
+
+    $output = agnosia_get_footer_sidebars();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_footer_sidebars() {
+
+    global $sidebar_templates, $sidebars, $counter;
+
+    $sidebars = agnosia_get( 'footer_columns_number' , 'footer' );
+    $counter = 1;
+
+    $html = '';
+
+    while ( $counter <= $sidebars ) :
+
+        $html .= agnosia_get_template( 'footer-sidebar' , 'footer' );
+        $counter++; 
+
+    endwhile;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_footer_sidebar_span() {
+
+    $output = agnosia_get_footer_sidebar_span();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_footer_sidebar_span() {
+
+    global $sidebars;
+
+    $html = ( 12 / $sidebars );
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_footer_sidebar_counter() {
+
+    $output = agnosia_get_footer_sidebar_counter();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_footer_sidebar_counter() {
+
+    global $counter;
+
+    $html = $counter;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_footer_sidebar_template() {
+
+    $output = agnosia_get_footer_sidebar_template();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_footer_sidebar_template() {
+
+    global $sidebar_templates, $counter;
+
+    $html = $sidebar_templates[ $counter ];
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_after_container() {
+
+    $output = agnosia_get_after_container();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_after_container() {
+
+    $html = '';
+
+    if ( function_exists( 'agnosia_ac_post_additional_html' ) ) : 
+
+        $html = agnosia_get_template( 'after-container' , 'content' );
 
     endif;
 
