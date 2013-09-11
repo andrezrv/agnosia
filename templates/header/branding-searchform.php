@@ -19,9 +19,7 @@
 <div id="branding-searchform-container" class="<?php agnosia_branding_searchform_container_class(); ?>">
 
 	<section id="branding-searchform" class="searchform">
-
 		<?php agnosia_header_branding_navbar_search_form(); ?>
-
 	</section>
 
 </div>

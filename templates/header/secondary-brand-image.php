@@ -20,10 +20,6 @@
 
 	<h2><?php agnosia_header_branding_secondary_logo(); ?></h2>
 
-	<?php if ( agnosia_get( 'header_branding_section_secondary_logo_subtitle' ) ) : ?>
-
-		<h3><?php agnosia_header_branding_section_secondary_logo_subtitle(); ?></h3>
-
-	<?php endif; ?>
+	<?php agnosia_branding_secondary_logo_subtitle(); // Uses agnosia_get_template( 'branding-secondary-logo-subtitle' , 'header' ); ?>
 
 </section>

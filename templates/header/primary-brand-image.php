@@ -24,10 +24,6 @@
 		</a>
 	</h1>
 
-	<?php if ( agnosia_evaluate('header_branding_section_site_description') ) : ?>
-
-		<h2><?php bloginfo('description'); ?></h2>
-
-	<?php endif; ?>
+	<?php agnosia_branding_site_description(); // Uses agnosia_get_template( 'branding-site-description', 'header' ); ?>
 
 </section>

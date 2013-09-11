@@ -24,17 +24,17 @@
 
 			<section class="<?php agnosia_wrapper_style(); ?>">
 
-				<?php agnosia_load_template( 'top-responsive-button' , 'header' ); ?>
+				<?php agnosia_top_responsive_button(); // Uses agnosia_get_template( 'top-responsive-button' , 'header' ); ?>
 
 				<div id="top-navbar-row" class="<?php agnosia_top_navbar_row_class(); ?>">
 
-					<?php agnosia_load_template( 'top-brand' , 'header' ); ?>
+					<?php agnosia_top_navbar_brand(); // Uses agnosia_get_template( 'top-brand' , 'header' ); ?>
 
 					<div id="top-navigation" class="<?php agnosia_top_navigation_class(); ?>">
 
-						<?php agnosia_load_template( 'top-menu' , 'header' ); ?>
+						<?php agnosia_top_menu(); // Uses agnosia_get_template( 'top-menu' , 'header' ); ?>
 
-						<?php agnosia_load_template( 'top-searchform' , 'header' ); ?>
+						<?php agnosia_top_navbar_searchform(); // Uses agnosia_get_template( 'top-searchform' , 'header' ); ?>
 
 					</div>
 

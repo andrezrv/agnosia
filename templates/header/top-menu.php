@@ -8,40 +8,14 @@
  * This file is an HTML template that shows the top navigation menu.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_evaluate('header_top_navbar_show_navigation') ) : ?>
-
-	<section id="top-menu" class="<?php agnosia_header_top_menu_class(); ?>">
-
-		<?php
-
-		if ( $agnosia_top_menu = wp_nav_menu( array( 
-				'theme_location' => 'top-menu' ,
-				'container'  => 'div' , 
-				'container_class' => '', 
-				'menu_class' => 'menu nav' ,
-				'fallback_cb' => false ,
-				'echo' => 0 ,
-				) 
-		) ) :
-
-			echo $agnosia_top_menu;
-
-		else : 
-
-			wp_page_menu( array(
-					'menu_class' => 'menu-header-menu-container',
-				)
-			);
-
-		endif;
-
-		?>
-
-	</section>
-
-<?php endif; ?>
+<section id="top-menu" class="<?php agnosia_header_top_menu_class(); ?>">
+	<?php agnosia_top_nav_menu(); ?>
+</section>

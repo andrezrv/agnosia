@@ -5,7 +5,7 @@
  * Please don't modify this file unless you know exactly what you're doing.
  * Keep in mind that any modification to this file may be overwritten by future core updates.
  *
- * This file is an HTML template that shows a responsive button into top navigation menu.
+ * This file is an HTML template that shows the secondary brand subtitle.
  * You can add or remove functionality via child themes.
  * 
  * @since 1.0
@@ -16,8 +16,4 @@
 
 ?>
 
-<a class="btn btn-navbar" data-toggle="collapse" data-target="#top-navigation">
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-</a>
+<h3><?php agnosia_header_branding_section_secondary_logo_subtitle(); ?></h3>

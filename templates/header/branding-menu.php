@@ -17,7 +17,5 @@
 ?>
 
 <section id="branding-menu" class="<?php agnosia_branding_top_menu_class(); ?>">
-
 	<?php agnosia_branding_nav_menu(); ?>
-
 </section>

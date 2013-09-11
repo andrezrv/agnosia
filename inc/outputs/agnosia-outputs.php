@@ -9,11 +9,12 @@
  * All the functions contained in this file are filterable.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
-
-/* HTML outputs and respective getters */
 
 
 function agnosia_home_url() {
@@ -2261,6 +2262,33 @@ function agnosia_get_header_responsive_button() {
 }
 
 
+function agnosia_top_responsive_button() {
+
+    $output = agnosia_get_top_responsive_button();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_top_responsive_button() {
+
+    $html = '';
+
+    if ( agnosia_show_top_responsive_button() ) :
+
+        $html = agnosia_get_template( 'top-responsive-button' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
 function agnosia_single_branding() {
 
     $output = agnosia_get_single_branding();
@@ -2304,7 +2332,9 @@ function agnosia_get_single_branding_contents() {
 
     if ( !agnosia_header_branding_has_logo() ) : 
 
-        $html = agnosia_get_template( 'single-branding-text', 'header' );
+        if ( agnosia_evaluate_show_branding_text() ) :
+            $html = agnosia_get_template( 'single-branding-text', 'header' );
+        endif;
 
     else :
 
@@ -2493,6 +2523,33 @@ function agnosia_get_header_menu() {
 }
 
 
+function agnosia_top_menu() {
+
+    $output = agnosia_get_top_menu();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_top_menu() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_top_navbar_show_navigation' ) ) :
+
+        $html = agnosia_get_template( 'top-menu' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
 function agnosia_branding_nav_menu() {
 
     $output = agnosia_get_branding_nav_menu();
@@ -2589,6 +2646,54 @@ function agnosia_get_header_nav_menu() {
 }
 
 
+function agnosia_top_nav_menu() {
+
+    $output = agnosia_get_top_nav_menu();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_top_nav_menu() {
+
+    $html = '';
+
+    if ( $agnosia_top_menu = wp_nav_menu( array( 
+                'theme_location' => 'top-menu' ,
+                'container'  => 'div' , 
+                'container_class' => '', 
+                'menu_class' => 'menu nav' ,
+                'fallback_cb' => false ,
+                'echo' => 0 ,
+                ) 
+        ) ) :
+
+        $html = $agnosia_top_menu;
+    
+    else : 
+
+        ob_start();
+
+        wp_page_menu( array(
+                'menu_class' => 'menu-header-menu-container',
+            )
+        );
+
+        $html = ob_get_contents();
+
+        ob_end_clean();
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
 function agnosia_branding_searchform() {
 
     $output = agnosia_get_branding_searchform();
@@ -2632,7 +2737,34 @@ function agnosia_get_header_navbar_searchform() {
 
     if ( agnosia_evaluate( 'header_navbar_show_search' ) ) :
 
-        $html = agnosia_get_template( 'branding-searchform' , 'header' );
+        $html = agnosia_get_template( 'header-searchform' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_top_navbar_searchform() {
+
+    $output = agnosia_get_top_navbar_searchform();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_top_navbar_searchform() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_top_navbar_show_search' ) ) :
+
+        $html = agnosia_get_template( 'top-searchform' , 'header' );
 
     endif;
 
@@ -2699,6 +2831,33 @@ function agnosia_get_header_navbar_brand() {
 }
 
 
+function agnosia_top_navbar_brand() {
+
+    $output = agnosia_get_top_navbar_brand();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_top_navbar_brand() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_top_navbar_show_brand' ) ) :
+
+        $html = agnosia_get_template( 'top-brand' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
 function agnosia_top_navbar() {
 
     $output = agnosia_get_top_navbar();
@@ -2718,6 +2877,60 @@ function agnosia_get_top_navbar() {
      ) :
 
         $html = agnosia_get_template( 'top-navbar' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_branding_site_description() {
+
+    $output = agnosia_get_branding_site_description();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_branding_site_description() {
+
+    $html = '';
+
+    if ( agnosia_evaluate( 'header_branding_section_site_description' ) ):
+
+        $html = agnosia_get_template( 'branding-site-description' , 'header' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_branding_secondary_logo_subtitle() {
+
+    $output = agnosia_get_branding_secondary_logo_subtitle();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_branding_secondary_logo_subtitle() {
+
+    $html = '';
+
+    if ( agnosia_get( 'header_branding_section_secondary_logo_subtitle' ) ):
+
+        $html = agnosia_get_template( 'branding-secondary-logo-subtitle' , 'header' );
 
     endif;
 
