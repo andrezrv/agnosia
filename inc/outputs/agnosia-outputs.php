@@ -3080,6 +3080,94 @@ function agnosia_get_footer_credits() {
 }
 
 
+function agnosia_content_left_sidebar() {
+
+    $output = agnosia_get_content_left_sidebar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_content_left_sidebar() {
+
+    $html = '';
+
+    ob_start();
+
+    if ( dynamic_sidebar( __( 'Left sidebar' , 'agnosia' ) ) ) : 
+        // Sidebar is printed.
+    else :
+        agnosia_load_template( 'sidebar-widget' , 'sidebar' );            
+    endif;
+
+    $html = ob_get_contents();
+
+    ob_end_clean();
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_content_right_sidebar() {
+
+    $output = agnosia_get_content_right_sidebar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_content_right_sidebar() {
+
+    $html = '';
+
+    ob_start();
+
+    if ( dynamic_sidebar( __( 'Right sidebar' , 'agnosia' ) ) ) : 
+        // Sidebar is printed.
+    else :
+        agnosia_load_template( 'sidebar-widget' , 'sidebar' );            
+    endif;
+
+    $html = ob_get_contents();
+
+    ob_end_clean();
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_sidebar_template( $key ) {
+
+    $output = agnosia_get_sidebar_template( $key );
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_sidebar_template( $key ) {
+
+    global $sidebar_templates;
+
+    $code = $sidebar_templates[$key];
+    $code = apply_filters( __FUNCTION__, $code );
+
+    return $code;
+
+}
+
+
 function agnosia_footer_sidebar() {
 
     $output = agnosia_get_footer_sidebar();
@@ -3232,6 +3320,72 @@ function agnosia_get_after_container() {
     if ( function_exists( 'agnosia_ac_post_additional_html' ) ) : 
 
         $html = agnosia_get_template( 'after-container' , 'content' );
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_left_sidebar() {
+
+    $output = agnosia_get_left_sidebar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_left_sidebar() {
+
+    $html = '';
+
+    if ( current_theme_supports( 'agnosia-left-sidebar' ) ) :
+
+        global $post, $sidebar_templates ;
+
+        if ( agnosia_evaluate_show( 'show_left_sidebar' , 'hide_left_sidebar' , $post ) ) :
+
+            $html = agnosia_get_template( 'left-sidebar' , 'sidebar' );
+
+        endif;
+
+    endif;
+
+    $html = apply_filters( __FUNCTION__, $html );
+
+    return $html;
+
+}
+
+
+function agnosia_right_sidebar() {
+
+    $output = agnosia_get_right_sidebar();
+    $output = apply_filters( __FUNCTION__, $output );
+
+    echo $output;
+
+}
+
+
+function agnosia_get_right_sidebar() {
+
+    $html = '';
+
+    if ( current_theme_supports( 'agnosia-right-sidebar' ) ) :
+
+        global $post, $sidebar_templates;
+
+        if ( agnosia_evaluate_show( 'show_right_sidebar' , 'hide_right_sidebar' , $post ) ) :
+
+            $html = agnosia_get_template( 'right-sidebar' , 'sidebar' );
+
+        endif;
 
     endif;
 

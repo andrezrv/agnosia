@@ -8,46 +8,24 @@
  * This file is an HTML template that shows the right sidebar.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( current_theme_supports( 'agnosia-right-sidebar' ) ) : ?>
+<div id="right-sidebar" class="span3 sidebar">
 
-    <?php global $post , $sidebar_templates ; ?>
+    <nav id="right-sidebar-nav">
 
-    <?php if ( agnosia_evaluate_show( 'show_right_sidebar' , 'hide_right_sidebar' , $post ) ) : ?>
-
-        <div id="right-sidebar" class="span3 sidebar">
-
-            <nav id="right-sidebar-nav">
-
-                <div class="right-sidebar sidebar-<?php $sidebars; ?>">
-                    
-                    <?php if ( dynamic_sidebar( __( 'Right sidebar' , 'agnosia' ) ) ) : ?>
-                    
-                        <?php /* Sidebar is printed */ ?>
-                        
-                    <?php else : ?>
-                    
-                        <div class="extra widget">
-
-                            <?php agnosia_load_template( $sidebar_templates[1] , 'sidebar' ); ?>
-                            <?php agnosia_load_template( $sidebar_templates[2] , 'sidebar' ); ?>
-                            <?php agnosia_load_template( $sidebar_templates[3] , 'sidebar' ); ?>
-                            <?php agnosia_load_template( $sidebar_templates[4] , 'sidebar' ); ?>
-
-                        </div>
-                        
-                    <?php endif; ?>
-                    
-                </div>
-
-            </nav>
-
+        <div class="right-sidebar sidebar-1">
+            
+            <?php agnosia_content_right_sidebar(); ?>
+            
         </div>
 
-    <?php endif; ?>
+    </nav>
 
-<?php endif; ?>
+</div>

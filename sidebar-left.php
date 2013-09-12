@@ -8,9 +8,12 @@
  * This file handles views for WordPress left sidebar.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php agnosia_load_template( 'left-sidebar' , 'sidebar' ); ?>
+<?php agnosia_left_sidebar(); // Uses agnosia_load_template( 'left-sidebar' , 'sidebar' ); ?>

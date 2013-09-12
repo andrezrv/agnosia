@@ -8,11 +8,12 @@
  * This file handles views for WordPress right sidebar.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php agnosia_load_template( 'right-sidebar' , 'sidebar' ); ?>
-
-<?php /* How many persons fit in a whale? None, because it goes full!! */ ?>
+<?php agnosia_right_sidebar(); // Uses agnosia_load_template( 'right-sidebar' , 'sidebar' ); ?>
