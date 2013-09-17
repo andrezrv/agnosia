@@ -8,6 +8,9 @@
  * This file handles views for WordPress comments.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -29,7 +32,11 @@
 
 			_e( 'This post is password protected. Enter the password to view comments.' , 'agnosia' );
 
-		?></section><?php
+		?>
+
+</section>
+		
+		<?php
 
 			return false;
 

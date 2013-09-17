@@ -8,6 +8,9 @@
  * This file handles views for WordPress footer.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 

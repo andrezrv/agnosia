@@ -8,26 +8,30 @@
  * This file handles views for WordPress home (blog or index, depending on your settings).
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
 <?php get_header(); ?>
-
 <?php get_sidebar( 'left' ); ?>
 
 <section id="posts-container" class="<?php agnosia_content_colspan(); ?> <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); $post = get_post( get_the_ID() ); ?>
+	<?php if ( have_posts() ) : ?>
 
-		<?php agnosia_load_template( 'home-post' , 'content' ); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php endwhile; ?>
+			<?php agnosia_load_template( 'home-post' , 'content' ); ?>
 
-	<?php agnosia_load_template( 'page-navigation' , 'content' ); ?>
+		<?php endwhile; ?>
 
-	<?php wp_reset_query(); ?>
+		<?php agnosia_load_template( 'page-navigation' , 'content' ); ?>
+
+		<?php wp_reset_query(); ?>
 
 	<?php else : ?>
 
@@ -38,5 +42,4 @@
 </section>
 
 <?php get_sidebar( 'right' ); ?>
-
 <?php get_footer(); ?>

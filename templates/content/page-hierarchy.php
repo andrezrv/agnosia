@@ -8,23 +8,18 @@
  * This file is an HTML template that shows the page hierarchy of a page.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php global $post; ?>
+<section id="page-hierarchy" class="span3">
 
-<?php if ( agnosia_evaluate_show( 'content_show_page_hierarchy' , 'content_hide_page_hierarchy' , $post ) and agnosia_has_page_hierarchy($post) ) : ?>
+	<ul class="nav nav-list">
+		<?php agnosia_page_hierarchy_content(); ?>
+	</ul>
 
-	<section id="page-hierarchy" class="span3">
-
-		<ul class="nav nav-list">
-
-		<?php agnosia_page_hierarchy($post); ?>
-
-		</ul>
-
-	</section>
-
-<?php endif;?>
+</section>

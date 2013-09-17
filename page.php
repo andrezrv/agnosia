@@ -8,125 +8,61 @@
  * This file handles views for WordPress pages.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
 <?php get_header(); ?>
-
 <?php get_sidebar( 'left' ); ?>
 
-<?php agnosia_load_template( 'page-hierarchy'  , 'content' ); ?>
+<?php // The following call uses agnosia_get_template( 'page-hierarchy'  , 'content' ); ?>
+<?php agnosia_page_hierarchy(); ?>
 
 <section id="page-container" class="<?php agnosia_content_colspan(); ?> <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
 
 	<?php agnosia_page_breadcrumb(); ?>
+	<?php agnosia_before_content(); ?>
 
-	<?php if ( function_exists( 'agnosia_ac_post_additional_html' ) ) : ?>
-		<?php agnosia_load_template( 'before-content' , 'content' ); ?>
-	<?php endif; ?>
+	<?php if ( have_posts() ) : ?>
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); $post = get_post( get_the_ID() ); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 			
-		<article class="post <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>" id="post-<?php the_ID(); ?>">
+			<article class="page post <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>" id="post-<?php the_ID(); ?>">
 
-			<?php if ( agnosia_post_show_thumbnail_before_header() ) : ?>
+				<?php // The following call uses agnosia_get_template( 'post-thumbnail', 'content' ); ?>
+				<?php agnosia_post_thumbnail( 'post-before-header' ); ?>
 
-				<section class="post-thumbnail <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
+				<?php // The following call uses agnosia_get_template( 'page-header', 'content' ); ?>
+				<?php agnosia_page_header(); ?>
 
-					<?php agnosia_post_thumbnail_img(); ?>
+				<?php // The following call uses agnosia_get_template( 'post-thumbnail', 'content' ); ?>
+				<?php agnosia_post_thumbnail( 'post-after-meta' ); ?>
 
+				<section class="entry <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
+					<?php agnosia_load_template( 'the-content' , 'content' ); ?>
 				</section>
 
-			<?php endif; ?>
+				<?php agnosia_load_template( 'post-pages'  , 'content' ); ?>
 
-			<?php if ( agnosia_show_page_header() ) : ?>
+				<?php // The following call uses agnosia_get_template( 'page-footer', 'content' ); ?>
+				<?php agnosia_post_footer(); ?>
 
-				<header class="post-header <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
+			</article>
 
-					<?php if ( agnosia_show_page_author_gravatar() ) : ?>
+			<?php agnosia_load_template( 'separator'  , 'content' ); ?>			
+			<?php agnosia_load_template( 'post-comments'  , 'content' ); ?>
 
-						<?php agnosia_load_template( 'author-gravatar'  , 'content' ); ?>
+		<?php endwhile;?>
 
-					<?php endif; ?>
-
-					<?php if ( agnosia_show_page_title() ) : ?>
-
-						<?php agnosia_load_template( 'the-title'  , 'content' ); ?>
-
-					<?php endif; ?>
-
-					<?php if ( agnosia_post_show_thumbnail_after_title() ) : ?>
-
-						<section class="post-thumbnail <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
-
-							<?php agnosia_post_thumbnail_img(); ?>
-
-						</section>
-
-					<?php endif; ?>
-					
-					<?php if ( agnosia_show_page_meta() ) : ?>
-					
-						<?php agnosia_load_template( 'pages-meta-before'  , 'content' ); ?>
-
-					<?php endif; ?>
-
-				</header>
-
-			<?php endif; ?>
-
-			<?php if ( agnosia_post_show_thumbnail_after_meta() ) : ?>
-
-				<section class="post-thumbnail <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
-
-					<?php agnosia_post_thumbnail_img(); ?>
-
-				</section>
-
-			<?php endif; ?>
-
-			<section class="entry <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
-
-				<?php agnosia_load_template( 'the-content' , 'content' ); ?>
-
-			</section>
-
-			<?php agnosia_load_template( 'post-pages'  , 'content' ); ?>
-
-			<?php if ( agnosia_show_page_footer() ) : ?>
-
-				<footer class="page-footer single">
-
-					<?php if ( agnosia_show_page_metadata() ) : ?>
-							
-						<?php agnosia_load_template( 'pages-meta-after'  , 'content' ); ?>
-
-					<?php endif; ?>
-
-					<?php agnosia_load_template( 'post-edit'  , 'content' ); ?>	
-
-					<?php agnosia_load_template( 'the-author'  , 'content' ); ?>	
-			
-				</footer>
-
-			<?php endif; ?>	
-
-		</article>
-
-		<?php agnosia_load_template( 'separator'  , 'content' ); ?>
-		
-		<?php agnosia_load_template( 'post-comments'  , 'content' ); ?>
-
-	<?php endwhile; endif; ?>
-
-	<?php if ( function_exists( 'agnosia_ac_post_additional_html' ) ) : ?>
-		<?php agnosia_load_template( 'after-content' , 'content' ); ?>
 	<?php endif; ?>
+
+	<?php agnosia_after_content(); ?>
 
 </section>
 
 <?php get_sidebar( 'right' ); ?>
-
 <?php get_footer(); ?>
