@@ -8,11 +8,12 @@
  * This file is an HTML template that shows the title of a post, page, index entries or archive entries.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
-global $post;
-
 ?>
 
-<h2><a href="<?php the_permalink(); ?>"><?php echo $post->post_title; ?></a></h2>
+<h2><a href="<?php the_permalink(); ?>"><?php agnosia_the_title(); ?></a></h2>

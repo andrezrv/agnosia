@@ -8,20 +8,12 @@
  * This file is an HTML template that shows an edit link into a post.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php 
-
-if ( 
-	( is_page() and agnosia_evaluate('content_show' . agnosia_get_prefixed_page_format() . '_edit_bottom' ) )
-	or ( ( is_single() or is_home() or is_archive() or is_author() or is_search() ) and agnosia_evaluate('content_show_post' . agnosia_get_prefixed_post_format() . '_edit_bottom' ) )
-) : 
-
-	edit_post_link( __( 'Edit this entry' , 'agnosia' ) , '<section class="edit-entry"><span>' , '</span></section>');
-				
-endif;
-
-?>
+<?php edit_post_link( __( 'Edit this entry' , 'agnosia' ) , '<section class="edit-entry"><span>' , '</span></section>'); ?>

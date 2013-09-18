@@ -17,6 +17,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <?php get_sidebar( 'left' ); ?>
 
 <section id="posts-container" class="<?php agnosia_content_colspan(); ?> <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
@@ -42,4 +43,5 @@
 </section>
 
 <?php get_sidebar( 'right' ); ?>
+
 <?php get_footer(); ?>

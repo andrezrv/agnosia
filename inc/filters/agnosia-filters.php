@@ -227,7 +227,33 @@ function agnosia_filter_comment_text( $text ) {
 
 
 
-function agnosia_comment_form( $args ) {
+function agnosia_comment_form() {
+
+    $commenter = wp_get_current_commenter();
+    $req = get_option( 'require_name_email' );
+    $aria_req = ( $req ? " aria-required='true'" : '' );
+    $required_text = '';
+
+    $args = array(
+
+        'id_form' => 'commentform' ,
+        'id_submit' => 'submit' ,
+        'title_reply' => __( 'Leave a Reply' , 'agnosia' ) ,
+        'title_reply_to' => __( 'Leave a Reply to %s' , 'agnosia' ) ,
+        'cancel_reply_link' => __( 'Cancel Reply' , 'agnosia' ) ,
+        'label_submit' => __( 'Post Comment' , 'agnosia' ) ,
+        'comment_field' => '<div class="control-group"><div class="controls"><textarea class="control-label" name="comment" id="comment" cols="80" rows="5" tabindex="4"></textarea></div></div>' ,
+        'must_log_in' => __( 'You must be' , 'agnosia' ) . '<a href="' . wp_login_url( get_permalink() ) . '"' . __( ' logged in' , 'agnosia' ) . '</a> ' . __( 'to post a comment.' , 'agnosia' ) ,
+        'logged_in_as' => __( 'Logged in as' , 'agnosia' ) . ' <a href="' . get_option('siteurl') . '/wp-admin/profile.php">' . $user_identity . '</a>. <a href="'. wp_logout_url( get_permalink() ) . '" title="' . __( 'Log out' , 'agnosia' ) . '">' . __( 'Log out' , 'agnosia' ) . ' &raquo;</a></p>' ,
+        'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.' , 'agnosia' ) . ( $req ? $required_text : '' ) . '</p>',
+        'comment_notes_after' => '<pre class="form-allowed-tags">' . sprintf( __( 'You may use these HTML tags and attributes: %s', 'agnosia' ), ' <code>' . allowed_tags() . '</code>' ) . '</pre>',
+        'fields' => apply_filters( 'comment_form_default_fields', array(
+            'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name', 'agnosia' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+            'email' => '<p class="comment-form-email"><label for="email">' . __( 'Email', 'agnosia' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+            'url' => '<p class="comment-form-url"><label for="url">' . __( 'Website', 'agnosia' ) . '</label>' . '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>' ) 
+        ) 
+
+    );
 
     ob_start();
 

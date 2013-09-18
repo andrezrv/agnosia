@@ -17,6 +17,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <?php get_sidebar( 'left' ); ?>
 
 <section id="category-archive-container" class="<?php agnosia_content_colspan(); ?> <?php agnosia_post_class(); ?>">
@@ -65,4 +66,5 @@
 </section>
 
 <?php get_sidebar( 'right' ); ?>
+
 <?php get_footer(); ?>

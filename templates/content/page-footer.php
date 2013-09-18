@@ -18,14 +18,13 @@
 
 <footer class="page-footer <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
 
-	<?php if ( agnosia_show_page_metadata() ) : ?>
-							
-		<?php agnosia_load_template( 'pages-meta-after'  , 'content' ); ?>
+	<?php // The following call uses agnosia_get_template( 'pages-meta-after'  , 'content' ); ?>
+	<?php agnosia_page_meta_after(); ?>
 
-	<?php endif; ?>
+	<?php // The following call uses agnosia_get_template( 'post-edit', 'content' ); ?>
+	<?php agnosia_post_edit_link(); ?>
 
-	<?php agnosia_load_template( 'post-edit'  , 'content' ); ?>	
-
-	<?php agnosia_load_template( 'the-author'  , 'content' ); ?>	
+	<?php // The following call uses agnosia_get_template( 'the-author'  , 'content' ); ?>
+	<?php agnosia_the_author(); ?>	
 
 </footer>

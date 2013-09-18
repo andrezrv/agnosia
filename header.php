@@ -8,6 +8,9 @@
  * This file handles views for WordPress header.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -19,7 +22,7 @@
 
 	<head>
 		
-		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+		<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
 		
 		<?php if ( is_search() ) : ?><meta name="robots" content="noindex, nofollow" /><?php endif; ?>
 
@@ -29,11 +32,9 @@
 		
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-		<?php if ( is_singular() and get_option( 'thread_comments' ) ) : wp_enqueue_script( 'comment-reply' ); endif; ?>
-
 		<?php wp_head(); ?>
 		
-		<?php if( is_single() or is_page() ) : agnosia_post_custom_stylesheet(); endif; ?>
+		<?php agnosia_post_custom_stylesheet(); ?>
 
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
@@ -50,9 +51,7 @@
 
 			<?php agnosia_load_template( 'content-wrapper-start' , 'content' ); ?>
 
-			<?php if ( function_exists( 'agnosia_ac_post_additional_html' ) or agnosia_page_has_large_header() ) : ?>
-				<?php agnosia_load_template( 'before-container' , 'content' ); ?>
-			<?php endif; ?>
+			<?php agnosia_before_container(); ?>
 			
 			<section id="content" class="content">
 

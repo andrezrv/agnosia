@@ -17,8 +17,17 @@
 ?>
 
 <header class="post-header <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
+
+	<?php // The following call uses agnosia_get_template( 'author-gravatar', 'content' ); ?>
 	<?php agnosia_post_author_gravatar(); ?>
-	<?php agnosia_post_title(); // Uses agnosia_get_template( 'the-title', 'content' ) and the_title(). ?>
+
+	<?php // The following call uses agnosia_get_template( 'the-title', 'content' ) and the_title() ?>
+	<?php agnosia_post_title(); ?>
+
+	<?php // The following call uses agnosia_get_template( 'post-thumbnail', 'content' ); ?>
 	<?php agnosia_post_thumbnail( 'index-after-title' ); ?>
-	<?php agnosia_post_meta_before(); // Uses agnosia_get_template( 'posts-meta-before', 'content' ); ?>
+
+	<?php // The following call uses agnosia_get_template( 'posts-meta-before', 'content' ) and the_title() ?>
+	<?php agnosia_post_meta_before(); ?>
+
 </header>

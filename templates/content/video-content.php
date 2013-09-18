@@ -8,10 +8,13 @@
  * This file is an HTML template that shows the post content of video format type.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
-agnosia_inserted_html();
-agnosia_post_title_bottom();
-
 ?>
+
+<?php agnosia_inserted_html(); ?>
+<?php agnosia_post_title_bottom(); ?>

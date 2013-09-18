@@ -23,6 +23,7 @@
 <?php else : ?>
 
 	<?php get_header(); ?>
+
 	<?php get_sidebar( 'left' ); ?>
 
 	<section id="post-container" class="<?php agnosia_content_colspan(); ?> <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
@@ -49,10 +50,15 @@
 						<?php agnosia_load_template( 'the-content'  , 'content' ); ?>
 					</section>
 
+					<?php agnosia_load_template( 'post-pages'  , 'content' ); ?>
+
 					<?php // The following call uses agnosia_get_template( 'post-footer', 'content' ); ?>
 					<?php agnosia_post_footer(); ?>
+
+					<?php // The following call uses agnosia_get_template( 'post-navigation', 'content' ); ?>
+					<?php agnosia_post_navigation(); ?>
 					
-				</article>			
+				</article>
 
 				<?php agnosia_load_template( 'separator'  , 'content' ); ?>				
 				<?php agnosia_load_template( 'post-comments'  , 'content' ); ?>					
@@ -66,6 +72,7 @@
 	</section>
 
 	<?php get_sidebar( 'right' ); ?>
+
 	<?php get_footer(); ?>
 
 <?php endif; ?>

@@ -18,6 +18,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <?php get_sidebar( 'left' ); ?>
 
 <section id="paged-post-container" class="<?php agnosia_content_colspan(); ?> <?php agnosia_post_class(); ?>">

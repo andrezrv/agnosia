@@ -8,13 +8,14 @@
  * This file is an HTML template that shows the post author's Gravatar into the author box.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<div class="gravatar">
-	
-	<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-	
+<div class="gravatar">	
+	<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>	
 </div>

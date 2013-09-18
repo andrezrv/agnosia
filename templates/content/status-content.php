@@ -8,6 +8,9 @@
  * This file is an HTML template that shows the post content of status format type.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -19,10 +22,8 @@
 	
 	<?php agnosia_the_author_posts_link(); ?>
 
-	<div class="content">
-		
+	<div class="content">		
 		<?php agnosia_inserted_html(); ?>
-
 	</div>
 
 </div>

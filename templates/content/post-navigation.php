@@ -8,19 +8,15 @@
  * This file is an HTML template that shows a post navigation links.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_show_post_navigation() ) : ?>
-
-	<section id="post-navigation-bottom">
-
-		<div id="previous-post" class="navigation"><?php previous_post_link(); ?></div>
-		
-		<div id="next-post" class="navigation"><?php next_post_link(); ?></div>
-		
-	</section>
-	
-<?php endif; ?>
+<section id="post-navigation-bottom">
+	<div id="previous-post" class="navigation"><?php previous_post_link(); ?></div>	
+	<div id="next-post" class="navigation"><?php next_post_link(); ?></div>
+</section>

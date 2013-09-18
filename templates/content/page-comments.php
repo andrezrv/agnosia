@@ -8,13 +8,12 @@
  * This file is an HTML template that shows the comments of a page.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_evaluate_show( 'content_show_page_comments_bottom' , 'content_hide_comments_bottom' , $post ) ) : ?>
-
-	<?php comments_template(); ?>
-
-<?php endif; ?>
+<?php agnosia_page_comments_template(); ?>

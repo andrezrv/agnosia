@@ -17,6 +17,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <?php get_sidebar( 'left' ); ?>
 
 <section id="404-container" class="<?php agnosia_post_class(); ?> <?php agnosia_content_colspan(); ?>">
@@ -27,4 +28,5 @@
 </section>
 
 <?php get_sidebar( 'right' ); ?>
+
 <?php get_footer(); ?>

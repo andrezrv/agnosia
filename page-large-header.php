@@ -21,6 +21,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <?php get_sidebar( 'left' ); ?>
 
 <?php // The following call uses agnosia_get_template( 'page-hierarchy'  , 'content' ); ?>
@@ -61,4 +62,5 @@
 </section>
 
 <?php get_sidebar( 'right' ); ?>
+
 <?php get_footer(); ?>

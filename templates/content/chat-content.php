@@ -14,7 +14,5 @@
 ?>
 
 <pre>
-
 	<?php agnosia_inserted_html(); ?>
-
 </pre>

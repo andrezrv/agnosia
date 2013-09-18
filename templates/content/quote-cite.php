@@ -8,11 +8,12 @@
  * This file is an HTML template that shows the cite for a post with the quote format type.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
-global $post;
-
 ?>
 
-<cite><?php echo $post->post_title; ?></cite>
+<cite><?php agnosia_the_title(); ?></cite>
