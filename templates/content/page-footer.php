@@ -18,6 +18,9 @@
 
 <footer class="page-footer <?php agnosia_post_class(); ?> <?php agnosia_post_format(); ?>">
 
+	<?php // The following call uses agnosia_get_template( 'the-title'  , 'content' ); ?>
+	<?php agnosia_page_title_bottom(); ?>
+
 	<?php // The following call uses agnosia_get_template( 'pages-meta-after'  , 'content' ); ?>
 	<?php agnosia_page_meta_after(); ?>
 

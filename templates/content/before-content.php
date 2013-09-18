@@ -8,37 +8,14 @@
  * This file is an HTML template that shows contents before main content section.
  * You can add or remove functionality via child themes.
  * 
+  * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-
-<?php
-
-if ( is_page() or is_single() ) :
-
-	ob_start();
-	do_action( 'agnosia_ac_before_content_html' );
-	$before_content_html = ob_get_contents();
-	ob_end_clean();
-
-	if ( $before_content_html ) :
-
-	?>
-
-		<div id="before-content-html" class="extra-content">
-			
-			<?php echo $before_content_html ; ?>
-
-		</div>
-
-	<?php
-
-	endif;
-
-	wp_reset_query();
-
-endif;
-
-?>
+<div id="before-content-html" class="extra-content">
+	<?php agnosia_inserted_html(); ?>
+</div>

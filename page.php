@@ -50,7 +50,7 @@
 				<?php agnosia_load_template( 'post-pages'  , 'content' ); ?>
 
 				<?php // The following call uses agnosia_get_template( 'page-footer', 'content' ); ?>
-				<?php agnosia_post_footer(); ?>
+				<?php agnosia_page_footer(); ?>
 
 			</article>
 

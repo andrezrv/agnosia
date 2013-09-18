@@ -8,36 +8,14 @@
  * This file is an HTML template that shows contents after main content element.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php
-
-if ( is_page() or is_single() ) :
-
-	ob_start();
-	do_action( 'agnosia_ac_after_content_html' );
-	$after_content_html = ob_get_contents();
-	ob_end_clean();
-
-	if ( $after_content_html ) :
-
-	?>
-
-		<div id="after-content-html" class="extra-content">
-			
-			<?php echo $after_content_html ; ?>
-
-		</div>
-
-	<?php
-
-	endif;
-
-	wp_reset_query();
-
-endif;
-
-?>
+<div id="after-content-html" class="extra-content">
+	<?php agnosia_inserted_html(); ?>
+</div>

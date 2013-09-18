@@ -229,6 +229,8 @@ function agnosia_filter_comment_text( $text ) {
 
 function agnosia_comment_form() {
 
+    global $user_identity;
+
     $commenter = wp_get_current_commenter();
     $req = get_option( 'require_name_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
@@ -244,7 +246,7 @@ function agnosia_comment_form() {
         'label_submit' => __( 'Post Comment' , 'agnosia' ) ,
         'comment_field' => '<div class="control-group"><div class="controls"><textarea class="control-label" name="comment" id="comment" cols="80" rows="5" tabindex="4"></textarea></div></div>' ,
         'must_log_in' => __( 'You must be' , 'agnosia' ) . '<a href="' . wp_login_url( get_permalink() ) . '"' . __( ' logged in' , 'agnosia' ) . '</a> ' . __( 'to post a comment.' , 'agnosia' ) ,
-        'logged_in_as' => __( 'Logged in as' , 'agnosia' ) . ' <a href="' . get_option('siteurl') . '/wp-admin/profile.php">' . $user_identity . '</a>. <a href="'. wp_logout_url( get_permalink() ) . '" title="' . __( 'Log out' , 'agnosia' ) . '">' . __( 'Log out' , 'agnosia' ) . ' &raquo;</a></p>' ,
+        'logged_in_as' => __( 'Logged in as' , 'agnosia' ) . ' <a href="' . get_option( 'siteurl' ) . '/wp-admin/profile.php">' . $user_identity . '</a>. <a href="'. wp_logout_url( get_permalink() ) . '" title="' . __( 'Log out' , 'agnosia' ) . '">' . __( 'Log out' , 'agnosia' ) . ' &raquo;</a></p>' ,
         'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.' , 'agnosia' ) . ( $req ? $required_text : '' ) . '</p>',
         'comment_notes_after' => '<pre class="form-allowed-tags">' . sprintf( __( 'You may use these HTML tags and attributes: %s', 'agnosia' ), ' <code>' . allowed_tags() . '</code>' ) . '</pre>',
         'fields' => apply_filters( 'comment_form_default_fields', array(
