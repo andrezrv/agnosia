@@ -6,8 +6,11 @@
  * Keep in mind that any modification to this file may be overwritten by future core updates.
  *
  * This file handles the post editor metaboxes.
- * Find a great amount of information about this topic in @link http://wp.smashingmagazine.com/2011/10/04/create-custom-post-meta-boxes-wordpress/
+ * Find a great amount of information about this topic in {@link http://wp.smashingmagazine.com/2011/10/04/create-custom-post-meta-boxes-wordpress/}
  * You can add or remove functionality via child themes.
+ * 
+ * @since 1.0
+ * @author andrezrv
  * 
  * @package Agnosia
  */
@@ -468,7 +471,3 @@ if ( is_admin() ) :
 	add_action( 'load-post-new.php', 'agnosia_post_meta_boxes_setup' );
 
 endif;
-
-
-
-?>

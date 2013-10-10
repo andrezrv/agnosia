@@ -8,6 +8,9 @@
  * This file initializes the custom Agnosia theme options page into the WordPress Dashboard.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -35,5 +38,3 @@ function agnosia_load_theme_options_modules() {
 /* Add action filters. */
 add_action( 'agnosia_before_setup', 'agnosia_initialize_theme_options_modules' );
 add_action( 'agnosia_before_setup', 'agnosia_load_theme_options_modules' );
-
-?>

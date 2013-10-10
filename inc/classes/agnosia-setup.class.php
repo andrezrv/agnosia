@@ -8,10 +8,20 @@
  * This file handles the default and user-opted settings of the Agnosia theme.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 
+
+/**
+ * Allows to manage global theme settings, separated by sections.
+ *  
+ * @since 1.0
+ * @author andrezrv
+ */
 class agnosia_setup {
 
 
@@ -22,14 +32,15 @@ class agnosia_setup {
 	private $content = array();
 
 
-
+	/**
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function __construct() {
 
 		do_action( 'agnosia_before_setup' );
 
-		/**
-		 * Reset to default settings based on value of AGNOSIA_DEVELOPMENT_MODE.
-		 */
+		//Reset to default settings based on value of AGNOSIA_DEVELOPMENT_MODE.
 
 		if ( defined( 'AGNOSIA_DEVELOPMENT_MODE' ) 
 			and isset( $_GET['reset'] )
@@ -40,9 +51,7 @@ class agnosia_setup {
 
 		endif;
 
-		/**
-		 * Initialize and stabilize object and options values.
-		 */
+		// Initialize and stabilize object and options values.
 
 		$this->init();
 		$this->initialize_options();
@@ -55,7 +64,12 @@ class agnosia_setup {
 
 
 
-
+	/**
+	 * Gets the name of the option that will store all the theme settings.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_theme_options_name() {
 
 		$child = 'Agnosia' != wp_get_theme()->Name ? sanitize_title( wp_get_theme()->Name ) . '_' : '';
@@ -65,7 +79,12 @@ class agnosia_setup {
 
 
 
-	/* Check if an option matches a select element */
+	/**
+	 * Check if an option matches a select element.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function is_select( $var , $parent = false ) {
 
 		global $agnosia_options;
@@ -89,7 +108,12 @@ class agnosia_setup {
 
 
 
-	/* Check if an option matches an uploader element */
+	/**
+	 * Checks if an option matches an uploader element.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function is_uploader( $var , $parent = false ) {
 
 		global $agnosia_options;
@@ -113,7 +137,12 @@ class agnosia_setup {
 
 
 
-	/* Check if an option matches a text input element */
+	/**
+	 * Checks if an option matches a text input element.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function is_input( $var , $parent = false ) {
 
 		global $agnosia_options;
@@ -137,7 +166,12 @@ class agnosia_setup {
 
 
 
-	/* Check if an option matches a checkbox element */
+	/**
+	 * Checks if an option matches a checkbox element.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function is_checkbox( $var , $parent = false ) {
 
 		global $agnosia_options;
@@ -161,7 +195,12 @@ class agnosia_setup {
 
 
 
-	/* Get HTML form element for a given option */
+	/**
+	 * Gets HTML form element for a given option.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_field( $var , $parent = false , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -178,7 +217,12 @@ class agnosia_setup {
 
 
 
-	/* Print $this->get_field() */
+	/**
+	 * Echoes $this->get_field().
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function print_field( $var, $parent = false , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -192,7 +236,12 @@ class agnosia_setup {
 
 
 
-	/* Get label for HTML element */
+	/**
+	 * Gets label for HTML element.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function print_label( $var, $parent = false , $message , $context = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -207,6 +256,10 @@ class agnosia_setup {
 
 
 	/* Get select HTML for option */
+	/**
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_select_field( $var, $parent = false , $context = false , $object ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -242,6 +295,10 @@ class agnosia_setup {
 
 
 	/* Get input HTML for option */
+	/**
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_input_field( $var, $parent = false , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -287,7 +344,12 @@ class agnosia_setup {
 	}
 
 
-	// not working properly
+	/**
+	 * Gets input button for media uploader.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_uploader_field( $var, $parent = false , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -332,7 +394,11 @@ class agnosia_setup {
 
 
 
-	/* Get checkbox HTML for option */
+	/**
+	 * Gets checkbox HTML for option.
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_checkbox_field( $var, $parent = false , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -366,7 +432,12 @@ class agnosia_setup {
 
 
 
-	/* Get options for HTML select element */
+	/**
+	 * Gets options for HTML select element.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_select_options( $var, $parent = false , $html = false , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent();
@@ -399,7 +470,12 @@ class agnosia_setup {
 
 
 
-	/* Get HTML label for option */
+	/**
+	 * Gets HTML label for option.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_label( $var , $parent = false , $message , $context = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -424,7 +500,12 @@ class agnosia_setup {
 
 
 
-	/* Check if an option is checked */
+	/**
+	 * Checks if an option is checked.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_checked( $var , $parent = false , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -460,7 +541,12 @@ class agnosia_setup {
 	}
 
 
-
+	/**
+	 * Checks if a checkbox is checked. Lol.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	function get_checked_external( $value ) {
 
 		if ( $value == 'true' ) : return 'checked="true"'; endif;
@@ -470,7 +556,12 @@ class agnosia_setup {
 
 
 
-	/* Check if an option is selected */
+	/**
+	 * Checks if an option is selected.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_selected( $var , $parent = false , $value , $context = false , $object = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent();
@@ -502,7 +593,12 @@ class agnosia_setup {
 
 
 
-	/* Associate previously registered options with object properties */
+	/**
+	 * Associates previously registered options with object properties.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function init() {
 
 		do_action( 'agnosia_before_setup_init' );
@@ -534,7 +630,12 @@ class agnosia_setup {
 
 
 
-	/* Store default options values into database */
+	/**
+	 * Stores default options values into database.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function initialize_options() {
 
 		do_action( 'agnosia_before_initialize_options' );
@@ -559,7 +660,12 @@ class agnosia_setup {
 
 
 
-	/* Store default options values into object */
+	/**
+	 * Stores default options values into object.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function initialize_default_values() {
 
 		do_action( 'agnosia_before_initialize_default_values' );
@@ -598,7 +704,12 @@ class agnosia_setup {
 
 
 
-	/* Make sure database values and object values are always the same */
+	/**
+	 * Makes sure database values and object values are always the same.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	private function stabilize_values() {
 
 		do_action( 'agnosia_before_stabilize_values' );
@@ -635,7 +746,12 @@ class agnosia_setup {
 
 
 
-	/* Remove all options that could remain in the database but are not used anymore */
+	/**
+	 * Removes all options that could remain in the database but are not used anymore.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	function remove_unused_options() {
 
 		do_action( 'agnosia_before_remove_unused_options' );
@@ -674,7 +790,12 @@ class agnosia_setup {
 
 
 
-	/* Process a request in order to update the option values */
+	/**
+	 * Processes a request in order to update the option values.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function process( $request ) {
 
 		do_action( 'agnosia_before_process_options' );
@@ -731,7 +852,12 @@ class agnosia_setup {
 
 
 
-	/* Save object values into the database */
+	/**
+	 * Saves object values into the database.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function save() {
 
 		do_action( 'agnosia_before_save_options' );
@@ -752,7 +878,12 @@ class agnosia_setup {
 
 
 
-	/* Get values from database */
+	/**
+	 * Gets values from database.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_options() {
 
 		if ( function_exists( 'get_option' ) ) :
@@ -779,7 +910,12 @@ class agnosia_setup {
 
 
 
-	/* Check if an option exists */
+	/**
+	 * Checks if an option exists.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function exists( $var , $parent = false ) {
 
 		global $agnosia_options;
@@ -800,7 +936,12 @@ class agnosia_setup {
 
 
 
-	/* Get the value of an option */
+	/**
+	 * Gets the value of an option.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get( $var , $parent = false ) {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
@@ -813,7 +954,12 @@ class agnosia_setup {
 
 
 
-	/* Get the parent of an options (basically, the object property which it belongs to) */
+	/**
+	 * Gets the parent of an options (basically, the object property which it belongs to).
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_parent( $var ) {
 
 		global $agnosia_options;
@@ -834,7 +980,12 @@ class agnosia_setup {
 
 
 
-	/* Get the default value of an option */
+	/**
+	 * Gets the default value of an option.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_default_value( $var , $parent = false ) {
 
 		global $agnosia_options;
@@ -857,7 +1008,12 @@ class agnosia_setup {
 
 
 
-	/* Checks an element and returs true (if true or string or not empty) or false (if false or blank or empty) */
+	/**
+	 * Checks an element and returs true (if true or string or not empty) or false (if false or blank or empty).
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function evaluate( $var , $parent = false ) {
 
 		do_action( 'agnosia_before_evaluate_option', $var , $parent );
@@ -876,7 +1032,12 @@ class agnosia_setup {
 
 
 
-	/* Sets the value to a given option into object properties */
+	/**
+	 * Sets the value to a given option into object properties.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function set( $var , $parent = false , $value ) {
 
 		do_action( 'agnosia_before_set_option', $parent, $value );
@@ -891,8 +1052,7 @@ class agnosia_setup {
 
 				$object = $object[$var];
 
-				if ( $object['values'] == 'any' or in_array( $value , $object['values'] ) or isset( $object['values'][$value] ) ) :
-					/* Check for string first to prevent array warning */
+				if ( 'any' == $object['values'] or in_array( $value , $object['values'] ) or isset( $object['values'][$value] ) ) :
 
 					$object['value'] = $value;
 					$new_object = $this->$parent;				
@@ -903,8 +1063,8 @@ class agnosia_setup {
 
 				endif;
 
-			/* If option does not exist into parent array, set it to false. Otherwise, 
-			 * all options will be reseted to default values */
+			// If option does not exist into parent array, set it to false.
+			// Otherwise, all options will be reseted to default values.
 			else :
 
 				$object[$var] = false;
@@ -925,7 +1085,12 @@ class agnosia_setup {
 
 
 
-	/* Removes not used option values from object properties */
+	/**
+	 * Removes not used option values from object properties.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function remove( $var , $parent = false ) {
 
 		// Removes the complete property, not only its value
@@ -944,7 +1109,12 @@ class agnosia_setup {
 
 
 
-	/* Returns the original object properties and its values */
+	/**
+	 * Returns the original object properties and its values.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_vars() {
 
 		return get_class_vars( get_class( $this ) );
@@ -953,7 +1123,12 @@ class agnosia_setup {
 
 
 
-	/* Returns all the options default values */
+	/**
+	 * Returns all the options default values.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_defaults() {
 
 		$vars = $this->get_vars();
@@ -978,7 +1153,12 @@ class agnosia_setup {
 
 
 
-	/* Return all the options with populated values */
+	/**
+	 * Return all the options with populated values.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_object_vars() {
 
 		$vars = $this->get_vars();
@@ -996,7 +1176,12 @@ class agnosia_setup {
 
 
 
-	/* Returns ordered list of object properties under a given category */
+	/**
+	 * Returns ordered list of object properties under a given category.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_object_properties_values( $category ) {
 
 		global $agnosia_options;
@@ -1024,7 +1209,13 @@ class agnosia_setup {
 
 
 
-	/* Pretty much the same than get_object_properties_values(), but returning values by given category string */
+	/**
+	 * Pretty much the same than $this->get_object_properties_values(),
+	 * but returning values by a given category string.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	function get_object_properties_values_by_category( $category ) {
 
 		global $agnosia_options;
@@ -1056,14 +1247,14 @@ class agnosia_setup {
 
 
 	/**
-	  * Gets a template from theme files. It's like a get_template_part()
-	  * (in fact, it uses that function) on steroids: besides getting a
-	  * template HTML, it executes actions and applies filters to the HTML,
-	  * so you can modify it in any way you want.
-	  * 
-	  * @author andrezrv
-	  * 
-	  */
+	 * Gets a template from theme files. It's like a get_template_part()
+	 * (in fact, it uses that function) on steroids: besides getting a
+	 * template HTML, it executes actions and applies filters to the HTML,
+	 * so you can modify it in any way you want.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_template( $template, $type, $insert = false ) {
 
 		do_action( 'agnosia_before_get_template', $template, $type );
@@ -1075,9 +1266,11 @@ class agnosia_setup {
 			 * any place that a template accepts it, making it possible
 			 * through the global variable.
 			 */
-			if ( $insert ) :  
+			if ( $insert ) :
+
 				global $inserted_html; 
 				$inserted_html = $insert;
+
 			endif;
 			
 			/** Start catching the HTML output. */
@@ -1109,8 +1302,8 @@ class agnosia_setup {
 	 * Outputs the HTML obtained with $this->get_template().
 	 * See that method for further reference.
 	 * 
+	 * @since 1.0
 	 * @author andrezrv
-	 * 
 	 */
 	public function load_template( $template , $type, $locator = false ) {
 
@@ -1118,13 +1311,19 @@ class agnosia_setup {
 
 		$output = $this->get_template( $template, $type, $locator );
 		$output = apply_filters( 'agnosia_load_template_' . $type . '_' . $template , $output );
+
 		echo $output;
 
 	}
 
 
-	/* Displays options for showing or hiding elements of a post, 
-	** opposite to those defined in Agnosia Options settings page */
+	/**
+	 * Displays options for showing or hiding elements of a post, 
+	 * opposite to those defined in Agnosia Options settings page.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function override_show( $evaluated , $show = array() , $hide = array() , $dependent = false ) {
 
 		/* $evaluated must be a preevaluated $agnosia parameter.
@@ -1148,7 +1347,7 @@ class agnosia_setup {
 
 		ob_start();
 
-		/* Display hide option if show is setted to true in Agnosia options configuration */
+		// Display hide option if show is setted to true in Agnosia options configuration.
 		if ( $evaluated ) :  ?>
 
 			<div class="agnosia-post-meta agnosia-field">
@@ -1156,7 +1355,7 @@ class agnosia_setup {
 				<label for="agnosia_post_meta[<?php echo $hide['key'] ; ?>]"><?php echo esc_html( $hide['text'] ) ; ?></label>
 			</div>
 
-			<?php /* Obtaind javascript for depending elements */ ?>
+			<?php // Obtaind javascript for depending elements. ?>
 			<?php if ( $dependent ) : ?>
 
 				<script type="text/javascript">
@@ -1177,7 +1376,7 @@ class agnosia_setup {
 
 			<?php endif; ?>
 
-		<?php /* Display show option if show is setted to false in Agnosia Options configuration */ ?>
+		<?php // Display show option if show is setted to false in Agnosia Options configuration. ?>
 		<?php else : ?>
 
 			<div class="agnosia-post-meta agnosia-field">
@@ -1185,7 +1384,7 @@ class agnosia_setup {
 				<label for="agnosia_post_meta[<?php echo $show['key'] ; ?>]"><?php echo esc_html( $show['text'] ) ; ?></label>
 			</div>
 
-			<?php /* Obtaind javascript for depending elements */ ?>
+			<?php // Obtaind javascript for depending elements. ?>
 			<?php if ( $dependent ) : ?>
 
 				<script type="text/javascript">
@@ -1218,7 +1417,13 @@ class agnosia_setup {
 	}
 
 
-	// this could be deprecated soon. Or not :O
+
+	/**
+	 * Evaluates if an HTML segment with a given ID should be displayed.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function evaluate_show( $show_key , $hide_key , $object = false , $context = false ) {
 
 		do_action( 'agnosia_before_evaluate_show', $show_key, $hide_key, $object, $context );
@@ -1249,7 +1454,12 @@ class agnosia_setup {
 
 
 
-	/* Returns HTML for options under given category */
+	/**
+	 * Returns HTML for all the visible options under a given category.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function get_form_options_by_category( $category ) {
 
 		do_action( 'agnosia_before_get_form_options_by_category', $category );
@@ -1298,6 +1508,14 @@ class agnosia_setup {
 
 	}
 
+
+	/**
+	 * Returs an array containing the names of the default sidebar templates.
+	 * It's kind of hard-coding, so it may need a little more work.
+	 * 
+	 * @since 1.0
+	 * @author andrezrv
+	 */
 	public function default_sidebar_templates() {
 
 		$sidebar_templates = array( 
@@ -1317,7 +1535,12 @@ class agnosia_setup {
 
 
 
-
+/**
+ * Initialize setup.
+ * 
+ * @since 1.0
+ * @author andrezrv
+ */
 function agnosia_setup_theme() {
 
 	global $agnosia;
@@ -1327,7 +1550,12 @@ function agnosia_setup_theme() {
 
 
 
-
+/**
+ * Initialize sidebar templates.
+ * 
+ * @since 1.0
+ * @author andrezrv
+ */
 function agnosia_setup_sidebar_templates() {
 
 	global $agnosia , $sidebar_templates;
@@ -1336,11 +1564,9 @@ function agnosia_setup_sidebar_templates() {
 }
 
 
-/* Add action hooks. */
+// Add action hooks.
 add_action( 'agnosia_start', 'agnosia_setup_theme' );
 add_action( 'agnosia_start', 'agnosia_setup_sidebar_templates' );
 
-/* Setup everything! */
+// Setup everything!
 do_action( 'agnosia_start' );
-
-?>

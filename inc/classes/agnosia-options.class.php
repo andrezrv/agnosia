@@ -12,9 +12,7 @@
  * @author andrezrv
  * 
  * @package Agnosia
- * @subpackage Options
  */
-
 
 
 /**
@@ -46,15 +44,16 @@ class agnosia_options {
  * 
  * If $before is set, $after will be ignored.
  * 
- * @since 1.0
- * @author andrezrv
- * 
  * @param string $name The name of the option. It will be used as the name and ID of the corresponding form element.
  * @param array $values An array containing default values, accepted values, description and HTML markup for the option.
  * @param string $before The name of the option to which the present one should be positioned before. 
  * @param string $after The name of the option to which the present one should be positioned after. 
+ *
+ * @since 1.0
+ * @author andrezrv
  * 
- * @example  agnosia_register_option( 
+ * @example  
+ * agnosia_register_option( 
  * 		$name = 'option_name', 
  * 		$values = array( 
  *			'type' => 'checkbox' , 
@@ -82,27 +81,27 @@ function agnosia_register_option( $name , $values = array(), $before = false, $a
 	$stored_options = $agnosia_options->stored_options;
 
 	// Set the position of the option before an option that was previously registered.
-	if ( $before and isset( $options[$before] ) ) :
-
+	if ( $before and isset( $options[$before] ) ) {
 		$options = agnosia_locate_option( $before, $options, $name, $values, 'before' );
+	}
 
 	// Store the current action until the one specified in $before is registered.
-	elseif ( $before ) :
-
+	elseif ( $before ) {
 		agnosia_store_option( $before, $name, $values, 'before' );
+	}
 
 	// Set the position of the option after an option that was previously registered.
-	elseif ( $after and isset( $options[$after] ) ) :
-
+	elseif ( $after and isset( $options[$after] ) ) {
 		$options = agnosia_locate_option( $before, $options, $name, $values, 'after' );
+	}
 
 	// Store the current action until the one specified in $after is registered.
-	elseif ( $after ) :
-
+	elseif ( $after ) {
 		agnosia_store_option( $after, $name, $values, 'after' );
+	}
 
 	// Regular registering process. 
-	else :
+	else {
 
 		$stored_options = $agnosia_options->stored_options;
 
@@ -118,7 +117,7 @@ function agnosia_register_option( $name , $values = array(), $before = false, $a
 		agnosia_locate_stored_options( $stored_options, $name, 'after' );
 		$options = $agnosia_options->options;
 
-	endif;
+	}
 
 	$agnosia_options->options = $options;
 
@@ -131,13 +130,12 @@ function agnosia_register_option( $name , $values = array(), $before = false, $a
 /**
  * Sets an array of stored options before or after a given option which belongs to another array.
  * 
- * @since 1.0
- * @author andrezrv
- * 
  * @param array $stored_options An array containing the stored options that should be located.
  * @param string $name The name of the option that should be used as reference.
  * @param string $position The position where the stored options must be located. Accepts only 'before' or 'after'.
  * 
+ * @since 1.0
+ * @author andrezrv
  */
 function agnosia_locate_stored_options( $stored_options, $name, $position ) {
 
@@ -147,11 +145,11 @@ function agnosia_locate_stored_options( $stored_options, $name, $position ) {
 
 	$options = $agnosia_options->options;
 
-	if ( isset( $stored_options[$name] ) and ( 'before' or 'after' ) == $position ) :
+	if ( isset( $stored_options[$name] ) and ( 'before' or 'after' ) == $position ) {
 
-		foreach ( $stored_options[$name] as $stored_option ) :
+		foreach ( $stored_options[$name] as $stored_option ) {
 
-			if ( $position == $stored_option['position'] ) :
+			if ( $position == $stored_option['position'] ) {
 
 				$options[$stored_option['name']] = $stored_option['values'];
 
@@ -159,21 +157,21 @@ function agnosia_locate_stored_options( $stored_options, $name, $position ) {
 
 				unset( $stored_options[$name][$stored_option['name']] );
 
-				if ( empty( $stored_options[$name] ) ) :
+				if ( empty( $stored_options[$name] ) ) {
 					unset( $stored_options[$name] );
-				endif;
+				}
 
-				if ( empty( $stored_options ) ) :
+				if ( empty( $stored_options ) ) {
 					unset( $stored_options );
-				endif;
+				}
 
 				$agnosia_options->stored_options = $stored_options;
 
-			endif;
+			}
 
-		endforeach;
+		}
 
-	endif;
+	}
 
 	do_action( 'agnosia_after_locate_stored_options', $stored_options, $name, $position );
 
@@ -184,18 +182,18 @@ function agnosia_locate_stored_options( $stored_options, $name, $position ) {
 /**
  * Sets an option into an array before or after a given key.
  * 
- * @since 1.0
- * @author andrezrv
- * 
  * @param string $key The name of the reference key.
  * @param array $options The current array to be modified.
  * @param string $name The name of the new key.
  * @param array $values The values for the new option.
  * @param string $position The position where the new option must be located. Accepts only 'before' or 'after'.
+ * 
+ * @since 1.0
+ * @author andrezrv
  */
 function agnosia_locate_option( $key, $options, $name, $values, $position ) {
 
-	if ( ( 'before' or 'after' ) == $position ) :
+	if ( ( 'before' or 'after' ) == $position ) {
 
 		$key_position = array_search( $key, array_keys( $options ) );
 
@@ -207,7 +205,7 @@ function agnosia_locate_option( $key, $options, $name, $values, $position ) {
 
 		return $new_options;
 
-	endif;
+	}
 
 	return false;
 
@@ -217,18 +215,18 @@ function agnosia_locate_option( $key, $options, $name, $values, $position ) {
 /**
  * Stores an option into the $agnosia_options->stored_options global variable,
  * in order for this option to be registered in the same process as its reference key.
- *  
- * @since 1.0
- * @author andrezrv
  * 
  * @param string $key The name of the reference key.
  * @param string $name The name of the current option.
  * @param array $values The values for the current option.
  * @param string $position The position where the option must be located. Accepts only 'before' or 'after'.
+ * 
+ * @since 1.0
+ * @author andrezrv
  */
 function agnosia_store_option( $key, $name, $values, $position ) {
 
-	if ( ( 'before' or 'after' ) == $position ) :
+	if ( ( 'before' or 'after' ) == $position ) {
 
 		global $agnosia_options;
 
@@ -238,7 +236,7 @@ function agnosia_store_option( $key, $name, $values, $position ) {
 		$agnosia_options->stored_options = $stored_options;
 		$agnosia_options->options = $options;
 
-	endif;
+	}
 
 }
 
@@ -247,10 +245,10 @@ function agnosia_store_option( $key, $name, $values, $position ) {
 /**
  * Removes an option from the $agnosia_options->options global variable.
  * 
+ * @param string $name The name of the option to be removed.
+ * 
  * @since 1.0
  * @author andrezrv
- * 
- * @param string $name The name of the option to be removed.
  */
 function agnosia_unregister_option( $name ) {
 
@@ -260,7 +258,9 @@ function agnosia_unregister_option( $name ) {
 
 	$options = $agnosia_options->options;
 
-	if ( isset( $options[$name] ) ) : unset( $options[$name] ); endif;
+	if ( isset( $options[$name] ) ) { 
+		unset( $options[$name] ); 
+	}
 
 	$agnosia_options->options = $options;
 
@@ -273,11 +273,11 @@ function agnosia_unregister_option( $name ) {
 /**
  * Resets the default value of an option to a given one.
  * 
- * @since 1.0
- * @author andrezrv
- * 
  * @param string $name The name of the option.
  * @param string $value The new default value.
+ * 
+ * @since 1.0
+ * @author andrezrv
  */
 function agnosia_reset_option_default( $name , $value ) {
 
@@ -287,7 +287,9 @@ function agnosia_reset_option_default( $name , $value ) {
 
 	$options = $agnosia_options->options;
 
-	if ( isset( $options[$name] ) ) : $options[$name]['value'] = $value; endif;
+	if ( isset( $options[$name] ) ) { 
+		$options[$name]['value'] = $value; 
+	}
 
 	$agnosia_options->options = $options;
 
@@ -300,17 +302,18 @@ function agnosia_reset_option_default( $name , $value ) {
 /**
  * Checks if an option exists.
  * 
+ * @param string $name The name of the option.
+ * 
  * @since 1.0
  * @author andrezrv
- * 
- * @param string $name The name of the option.
  */
 function agnosia_option_exists( $name ) {
 
 	global $agnosia_options;
 
-	if ( isset( $agnosia_options['options'][$name] ) ) : return true;
-	endif;
+	if ( isset( $agnosia_options['options'][$name] ) ) {
+		return true;
+	}
 
 	return false;
 
@@ -326,7 +329,7 @@ function agnosia_option_exists( $name ) {
  * @since 1.0
  * @author andrezrv
  * 
- * @link http://www.youtube.com/watch?v=YWf5BLUOhNM
+ * {@link http://www.youtube.com/watch?v=YWf5BLUOhNM}
  */
 function agnosia_load_options() {
 
@@ -337,8 +340,5 @@ function agnosia_load_options() {
 }
 
 
-
 // This makes magic actually happen.
 add_action( 'agnosia_before_setup', 'agnosia_load_options' );
-
-?>

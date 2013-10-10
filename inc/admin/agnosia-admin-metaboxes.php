@@ -8,6 +8,9 @@
  * This file handles the inclusion of metaboxes modules.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -36,5 +39,3 @@ function agnosia_load_admin_metaboxes_modules() {
 /* Add action filters. */
 add_action( 'agnosia_before_setup', 'agnosia_initialize_admin_metaboxes_modules' );
 add_action( 'agnosia_before_setup', 'agnosia_load_admin_metaboxes_modules' );
-
-?>

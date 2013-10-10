@@ -8,6 +8,9 @@
  * This file handles the Agnosia theme framework functions.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -33,5 +36,3 @@ add_action( 'agnosia_after_init', 'agnosia_init' );
 
 do_action( 'agnosia_init' );
 do_action( 'agnosia_after_init' );
-
-?>

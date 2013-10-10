@@ -8,10 +8,20 @@
  * This file handles registration and initialization of Agnosia theme styles.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ *  
  * @package Agnosia
  */
 
 
+/**
+ * Provides a container for selectable styles that can be managed both through
+ * the Agnosia Options page in the admin dashboard and through a lot of functions.
+ * 
+ * @since 1.0
+ * @author andrezrv
+ */
 class agnosia_styles {
 
 	var $styles = array();
@@ -33,13 +43,17 @@ class agnosia_styles {
 
 
 /**
+ * Registers a new style.
+ * 
  * If you want to use your custom Bootstrap compilation, then:
  * 1) name your compilation folder like the slug of your custom style (i.e. 'starter-kit-styles');
  * 2) copy your compilation folder into the Bootstrap folder of your child theme (i.e. bootstrap/starter-kit-styles);
  * 3) set the parameter $custom_boostrap of agnosia_register_style() to true.
- * To customize Boostrap, we suggest to use @link http://fancyboot.designspebam.com/.
+ * To customize Boostrap, we suggest to use {@link http://fancyboot.designspebam.com/}.
+ * 
+ * @since 1.0
+ * @author andrezrv
  */
-
 function agnosia_register_style( $slug , $name , $custom_bootstrap = false ) {
 
 	do_action( 'agnosia_before_register_style', $slug , $name , $custom_bootstrap );
@@ -59,6 +73,12 @@ function agnosia_register_style( $slug , $name , $custom_bootstrap = false ) {
 
 
 
+/**
+ * Removes a style.
+ * 
+ * @since 1.0
+ * @author andrezrv
+ */
 function agnosia_unregister_style( $slug ) {
 
 	do_action( 'agnosia_before_unregister_style', $slug );
@@ -67,7 +87,9 @@ function agnosia_unregister_style( $slug ) {
 
 	$styles = $agnosia_styles->styles;
 
-	if ( isset( $styles[$slug] ) ) : unset( $styles[$slug] ); endif;
+	if ( isset( $styles[$slug] ) ) { 
+		unset( $styles[$slug] ); 
+	}
 
 	$agnosia_styles->styles = $styles;
 
@@ -77,6 +99,12 @@ function agnosia_unregister_style( $slug ) {
 
 
 
+/**
+ * Initialize styles.
+ * 
+ * @since 1.0
+ * @author andrezrv
+ */
 function agnosia_initialize_styles() {
 
 	global $agnosia_styles;
@@ -87,8 +115,5 @@ function agnosia_initialize_styles() {
 
 
 
-/* Add action filters. */
+// Add action filters.
 add_action( 'agnosia_before_setup', 'agnosia_initialize_styles' );
-
-
-?>

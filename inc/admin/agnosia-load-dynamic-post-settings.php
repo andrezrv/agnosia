@@ -8,11 +8,13 @@
  * This file handles the dynamic visualization of post settings by post formats into post editor.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
-/* If post format types are enabled, 
-** the pages with alternative format types will be treated as posts */
+// If post format types are enabled, the pages with alternative format types will be treated as posts.
 
 function agnosia_load_dynamic_post_settings() {
 
@@ -315,5 +317,3 @@ function agnosia_load_dynamic_post_settings() {
 }
 
 add_action( 'wp_ajax_agnosia_load_dynamic_post_settings', 'agnosia_load_dynamic_post_settings');
-
-?>

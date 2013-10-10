@@ -8,6 +8,9 @@
  * This file handles the visualization of the Agnosia Options page.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
@@ -196,6 +199,3 @@ add_action( 'admin_init', 'agnosia_theme_options_init' );
 add_action( 'admin_menu', 'agnosia_theme_options_add_page' );
 add_action( 'admin_enqueue_scripts' , 'wp_enqueue_media' );
 add_action( 'admin_enqueue_scripts' , 'agnosia_theme_manager_admin_options_scripts' );
-
-
-?>
