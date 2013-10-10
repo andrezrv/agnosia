@@ -16,32 +16,5 @@
 
 ?>
 
-<?php if ( current_theme_supports( 'agnosia-dynamic-wrapper' ) ) : ?>
-
-								<?php if ( agnosia_header_is_wrapped() ) : ?>
-
-									</div>
-
-								<?php endif; ?>
-
-								<?php agnosia_after_container(); ?>
-								<?php agnosia_footer_contents(); ?>
-
-						<?php if ( agnosia_footer_is_wrapped() ) : ?>
-
-							</div>
-
-						<?php endif; ?>
-
-				<?php if ( agnosia_header_and_footer_are_wrapped() ) : ?>
-
-					</div>
-
-				<?php endif; ?>
-
-<?php else : ?>
-
-	<?php agnosia_after_container(); ?>
-	<?php agnosia_footer_contents(); ?>
-
-<?php endif; ?>
+<?php agnosia_dynamic_wrapper_end(); ?>
+<?php agnosia_standard_wrapper_end(); ?>

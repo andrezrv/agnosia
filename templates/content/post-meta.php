@@ -5,23 +5,24 @@
  * Please don't modify this file unless you know exactly what you're doing.
  * Keep in mind that any modification to this file may be overwritten by future core updates.
  *
- * This file is an HTML template that shows the navigation links for a paged post.
+ * This file is an HTML template that shows meta data of a post.
  * You can add or remove functionality via child themes.
- * 
- * @since 1.0
- * @author andrezrv
  * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( agnosia_get_wp_link_pages() ) : ?>
+<div class="metadata top">
 
-	<section class="post-pages">
+	<?php agnosia_post_date_top(); ?>
 
-		<?php agnosia_wp_link_pages(); ?>
+	<?php agnosia_post_categories_top(); ?>
 
-	</section>
+	<?php agnosia_post_tags_top(); ?>
 
-<?php endif; ?>
+	<?php agnosia_post_comments_top(); ?>
+
+	<?php agnosia_post_permalink_top(); ?>
+
+</div>

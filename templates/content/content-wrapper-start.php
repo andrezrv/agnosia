@@ -8,33 +8,13 @@
  * This file is an HTML template that shows the start of the content wrapper.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
 ?>
 
-<?php if ( current_theme_supports( 'agnosia-dynamic-wrapper' ) ) : ?>
-
-<?php if ( agnosia_header_and_footer_are_wrapped() ) : ?>
-	<div id="global-wrap" class="container">
-<?php endif; ?>
-
-	<?php if ( agnosia_header_is_wrapped() ) : ?>
-			<div id="header-wrap" class="container">
-	<?php endif; ?>
-
-				<?php agnosia_header(); ?>
-
-				<?php if ( agnosia_footer_is_wrapped() ) : ?>
-					<div id="footer-wrap" class="container">
-				<?php endif; ?>
-
-<?php else : ?>
-
-	<?php if ( agnosia_show_header() ) : ?>
-
-		<?php agnosia_load_template( 'header' , 'header' ); ?>
-
-	<?php endif; ?>
-
-<?php endif; ?>
+<?php agnosia_dynamic_wrapper_start(); ?>
+<?php agnosia_standard_wrapper_start(); ?>

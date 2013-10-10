@@ -8,6 +8,9 @@
  * This file is an HTML template that shows the post content of aside format type.
  * You can add or remove functionality via child themes.
  * 
+ * @since 1.0
+ * @author andrezrv
+ * 
  * @package Agnosia
  */
 
