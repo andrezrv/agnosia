@@ -5,7 +5,7 @@
  * Please don't modify this file unless you know exactly what you're doing.
  * Keep in mind that any modification to this file may be overwritten by future core updates.
  *
- * This file is an HTML template that shows the navigation links for a paged post.
+ * This file is an HTML template that shows data for the categories of a post or page.
  * You can add or remove functionality via child themes.
  * 
  * @since 1.0
@@ -16,12 +16,6 @@
 
 ?>
 
-<?php if ( agnosia_get_wp_link_pages() ) : ?>
-
-	<section class="post-pages">
-
-		<?php agnosia_wp_link_pages(); ?>
-
-	</section>
-
-<?php endif; ?>
+<section class="categories">
+	<span><?php the_category( ', ' ) ?></span>
+</section>
