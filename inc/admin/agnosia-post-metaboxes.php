@@ -232,7 +232,7 @@ if ( is_admin() ) :
 				<label for="content_featured_image_position_in_post[5]"><?php _e( 'After post meta' , 'agnosia' ) ; ?></label><br />
 
 				<input type="radio" name="agnosia_post_meta[content_featured_image_position_in_post]" id="content_featured_image_position_in_post[6]" value="not-show"  <?php agnosia_is_checked_meta_box_setting( $value_post , 'not-show' ); ?>>
-				<label for="content_featured_image_position_in_post[7]"><?php _e( 'Not show' , 'agnosia' ) ; ?></label><br />
+				<label for="content_featured_image_position_in_post[6]"><?php _e( 'Not show' , 'agnosia' ) ; ?></label><br />
 
 				<p><input type="checkbox" name="agnosia_post_meta[content_featured_image_replace_gravatar_in_post]" id="content_featured_image_replace_gravatar_in_post" value="true"  <?php agnosia_is_checked_meta_box_setting( $replace_value_post , 'true' ); ?>>
 				<label for="content_featured_image_replace_gravatar_in_post"><?php _e( 'Replace Gravatar' , 'agnosia' ) ; ?></label></p>

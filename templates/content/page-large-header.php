@@ -25,7 +25,7 @@
 		<?php agnosia_get_post_thumbnail( 'post-after-title' ); ?>
 
 		<div class="page-excerpt">
-			<?php the_excerpt(); ?>
+			<?php agnosia_inserted_html(); ?>
 		</div>
 
 	</div>

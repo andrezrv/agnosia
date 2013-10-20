@@ -17,5 +17,5 @@
 ?>
 
 <div id="post-excerpt" role="excerpt">
-	<?php the_excerpt(); ?>
+	<?php agnosia_inserted_html(); ?>
 </div>

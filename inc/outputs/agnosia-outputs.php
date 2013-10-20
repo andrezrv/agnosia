@@ -3272,22 +3272,18 @@ function agnosia_get_after_container() {
 
     $html = '';
 
-    if ( function_exists( 'agnosia_ac_post_additional_html' ) and ( is_page() or is_single() ) ) :
+    ob_start();
+    do_action( 'agnosia_ac_after_container_html' );
+    $after_container_html = ob_get_contents();
+    ob_end_clean();
 
-        ob_start();
-        do_action( 'agnosia_ac_after_container_html' );
-        $after_container_html = ob_get_contents();
-        ob_end_clean();
+    if ( $after_container_html ) :
 
-        if ( $after_container_html ) :
-
-            $html = agnosia_get_template( 'after-container', 'content', $after_container_html );
-
-        endif;
-
-        wp_reset_query();
+        $html = agnosia_get_template( 'after-container', 'content', $after_container_html );
 
     endif;
+
+    wp_reset_query();
 
     $html = apply_filters( __FUNCTION__, $html );
 
@@ -3776,22 +3772,27 @@ function agnosia_get_before_container() {
 
     $html = '';
 
-    if ( function_exists( 'agnosia_ac_post_additional_html' ) and ( is_page() or is_single() ) ) :
+    ob_start();
+    do_action( 'agnosia_ac_before_container_html' );
+    $before_container_html = ob_get_contents();
+    ob_end_clean();
 
-        ob_start();
-        do_action( 'agnosia_ac_before_container_html' );
-        $before_container_html = ob_get_contents();
-        ob_end_clean();
+    $has_large_header = agnosia_page_has_large_header();
 
-        if ( $before_container_html ) :
+    if ( $before_container_html or $has_large_header ) {
 
-            $html = agnosia_get_template( 'before-container', 'content', $before_container_html );
+        $inserted_html = $before_container_html;
 
-        endif;
+        if ( $has_large_header and agnosia_show_page_header() ) {
+            global $post;
+            $inserted_html .= agnosia_get_template( 'page-large-header', 'content', wpautop( $post->post_excerpt ) );
+        }
 
-        wp_reset_query();
+        $html = agnosia_get_template( 'before-container', 'content', $inserted_html );
 
-    endif;
+    }
+
+    wp_reset_query();
 
     $html = apply_filters( __FUNCTION__, $html );
 
@@ -3814,30 +3815,18 @@ function agnosia_get_before_content() {
 
     $html = '';
 
-    if ( function_exists( 'agnosia_ac_post_additional_html' ) and ( is_page() or is_single() ) ) {
+    ob_start();
+    do_action( 'agnosia_ac_before_content_html' );
+    $before_content_html = ob_get_contents();
+    ob_end_clean();
 
-        ob_start();
-        do_action( 'agnosia_ac_before_content_html' );
-        $before_content_html = ob_get_contents();
-        ob_end_clean();
+    if ( $before_content_html ) :
 
-        $has_large_header = agnosia_page_has_large_header();
+        $html = agnosia_get_template( 'before-content', 'content', $before_content_html );
 
-        if ( $before_content_html or $has_large_header ) {
+    endif;
 
-            $inserted_html = $before_content_html;
-
-            if ( $has_large_header and agnosia_show_page_header() ) {
-                $inserted_html .= agnosia_get_template( 'page-large-header', 'content' );
-            }
-
-            $html = agnosia_get_template( 'before-content', 'content', $inserted_html );
-
-        }
-
-        wp_reset_query();
-
-    }
+    wp_reset_query();
 
     $html = apply_filters( __FUNCTION__, $html );
 
@@ -3862,22 +3851,18 @@ function agnosia_get_after_content() {
 
     $html = '';
 
-    if ( function_exists( 'agnosia_ac_post_additional_html' ) and ( is_page() or is_single() ) ) :
+    ob_start();
+    do_action( 'agnosia_ac_after_content_html' );
+    $after_content_html = ob_get_contents();
+    ob_end_clean();
 
-        ob_start();
-        do_action( 'agnosia_ac_after_content_html' );
-        $after_content_html = ob_get_contents();
-        ob_end_clean();
+    if ( $after_content_html ) :
 
-        if ( $after_content_html ) :
-
-            $html = agnosia_get_template( 'after-content', 'content', $after_content_html );
-
-        endif;
-
-        wp_reset_query();
+        $html = agnosia_get_template( 'after-content', 'content', $after_content_html );
 
     endif;
+
+    wp_reset_query();
 
     $html = apply_filters( __FUNCTION__, $html );
 
@@ -3921,6 +3906,8 @@ function agnosia_the_content() {
 
 function agnosia_get_the_content() {
 
+    global $post;
+
     $post_meta = get_post_meta( get_the_ID(), 'agnosia_post_meta' , true ) ;
 
     $html = '';
@@ -3938,7 +3925,11 @@ function agnosia_get_the_content() {
         
         else :
 
-            agnosia_load_template( 'post-excerpt', 'content' );
+            ob_start();
+            the_excerpt();
+            $the_excerpt = ob_get_contents();
+            ob_end_clean();
+            agnosia_load_template( 'post-excerpt', 'content', $the_excerpt );
 
         endif;
 
@@ -3946,7 +3937,7 @@ function agnosia_get_the_content() {
 
         if ( isset( $post_meta['content_show_post_excerpt_in_post'] ) and get_the_excerpt() ) :
 
-            agnosia_load_template( 'post-excerpt', 'content' );
+            agnosia_load_template( 'post-excerpt', 'content', wpautop( $post->post_excerpt ) );
                 
         endif;
 
