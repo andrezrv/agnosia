@@ -4562,7 +4562,7 @@ function agnosia_get_page_permalink_top() {
 
 function agnosia_post_permalink_bottom() {
 
-    $output = agnosia_get_page_permalink_bottom();
+    $output = agnosia_get_post_permalink_bottom();
     $output = apply_filters( __FUNCTION__, $output );
 
     echo $output;
@@ -4587,7 +4587,7 @@ function agnosia_get_post_permalink_bottom() {
 
 function agnosia_post_permalink_top() {
 
-    $output = agnosia_get_page_permalink_bottom();
+    $output = agnosia_get_post_permalink_top();
     $output = apply_filters( __FUNCTION__, $output );
 
     echo $output;
