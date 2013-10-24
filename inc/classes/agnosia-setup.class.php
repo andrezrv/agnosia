@@ -45,11 +45,11 @@ class agnosia_setup {
 		if ( defined( 'AGNOSIA_DEVELOPMENT_MODE' ) 
 			and isset( $_GET['reset'] )
 			and 'defaults' == $_GET['reset'] 
-		) :
+		) {
 
 			delete_option( $this->get_theme_options_name() );
 
-		endif;
+		}
 
 		// Initialize and stabilize object and options values.
 
@@ -93,14 +93,15 @@ class agnosia_setup {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
 
-		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) :
+		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) {
 
 			$object = $options[$var];
 	
-			if ( $object['type'] == 'select' ) : return true;
-			endif;
+			if ( $object['type'] == 'select' ) {
+				return true;
+			}
 
-		endif;
+		}
 
 		return false;
 
@@ -122,14 +123,15 @@ class agnosia_setup {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
 
-		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) :
+		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) {
 
 			$object = $options[$var];
 		
-			if ( $object['type'] == 'input-upload' ) : return true;
-			endif;
+			if ( $object['type'] == 'input-upload' ) {
+				return true;
+			}
 
-		endif;
+		}
 
 		return false;
 
@@ -151,14 +153,15 @@ class agnosia_setup {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
 
-		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) :
+		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) {
 
 			$object = $options[$var];
 			
-			if ( $object['type'] == 'input' ) : return true;
-			endif;
+			if ( $object['type'] == 'input' ) {
+				return true;
+			}
 
-		endif;
+		}
 
 		return false;
 
@@ -180,14 +183,15 @@ class agnosia_setup {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
 
-		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) :
+		if ( isset( $options[$var] ) and $options[$var]['category'] == $parent ) {
 
 			$object = $options[$var];
 
-			if ( $object['type'] == 'checkbox' ) : return true;
-			endif;
+			if ( $object['type'] == 'checkbox' ) {
+				return true;
+			}
 
-		endif;
+		}
 
 		return false;
 
@@ -205,11 +209,18 @@ class agnosia_setup {
 
 		$parent = $parent ? $parent : $this->get_parent( $var );
 
-		if ( $this->is_select( $var, $parent ) ) : return $this->get_select_field( $var, $parent , $context , $object );
-		elseif ( $this->is_input( $var, $parent ) ) : return $this->get_input_field( $var, $parent , $context , $object );
-		elseif ( $this->is_uploader( $var, $parent ) ) : return $this->get_uploader_field( $var, $parent , $context , $object );
-		elseif ( $this->is_checkbox( $var, $parent ) ) : return $this->get_checkbox_field( $var, $parent , $context , $object );
-		endif;
+		if ( $this->is_select( $var, $parent ) ) {
+			return $this->get_select_field( $var, $parent , $context , $object );
+		}
+		elseif ( $this->is_input( $var, $parent ) ) {
+			return $this->get_input_field( $var, $parent , $context , $object );
+		}
+		elseif ( $this->is_uploader( $var, $parent ) ) {
+			return $this->get_uploader_field( $var, $parent , $context , $object );
+		}
+		elseif ( $this->is_checkbox( $var, $parent ) ) {
+			return $this->get_checkbox_field( $var, $parent , $context , $object );
+		}
 
 		return false;
 
