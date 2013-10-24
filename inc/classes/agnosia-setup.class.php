@@ -1248,9 +1248,13 @@ class agnosia_setup {
 
 	/**
 	 * Gets a template from theme files. It's like a get_template_part()
-	 * (in fact, it uses that function) on steroids: besides getting a
+	 * (in fact, it uses that function internally) on steroids: besides getting a
 	 * template HTML, it executes actions and applies filters to the HTML,
 	 * so you can modify it in any way you want.
+	 * 
+	 * @param $template string|array A string containing $slug for get_template_part( $slug ), or a two position array containing $slug and $name for get_template_part( $slug, $name ).
+	 * @param $type string The type of the template (header, footer, content, general, etc.).
+	 * @param $insert string HTML code to be included into the output of the template through agnosia_inserted_html().
 	 * 
 	 * @since 1.0
 	 * @author andrezrv
@@ -1263,8 +1267,8 @@ class agnosia_setup {
 
 			/**
 			 * This little snippet allows you to insert external HTML in 
-			 * any place that a template accepts it, making it possible
-			 * through the global variable.
+			 * any place that a template accepts it by calling agnosia_inserted_html(),
+			 * making it possible through the global variable.
 			 */
 			if ( $insert ) :
 
@@ -1273,18 +1277,23 @@ class agnosia_setup {
 
 			endif;
 			
-			/** Start catching the HTML output. */
+			// Start catching the HTML output.
 			ob_start();
 
-			get_template_part( '/templates/' . $type . '/' . $template );
+			if ( is_array( $template ) and !empty( $template ) ) {
+				get_template_part( '/templates/' . $type . '/' . $template[0], $template[1] );
+			}
+			else {
+				get_template_part( '/templates/' . $type . '/' . $template );
+			}
 
 			$output = ob_get_contents();
 			ob_end_clean();
 
-			/** Set the $insert global variable to false, clearing it for further uses. */
+			// Set the $insert global variable to false, clearing it for further uses.
 			if ( $insert ) : $insert = false; endif;
 
-			/** Create a filter for this template. */
+			// Create a filter for this template.
 			$output = apply_filters( 'agnosia_get_template_' . $type . '_' . $template , $output );
 
 			return $output;
@@ -1302,17 +1311,27 @@ class agnosia_setup {
 	 * Outputs the HTML obtained with $this->get_template().
 	 * See that method for further reference.
 	 * 
+	 * @param $template string|array A string containing $slug for get_template_part( $slug ), or a two position array containing $slug and $name for get_template_part( $slug, $name ).
+	 * @param $type string The type of the template (header, footer, content, general, etc.).
+	 * @param $insert string HTML code to be included into the output of the template through agnosia_inserted_html().
+	 * @param $echo boolean Echo or return the result. Useful if you want to filter a template but don't want to hook $this->get_template().
+	 *  
 	 * @since 1.0
 	 * @author andrezrv
 	 */
-	public function load_template( $template , $type, $locator = false ) {
+	public function load_template( $template , $type, $insert = false, $echo = true ) {
 
-		do_action( 'agnosia_before_load_template', $template, $type, $locator );
+		do_action( 'agnosia_before_load_template', $template, $type, $insert );
 
-		$output = $this->get_template( $template, $type, $locator );
+		$output = $this->get_template( $template, $type, $insert );
 		$output = apply_filters( 'agnosia_load_template_' . $type . '_' . $template , $output );
 
-		echo $output;
+		if ( $echo ) {
+			echo $output;
+		}
+		else {
+			return $output;
+		}
 
 	}
 
@@ -1384,7 +1403,7 @@ class agnosia_setup {
 				<label for="agnosia_post_meta[<?php echo $show['key'] ; ?>]"><?php echo esc_html( $show['text'] ) ; ?></label>
 			</div>
 
-			<?php // Obtaind javascript for depending elements. ?>
+			<?php // Obtain javascript for depending elements. ?>
 			<?php if ( $dependent ) : ?>
 
 				<script type="text/javascript">
@@ -1406,7 +1425,6 @@ class agnosia_setup {
 		<?php
 
 		$html = ob_get_contents();
-
 		ob_end_clean();
 
 		$html = apply_filters( 'agnosia_override_show', $html );
@@ -1455,7 +1473,9 @@ class agnosia_setup {
 
 
 	/**
-	 * Returns HTML for all the visible options under a given category.
+	 * Returns HTML for all the visible options under a given category of theme elements.
+	 * 
+	 * @param $category string Slug for a category of theme elements.
 	 * 
 	 * @since 1.0
 	 * @author andrezrv
@@ -1467,30 +1487,38 @@ class agnosia_setup {
 		$properties = $this->get_object_properties_values_by_category( $category );
 		$html = '';
 
-		foreach ( $properties as $property => $value ) :
+		foreach ( $properties as $property => $value ) {
 
-			if ( !isset( $properties[$property]['display'] ) or false != $properties[$property]['display'] ) :
+			if ( !isset( $properties[$property]['display'] ) or false != $properties[$property]['display'] ) {
 
-				if ( isset( $properties[$property]['html']['label'] ) ) : $label = $properties[$property]['html']['label']; else : $label = $property; endif;
-				if ( isset( $properties[$property]['html']['before'] ) ) : $before = $properties[$property]['html']['before']; else : $before = ''; endif;
-				if ( isset( $properties[$property]['html']['description'] ) ) : $description = $properties[$property]['html']['description']; else : $description = ''; endif;
-				if ( isset( $properties[$property]['html']['after'] ) ) : $after = $properties[$property]['html']['after']; else : $after = ''; endif;
+				$property_html = $properties[$property]['html'];
+
+				$label = isset( $property_html['label'] ) ? $property_html['label'] : $property;
+				$before = isset( $property_html['before'] ) ? $property_html['before'] : '';
+				$description = isset( $property_html['description'] ) ? $property_html['description'] : '';
+				$after = isset( $property_html['after'] ) ? $property_html['after'] : '';
 
 				$html .= $before;
 
 				$html .= '<div class="agnosia-field">';
 				$html .= '<div class="left-column">';
 
-				if ( $this->is_checkbox( $property ) ) : $html .= $this->get_field( $property ) . ' '; endif;
+				if ( $this->is_checkbox( $property ) ) { 
+					$html .= $this->get_field( $property ) . ' ';
+				}
 				$html .= $this->get_label( $property , $category , $label );
 
 				$html .= '</div>';
 
 				$html .= '<div class="right-column">';
-				if ( isset( $properties[$property]['html']['relative_to'] ) ) : 
+				
+				if ( isset( $properties[$property]['html']['relative_to'] ) ) {
 					$html .= '<code>' . $properties[$property]['html']['relative_to'] . '</code>';
-				endif; 
-				if ( !$this->is_checkbox( $property ) ) : $html .= $this->get_field( $property ) . ' '; endif;
+				}
+				
+				if ( !$this->is_checkbox( $property ) ) { 
+					$html .= $this->get_field( $property ) . ' ';
+				}
 				$html .= $description;
 
 				$html .= '</div>';
@@ -1498,9 +1526,9 @@ class agnosia_setup {
 				
 				$html .= $after;
 
-			endif;
+			}
 
-		endforeach;
+		}
 
 		$html = apply_filters( 'agnosia_get_form_options_by_category', $html );
 
