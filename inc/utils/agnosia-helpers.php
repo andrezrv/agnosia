@@ -184,7 +184,7 @@ function agnosia_remove_theme_support( $modules ) {
 
 function agnosia_load_text_domain() {
 
-    load_theme_textdomain( 'agnosia' , agnosia_get_path( '/languages' ) );
+    load_theme_textdomain( 'agnosia' , get_template_directory() . '/languages' );
 
 }
 
