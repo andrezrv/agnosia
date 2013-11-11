@@ -1769,24 +1769,6 @@ function agnosia_header_top_navbar_color_scheme() {
 
 
 
-function agnosia_post_custom_stylesheet() {
-
-    $output = '';
-
-    if ( is_singular() and agnosia_post_has_custom_stylesheet() ) :
-
-        $output = '<link rel="stylesheet" id="post-custom-stylesheet" type="text/css" href="'. esc_attr( agnosia_post_get_custom_stylesheet() ). '" media="all" />';
-
-    endif;
-
-    $output = apply_filters( __FUNCTION__ , $output );
-
-    echo $output;
-    
-}
-
-
-
 function agnosia_custom_favicon() {
 
     $output = '';
@@ -1857,38 +1839,34 @@ function agnosia_get_css_for_text_color() {
 
     $output = '';
 
-    if ( get_header_image() ) :
+    ob_start();
 
-        ob_start();
-
-        ?>
-
-        <style type="text/css">
-            
-            #branding h1, #branding h2, #branding h3, #branding h1 a, #branding h2 a, #branding h3 a, #branding ul.menu.nav > li > a {
-                color: #<?php echo get_header_textcolor(); ?> !important;
-                text-shadow: none;
-            }
-
-            #branding a b.caret {
-                border-bottom-color: #<?php echo get_header_textcolor(); ?>;
-                border-top-color: #<?php echo get_header_textcolor(); ?>;
-            }
-
-        </style>
-
-        <?php
-
-        $output .= ob_get_contents();
+    ?>
         
-        ob_end_clean();
-        ob_flush();
+#branding h1, #branding h2, #branding h3, #branding h1 a, #branding h2 a, #branding h3 a, #branding ul.menu.nav > li > a {
+    color: #<?php echo get_header_textcolor(); ?> !important;
+    text-shadow: none;
+}
 
-    endif;
+#branding a b.caret {
+    border-bottom-color: #<?php echo get_header_textcolor(); ?>;
+    border-top-color: #<?php echo get_header_textcolor(); ?>;
+}
+
+    <?php
+
+    $output .= ob_get_contents();
+    
+    ob_end_clean();
 
     $output = apply_filters( __FUNCTION__, $output );
 
+    header( 'Content-Type: text/css' );
+
     echo $output;
+
+    die();
+
 
 }
 
@@ -5082,3 +5060,14 @@ function agnosia_get_standard_wrapper_end() {
     return $html;
 
 }
+
+
+function agnosia_processed_css() {
+
+    if ( isset( $_GET['agnosia-processed-css'] ) and 'text-color' == $_GET['agnosia-processed-css'] ) {
+        agnosia_get_css_for_text_color();
+    }
+
+}
+
+add_action( 'wp', 'agnosia_processed_css' );

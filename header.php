@@ -34,14 +34,12 @@
 
 		<?php wp_head(); ?>
 		
-		<?php agnosia_post_custom_stylesheet(); ?>
-
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	    <![endif]-->
 
-	    <?php agnosia_get_css_for_text_color(); ?>
+	    <?php //agnosia_get_css_for_text_color(); ?>
 		
 	</head>
 

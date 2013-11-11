@@ -17,5 +17,5 @@
 ?>
 
 <form action="<?php agnosia_home_url(); ?>" method="get" class="navbar-search">
-	<input type="text" id="s" name="s" value="" class="search-query" placeholder="<?php _e( 'search' , 'agnosia' ); ?>">
+	<input type="text" id="s" name="s" value="" class="search-query" placeholder="<?php _e( 'Search' , 'agnosia' ); ?>">
 </form>

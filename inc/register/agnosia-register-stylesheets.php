@@ -24,7 +24,7 @@ function agnosia_register_styles() {
        * 1) name your compilation folder like the slug of your custom style (i.e. 'starter-kit-styles');
        * 2) copy your compilation folder into the Bootstrap folder of your child theme (i.e. bootstrap/starter-kit-styles);
        * 3) set the parameter $custom_boostrap of agnosia_register_style() to true.
-       * To customize Boostrap, we suggest to use @link http://fancyboot.designspebam.com/.
+       * To customize Boostrap, we suggest to use {@link http://fancyboot.designspebam.com/}.
        */
          
       if ( agnosia_style_has_custom_bootstrap( agnosia_get( 'stylesheet' ) ) ) :         
@@ -49,7 +49,19 @@ function agnosia_register_styles() {
       wp_register_style( agnosia_get( 'stylesheet' ) , agnosia_get_uri( '/css/' . agnosia_get( 'stylesheet' ) . '.css' ) , array() , '1.0' );
 
       // Register Agnosia custom stylesheet if specified
-      if ( agnosia_has_custom_stylesheet() ) : wp_register_style( 'custom-stylesheet' , agnosia_get( 'custom_stylesheet' ) , array() , '' ); endif;
+      if ( agnosia_has_custom_stylesheet() ) : 
+         wp_register_style( 'custom-stylesheet' , agnosia_get( 'custom_stylesheet' ) , array() , '' ); 
+      endif;
+
+      // Register Agnosia custom post stylesheet if specified
+      if ( is_singular() and agnosia_post_has_custom_stylesheet() ) :
+         wp_register_style( 'custom-post-stylesheet' , esc_attr( agnosia_post_get_custom_stylesheet() ) , array() , '' );
+      endif;
+
+      // Register Agnosia styles for header when header image is present
+      if ( get_header_image() ) :
+         wp_register_style( 'css-text-color' , get_bloginfo( 'siteurl' ) . '/?agnosia-processed-css=text-color' , array() , '' ); 
+      endif;
 
    else :
 
@@ -86,10 +98,27 @@ function agnosia_enqueue_styles() {
       wp_enqueue_style( agnosia_get( 'stylesheet' ) );
 
       // Enqueue Agnosia custom stylesheet if specified
-      if ( agnosia_has_custom_stylesheet() ) : wp_enqueue_style( 'custom-stylesheet' ); endif;
+      if ( agnosia_has_custom_stylesheet() ) :
+         wp_enqueue_style( 'custom-stylesheet' );
+      endif;
 
-      // Enqueue comments stylesheet
-      if ( is_singular() ) : wp_enqueue_script( 'comment-reply' ); endif;
+      // Enqueue Agnosia styles for header texts
+      if ( get_header_image() ) : 
+         wp_enqueue_style( 'css-text-color' );
+      endif;
+
+      // Enqueue styles for singular views
+      if ( is_singular() ) : 
+
+         // Enqueue comments stylesheet
+         wp_enqueue_script( 'comment-reply' ); 
+
+         // Enqueue post specific style
+         if ( agnosia_post_has_custom_stylesheet() ) :
+            wp_enqueue_style( 'custom-post-stylesheet' );
+         endif;
+
+      endif;
 
    else :
 
@@ -142,10 +171,10 @@ function agnosia_add_editor_styles() {
 
 
 /* Add action hooks. */
-add_action( 'init', 'agnosia_register_styles' );
+add_action( 'wp', 'agnosia_register_styles' );
 add_action( 'wp_enqueue_scripts', 'agnosia_enqueue_styles' );
 add_action( 'admin_enqueue_scripts', 'agnosia_enqueue_styles' );
-add_action( 'init', 'agnosia_add_editor_styles' );
+add_action( 'wp', 'agnosia_add_editor_styles' );
 
 
 ?>
