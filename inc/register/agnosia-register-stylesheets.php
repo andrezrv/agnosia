@@ -60,7 +60,7 @@ function agnosia_register_styles() {
 
       // Register Agnosia styles for header when header image is present
       if ( get_header_image() ) :
-         wp_register_style( 'css-text-color' , get_bloginfo( 'siteurl' ) . '/?agnosia-processed-css=text-color' , array() , '' ); 
+         wp_register_style( 'css-text-color' , get_bloginfo( 'siteurl' ) . '/agnosia-processed-text-color.css' , array() , '' ); 
       endif;
 
    else :
