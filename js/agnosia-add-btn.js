@@ -8,13 +8,10 @@
  * 
  * @package Agnosia
  */
-
 function add_btn_class() {
-	jQuery('input[type="submit"], button').addClass('btn');
+	jQuery( 'input[type="submit"], button' ).addClass( 'btn' );
 }
 
-
-
-jQuery(document).ready(function() {
+jQuery( document ).ready( function() {
 	add_btn_class();
-});
+} );

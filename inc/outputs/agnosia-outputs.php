@@ -5064,7 +5064,7 @@ function agnosia_get_standard_wrapper_end() {
 
 function agnosia_processed_css() {
 
-    if ( '/agnosia-processed-text-color.css' == $_SERVER['REQUEST_URI'] ) {
+    if ( isset( $_GET['agnosia_processed_css'] ) and 'custom-header-text-color' == $_GET['agnosia_processed_css'] ) {
         agnosia_get_css_for_text_color();
     }
 
