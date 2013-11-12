@@ -38,8 +38,6 @@
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	    <![endif]-->
-
-	    <?php //agnosia_get_css_for_text_color(); ?>
 		
 	</head>
 
