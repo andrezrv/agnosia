@@ -32,7 +32,7 @@ class agnosia_styles {
 
 		do_action( 'agnosia_before_setup_styles' );
 
-		agnosia_load_text_domain();
+		agnosia_load_textdomain();
 
 		do_action( 'agnosia_after_setup_styles' );
 

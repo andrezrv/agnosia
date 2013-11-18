@@ -13,7 +13,7 @@
 
 function agnosia_language_setup() {
 	
-	agnosia_load_text_domain();
+	agnosia_load_textdomain();
 	
 }
 

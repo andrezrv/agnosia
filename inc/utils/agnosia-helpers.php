@@ -122,15 +122,15 @@ function agnosia_process( $request ) {
 
 function agnosia_load_modules( $modules ) {
 
-    if ( is_array( $modules ) and !empty( $modules ) ) :
+    if ( is_array( $modules ) and !empty( $modules ) ) {
 
-        foreach ( $modules as $module ) :
+        foreach ( $modules as $module ) {
 
             @include_once agnosia_get_path( $module );
 
-        endforeach;
+        }
 
-    endif;
+    }
 
 }
 
@@ -182,12 +182,28 @@ function agnosia_remove_theme_support( $modules ) {
 
 
 
-function agnosia_load_text_domain() {
+function agnosia_load_textdomain() {
 
     load_theme_textdomain( 'agnosia' , get_template_directory() . '/languages' );
 
+    agnosia_load_child_theme_textdomain();
+
 }
 
+
+function agnosia_load_child_theme_textdomain() {
+
+    do_action( 'agnosia_load_child_theme_textdomains' );
+
+    global $agnosia_child_theme_textdomains;
+
+    if ( is_array( $agnosia_child_theme_textdomains ) and !empty( $agnosia_child_theme_textdomains ) ) {
+        foreach ( $agnosia_child_theme_textdomains as $child_theme ) {
+            load_child_theme_textdomain( $child_theme , get_stylesheet_directory() . '/languages' );
+        }
+    }
+
+}
 
 
 function agnosia_infinite_render() {
