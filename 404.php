@@ -22,8 +22,14 @@
 
 <section id="404-container" class="<?php agnosia_post_class(); ?> <?php agnosia_content_colspan(); ?>">
 
-	<h2><?php _e( 'Error 404 - Page Not Found' , 'agnosia' ) ?></h2>
-	<p><?php _e( 'The page you were looking for does not exist. You can try to find it by using the search option. ' , 'agnosia' ) ?></p>
+	<article>
+		<header>
+			<h2><?php _e( 'Error 404 - Page Not Found' , 'agnosia' ) ?></h2>
+		</header>
+		<section class="entry">
+			<p><?php _e( 'The page you were looking for does not exist. You can try to find it by using the search option. ' , 'agnosia' ) ?></p>
+		</section>
+	</article>
 
 </section>
 
